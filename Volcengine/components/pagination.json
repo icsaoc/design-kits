@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 2,
+  "slug": "pagination",
+  "name": "Pagination",
+  "category": "navigation",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Pagination",
+      "evidence": "Inferred from preview/component-pagination.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".pagination",
+        ".pagination-default",
+        ".pagination-jump",
+        ".pagination-simple",
+        ".pagination-small",
+        ".pagination-total",
+        ".pagination-wrapper",
+        ".active",
+        ".disabled",
+        ".jump-input"
+      ],
+      "evidence": "Representative selectors from preview/component-pagination.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-pagination.html",
+    "representativeSelectors": [
+      ".pagination",
+      ".pagination-default",
+      ".pagination-jump",
+      ".pagination-simple",
+      ".pagination-small",
+      ".pagination-total",
+      ".pagination-wrapper",
+      ".active",
+      ".pagination:hover",
+      ".disabled"
+    ],
+    "cssRuleCount": 23
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "disabled",
+      "focus",
+      "hover"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".pagination",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-pagination.html",
+    "selectors": [
+      ".pagination",
+      ".pagination-default",
+      ".pagination-jump",
+      ".pagination-simple",
+      ".pagination-small",
+      ".pagination-total",
+      ".pagination-wrapper",
+      ".active",
+      ".disabled",
+      ".jump-input",
+      ".page-arrow",
+      ".page-icon",
+      ".page-item",
+      ".page-item-more",
+      ".page-simple-indicator"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-pagination.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-pagination.html",
+      "classes": [
+        "pagination",
+        "pagination-default",
+        "pagination-jump",
+        "pagination-simple",
+        "pagination-small",
+        "pagination-total",
+        "pagination-wrapper",
+        "active",
+        "disabled",
+        "jump-input",
+        "page-arrow",
+        "page-icon",
+        "page-item",
+        "page-item-more",
+        "page-simple-indicator",
+        "pagesize-arrow",
+        "pagesize-select"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-pagination.html",
+    "source": "preview/component-pagination.html",
+    "css": {
+      "file": "components.css",
+      "marker": "pagination"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

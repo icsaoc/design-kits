@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 2,
+  "slug": "steps",
+  "name": "Steps",
+  "category": "navigation",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Steps",
+      "evidence": "Inferred from preview/component-steps.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".steps-h",
+        ".active",
+        ".completed",
+        ".disabled",
+        ".done",
+        ".error",
+        ".ind",
+        ".last",
+        ".line",
+        ".pending"
+      ],
+      "evidence": "Representative selectors from preview/component-steps.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-steps.html",
+    "representativeSelectors": [
+      ".steps-h",
+      ".active",
+      ".completed",
+      ".disabled",
+      ".done",
+      ".error",
+      ".ind",
+      ".last",
+      ".disabled"
+    ],
+    "cssRuleCount": 28
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "disabled",
+      "error"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".steps-h",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-steps.html",
+    "selectors": [
+      ".steps-h",
+      ".active",
+      ".completed",
+      ".disabled",
+      ".done",
+      ".error",
+      ".ind",
+      ".last",
+      ".line",
+      ".pending",
+      ".step-desc",
+      ".step-desc-last",
+      ".step-desc-v",
+      ".step-h",
+      ".step-h-desc"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-steps.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [
+    "--steps-border",
+    "--steps-desc",
+    "--steps-disabled-bg",
+    "--steps-disabled-text",
+    "--steps-error",
+    "--steps-primary",
+    "--steps-primary-bg",
+    "--steps-primary-line",
+    "--steps-shadow",
+    "--steps-text",
+    "--steps-white"
+  ],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-steps.html",
+      "classes": [
+        "steps-h",
+        "active",
+        "completed",
+        "disabled",
+        "done",
+        "error",
+        "ind",
+        "last",
+        "line",
+        "pending",
+        "step-desc",
+        "step-desc-last",
+        "step-desc-v",
+        "step-h",
+        "step-h-desc",
+        "step-header",
+        "step-line",
+        "step-title",
+        "step-v",
+        "step-v-content"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-steps.html",
+    "source": "preview/component-steps.html",
+    "css": {
+      "file": "components.css",
+      "marker": "steps"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

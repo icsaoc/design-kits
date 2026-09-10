@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 2,
+  "kitType": "list-page",
+  "sourceKind": "preview-contract",
+  "screensGenerated": 2,
+  "coreComponentsUsed": [
+    "page-header",
+    "sidenav",
+    "table",
+    "tabs",
+    "topnav"
+  ],
+  "supportComponentsUsed": [
+    "topnav",
+    "sidenav",
+    "page-header",
+    "tabs",
+    "table",
+    "segmented-picker",
+    "input",
+    "select",
+    "tag",
+    "buttons"
+  ],
+  "previewClassReuseRate": 0.82,
+  "inventedComponents": [],
+  "interactiveStatesRendered": [
+    "active",
+    "hover",
+    "disabled",
+    "selected"
+  ],
+  "primaryActionPerScreen": true,
+  "mockDataDensity": {
+    "tableRows": 14,
+    "chartPoints": 0
+  },
+  "warnings": [],
+  "notes": [
+    "Detail page with Card Tabs, FilterBar (segmented picker + inputs + date range), and data table.",
+    "TopNav and Sidenav referenced from preview/component-topnav.html and preview/component-sidenav.html respectively.",
+    "Icons sourced from assets/icons/sidenav-icon/ directory."
+  ],
+  "componentUsageBasis": "preview-reference"
+}

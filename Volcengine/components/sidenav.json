@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 2,
+  "slug": "sidenav",
+  "name": "Sidenav",
+  "category": "navigation",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Sidenav",
+      "evidence": "Inferred from preview/component-sidenav.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".sidenav",
+        ".sidenav-header",
+        ".sidenav-menu",
+        ".active",
+        ".has-arrow",
+        ".menu-chevron",
+        ".collapse-btn",
+        ".collapsed"
+      ],
+      "evidence": "Representative selectors from preview/component-sidenav.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-sidenav.html",
+    "representativeSelectors": [
+      ".sidenav",
+      ".sidenav-header",
+      ".sidenav-menu",
+      ".active",
+      ".has-arrow",
+      ".menu-chevron",
+      ".collapse-btn",
+      ".collapsed",
+      ".sidenav:hover"
+    ],
+    "cssRuleCount": 38
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "hover"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".sidenav",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-sidenav.html",
+    "selectors": [
+      ".sidenav",
+      ".sidenav-header",
+      ".sidenav-menu",
+      ".active",
+      ".has-arrow",
+      ".menu-chevron",
+      ".collapse-btn",
+      ".collapsed",
+      ".collapsed-divider",
+      ".collapsed-item",
+      ".collapsed-menu",
+      ".group-title",
+      ".menu-group-block",
+      ".menu-icon"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "MANDATORY: Copy HTML structure VERBATIM from preview/component-sidenav.html. This is a code template, not a visual reference.",
+    "Keep all CSS class names (.sidenav, .sidenav-header, .sidenav-menu, .menu-item, .menu-icon, .menu-text, .product-icon) unchanged.",
+    "Menu icons: Copy the complete inline SVG from preview/component-sidenav.html <span class='menu-icon'> elements. Each SVG contains multi-color linearGradient — NEVER simplify or replace.",
+    "FORBIDDEN: Tailwind CSS classes, Lucide/Heroicons/FontAwesome, any third-party icon library, CDN framework links.",
+    "Use colors_and_type.css + components.css as the rendering contract. Do NOT read snippets/sidenav-icons.json — all needed icons are already inline in the preview HTML."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [
+    "--bg-7",
+    "--border-2",
+    "--border-3",
+    "--primary-6",
+    "--text-1",
+    "--text-3"
+  ],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-sidenav.html",
+      "classes": [
+        "sidenav",
+        "sidenav-header",
+        "sidenav-menu",
+        "active",
+        "has-arrow",
+        "menu-chevron",
+        "collapse-btn",
+        "collapsed",
+        "collapsed-divider",
+        "collapsed-item",
+        "collapsed-menu",
+        "group-title",
+        "menu-group-block",
+        "menu-icon",
+        "menu-item",
+        "menu-text",
+        "product-icon",
+        "product-name"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-sidenav.html",
+    "source": "preview/component-sidenav.html",
+    "css": {
+      "file": "components.css",
+      "marker": "sidenav"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": [
+    "assets/icons/sidenav-icon/CRB-p.svg",
+    "assets/icons/sidenav-icon/DTS-p.svg",
+    "assets/icons/sidenav-icon/ECS-p.svg",
+    "assets/icons/sidenav-icon/cloud-native-monitor-p.svg",
+    "assets/icons/sidenav-icon/cloud-network-p.svg",
+    "assets/icons/sidenav-icon/cloud-security-p.svg",
+    "assets/icons/sidenav-icon/data-platform.svg",
+    "assets/icons/sidenav-icon/database-management.svg",
+    "assets/icons/sidenav-icon/database-workbench.svg",
+    "assets/icons/sidenav-icon/database.svg",
+    "assets/icons/sidenav-icon/dc.svg",
+    "assets/icons/sidenav-icon/elastic-scaling-p.svg",
+    "assets/icons/sidenav-icon/encryption-of-permissions-grey.svg",
+    "assets/icons/sidenav-icon/file-NAS-p.svg",
+    "assets/icons/sidenav-icon/hacker-grey.svg"
+  ]
+}

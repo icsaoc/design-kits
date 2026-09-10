@@ -1,0 +1,84 @@
+/* preview-scaffold.css — Preview page layout scaffold */
+/* Shared across all component preview pages */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 24px 32px;
+  font-family: -apple-system, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+  background: #fff;
+  color: #0c0d0e;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Page header */
+.pv-header {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eaedf1;
+}
+.pv-header h1 {
+  margin: 0 0 4px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0c0d0e;
+}
+.pv-header p {
+  margin: 0;
+  font-size: 13px;
+  color: #737a87;
+  line-height: 1.5;
+}
+
+/* Section */
+.pv-section {
+  margin-bottom: 32px;
+}
+.pv-section__title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #42464e;
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eaedf1;
+}
+.pv-section__sub {
+  font-size: 12px;
+  color: #737a87;
+  margin: 0 0 8px;
+}
+
+/* Layout helpers */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-start;
+}
+.row-wrap { flex-wrap: wrap; }
+.row-16 { gap: 16px; }
+.row-top { align-items: flex-start; }
+.row-bottom { align-items: flex-end; }
+.row-left { justify-content: flex-start; }
+.row-right { justify-content: flex-end; }
+.row-wrap-side { flex-wrap: wrap; gap: 12px; }
+
+.stack-12 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.stack-16 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Demo container */
+.demo-box {
+  padding: 16px;
+  border: 1px solid #eaedf1;
+  border-radius: 6px;
+  background: #fff;
+}

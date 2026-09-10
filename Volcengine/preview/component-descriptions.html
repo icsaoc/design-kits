@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Descriptions 描述列表</title>
+  <link rel="stylesheet" href="preview-scaffold.css">
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="../components.css">
+</head>
+<body>
+  <div class="pv-header">
+    <h1>Descriptions 描述列表</h1>
+    <p>键值对信息展示组件，支持堆叠、左对齐、右对齐与内联等多种布局模式。</p>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Stacked 堆叠布局</div>
+    <div class="stack-12">
+      <section class="descriptions descriptions-stacked" data-component="descriptions" data-type="stacked">
+        <h3 class="descriptions-title">基本信息</h3>
+        <div class="descriptions-grid descriptions-grid-2">
+          <div class="desc-item desc-item-stacked"><span class="desc-label">姓名</span><span class="desc-value">zhangxiaoming</span></div>
+          <div class="desc-item desc-item-stacked"><span class="desc-label">电话号码</span><span class="desc-value">138-1234-1234</span></div>
+          <div class="desc-item desc-item-stacked"><span class="desc-label">出生年月</span><span class="desc-value">2022-08-08</span></div>
+          <div class="desc-item desc-item-stacked"><span class="desc-label">详细地址</span><span class="desc-value">北京市海淀区方恒时尚中心</span></div>
+          <div class="desc-item desc-item-stacked"><span class="desc-label">邮箱</span><span class="desc-value">zhangxiaomao@example.com</span></div>
+          <div class="desc-item desc-item-stacked"><span class="desc-label">状态</span><span class="desc-value">已开启</span></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Label-Left 左对齐</div>
+    <div class="stack-12">
+      <section class="descriptions descriptions-label-left" data-component="descriptions" data-type="label-left">
+        <h3 class="descriptions-title">基本信息</h3>
+        <div class="descriptions-list">
+          <div class="desc-item desc-item-horizontal"><span class="desc-label">姓名</span><span class="desc-value">zhangxiaoming</span></div>
+          <div class="desc-item desc-item-horizontal"><span class="desc-label">电话号码</span><span class="desc-value">138-1234-1234</span></div>
+          <div class="desc-item desc-item-horizontal"><span class="desc-label">出生年月</span><span class="desc-value">2022-08-08</span></div>
+          <div class="desc-item desc-item-horizontal"><span class="desc-label">邮箱</span><span class="desc-value">zhangxiaomao@example.com</span></div>
+          <div class="desc-item desc-item-horizontal"><span class="desc-label">详细地址</span><span class="desc-value">北京市海淀区方恒时尚中心</span></div>
+          <div class="desc-item desc-item-horizontal"><span class="desc-label">状态</span><span class="desc-value">已开启</span></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Label-Right 右对齐</div>
+    <div class="stack-12">
+      <section class="descriptions descriptions-label-right" data-component="descriptions" data-type="label-right">
+        <h3 class="descriptions-title">基本信息</h3>
+        <div class="descriptions-list">
+          <div class="desc-item desc-item-horizontal"><span class="desc-label">姓名</span><span class="desc-value">zhangxiaoming</span></div>
+          <div class="desc-item desc-item-horizontal"><span class="desc-label">电话号码</span><span class="desc-value">138-1234-1234</span></div>
+          <div class="desc-item desc-item-horizontal"><span class="desc-label">出生年月</span><span class="desc-value">2022-08-08</span></div>
+          <div class="desc-item desc-item-horizontal"><span class="desc-label">邮箱</span><span class="desc-value">zhangxiaomao@example.com</span></div>
+          <div class="desc-item desc-item-horizontal"><span class="desc-label">详细地址</span><span class="desc-value">北京市海淀区方恒时尚中心</span></div>
+          <div class="desc-item desc-item-horizontal"><span class="desc-label">状态</span><span class="desc-value">已开启</span></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Inline 内联</div>
+    <div class="stack-12">
+      <section class="descriptions descriptions-inline" data-component="descriptions" data-type="inline">
+        <h3 class="descriptions-title">基本信息</h3>
+        <div class="descriptions-grid descriptions-grid-2">
+          <div class="desc-item desc-item-inline"><span class="desc-label">姓名</span><span class="desc-value">zhangxiaoming</span></div>
+          <div class="desc-item desc-item-inline"><span class="desc-label">电话号码</span><span class="desc-value">138-1234-1234</span></div>
+          <div class="desc-item desc-item-inline"><span class="desc-label">出生年月</span><span class="desc-value">2022-08-08</span></div>
+          <div class="desc-item desc-item-inline"><span class="desc-label">详细地址</span><span class="desc-value">北京市海淀区方恒时尚中心</span></div>
+          <div class="desc-item desc-item-inline"><span class="desc-label">邮箱</span><span class="desc-value">zhangxiaomao@example.com</span></div>
+          <div class="desc-item desc-item-inline"><span class="desc-label">状态</span><span class="desc-value">已开启</span></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Inline-Colon 内联冒号</div>
+    <div class="stack-12">
+      <section class="descriptions descriptions-inline-colon" data-component="descriptions" data-type="inline-colon">
+        <h3 class="descriptions-title">基本信息</h3>
+        <div class="descriptions-grid descriptions-grid-2">
+          <div class="desc-item desc-item-inline"><span class="desc-label">姓名：</span><span class="desc-value">zhangxiaoming</span></div>
+          <div class="desc-item desc-item-inline"><span class="desc-label">电话号码：</span><span class="desc-value">138-1234-1234</span></div>
+          <div class="desc-item desc-item-inline"><span class="desc-label">出生年月：</span><span class="desc-value">2022-08-08</span></div>
+          <div class="desc-item desc-item-inline"><span class="desc-label">详细地址：</span><span class="desc-value">北京市海淀区方恒时尚中心</span></div>
+          <div class="desc-item desc-item-inline"><span class="desc-label">邮箱：</span><span class="desc-value">zhangxiaomao@example.com</span></div>
+          <div class="desc-item desc-item-inline"><span class="desc-label">状态：</span><span class="desc-value">已开启</span></div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

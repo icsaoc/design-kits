@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Popconfirm 气泡确认框</title>
+  <link rel="stylesheet" href="preview-scaffold.css">
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="../components.css">
+</head>
+<body>
+  <div class="pv-header">
+    <h1>Popconfirm 气泡确认框</h1>
+    <p>点击元素弹出的轻量确认气泡，用于需二次确认的操作场景，支持多种图标语义。</p>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Default 默认（带图标）</div>
+    <div class="row">
+      <div class="popconfirm popconfirm-default" data-component="popconfirm" data-type="default" data-icon="warning">
+        <div class="popconfirm-content">
+          <div class="popconfirm-header">
+            <span class="popconfirm-icon popconfirm-icon-warning">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 9.5a.75.75 0 100 1.5.75.75 0 000-1.5zM8 4a.75.75 0 00-.75.75v4a.75.75 0 001.5 0v-4A.75.75 0 008 4z"/></svg>
+            </span>
+            <span class="popconfirm-title">确定要删除吗？</span>
+          </div>
+          <div class="popconfirm-footer">
+            <button class="btn btn-secondary">取消</button>
+            <button class="btn btn-primary">确认</button>
+          </div>
+        </div>
+        <div class="popconfirm-arrow"></div>
+      </div>
+      <div class="popconfirm popconfirm-default" data-component="popconfirm" data-type="default" data-icon="info">
+        <div class="popconfirm-content">
+          <div class="popconfirm-header">
+            <span class="popconfirm-icon popconfirm-icon-info">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 5.5a.75.75 0 00-.75.75v4a.75.75 0 001.5 0v-4A.75.75 0 008 6.5zM8 4a.75.75 0 100 1.5A.75.75 0 008 4z"/></svg>
+            </span>
+            <span class="popconfirm-title">确定要执行此操作吗？</span>
+          </div>
+          <div class="popconfirm-footer">
+            <button class="btn btn-secondary">取消</button>
+            <button class="btn btn-primary">确认</button>
+          </div>
+        </div>
+        <div class="popconfirm-arrow"></div>
+      </div>
+      <div class="popconfirm popconfirm-default" data-component="popconfirm" data-type="default" data-icon="error">
+        <div class="popconfirm-content">
+          <div class="popconfirm-header">
+            <span class="popconfirm-icon popconfirm-icon-error">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 110 14A7 7 0 018 1zm2.12 4.17a.75.75 0 00-1.06 0L8 6.23 6.94 5.17a.75.75 0 10-1.06 1.06L6.94 7.3 5.88 8.35a.75.75 0 101.06 1.06L8 8.35l1.06 1.06a.75.75 0 101.06-1.06L9.06 7.3l1.06-1.06a.75.75 0 000-1.06z"/></svg>
+            </span>
+            <span class="popconfirm-title">确定要删除此资源吗？</span>
+          </div>
+          <div class="popconfirm-footer">
+            <button class="btn btn-secondary">取消</button>
+            <button class="btn btn-danger">删除</button>
+          </div>
+        </div>
+        <div class="popconfirm-arrow"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Default 带描述</div>
+    <div class="row">
+      <div class="popconfirm popconfirm-default" data-component="popconfirm" data-type="default" data-icon="warning">
+        <div class="popconfirm-content">
+          <div class="popconfirm-header">
+            <span class="popconfirm-icon popconfirm-icon-warning">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 9.5a.75.75 0 100 1.5.75.75 0 000-1.5zM8 4a.75.75 0 00-.75.75v4a.75.75 0 001.5 0v-4A.75.75 0 008 4z"/></svg>
+            </span>
+            <span class="popconfirm-title">确定要删除吗？</span>
+          </div>
+          <p class="popconfirm-description">删除后数据将无法恢复，请谨慎操作。</p>
+          <div class="popconfirm-footer">
+            <button class="btn btn-secondary">取消</button>
+            <button class="btn btn-primary">确认</button>
+          </div>
+        </div>
+        <div class="popconfirm-arrow"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Simple 简洁</div>
+    <div class="row">
+      <div class="popconfirm popconfirm-simple" data-component="popconfirm" data-type="simple">
+        <div class="popconfirm-content">
+          <div class="popconfirm-header">
+            <span class="popconfirm-title">确定要删除吗？</span>
+          </div>
+          <div class="popconfirm-footer">
+            <button class="btn btn-secondary">取消</button>
+            <button class="btn btn-primary">确认</button>
+          </div>
+        </div>
+        <div class="popconfirm-arrow"></div>
+      </div>
+      <div class="popconfirm popconfirm-simple" data-component="popconfirm" data-type="simple">
+        <div class="popconfirm-content">
+          <div class="popconfirm-header">
+            <span class="popconfirm-title">确定要停止服务吗？</span>
+          </div>
+          <p class="popconfirm-description">停止后该服务将不再响应请求。</p>
+          <div class="popconfirm-footer">
+            <button class="btn btn-secondary">取消</button>
+            <button class="btn btn-primary">确认</button>
+          </div>
+        </div>
+        <div class="popconfirm-arrow"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

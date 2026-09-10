@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "kitType": "detail-with-sidebar",
+  "sourceKind": "preview-contract",
+  "screensGenerated": 2,
+  "coreComponentsUsed": [
+    "button",
+    "page-header",
+    "sidenav",
+    "tabs",
+    "tag",
+    "topnav"
+  ],
+  "supportComponentsUsed": [
+    "topnav",
+    "sidenav",
+    "page-header",
+    "tabs",
+    "descriptions",
+    "tag",
+    "buttons",
+    "switch"
+  ],
+  "previewClassReuseRate": 0.85,
+  "inventedComponents": [],
+  "interactiveStatesRendered": [
+    "active",
+    "hover",
+    "disabled",
+    "selected"
+  ],
+  "primaryActionPerScreen": true,
+  "mockDataDensity": {
+    "tableRows": 0,
+    "chartPoints": 0
+  },
+  "warnings": [],
+  "notes": [
+    "Detail overview page with PageHeader, Card Tabs, two-column descriptions layout, and right-side billing card.",
+    "TopNav and Sidenav referenced from preview/component-topnav.html and preview/component-sidenav.html respectively.",
+    "Icons sourced from assets/icons/sidenav-icon/ directory."
+  ],
+  "componentUsageBasis": "preview-reference"
+}

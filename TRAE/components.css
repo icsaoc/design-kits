@@ -1,0 +1,1441 @@
+/* ═══════════════════════════════════════════════════════════════
+   components.css — Design System Component Definitions
+   Auto-extracted from preview/component-*.html
+   DO NOT EDIT MANUALLY — regenerate via extract-components-css.mjs
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Activity Rail ─────────────────────────────────────────── */
+/* @anatomy
+   <div class="pv-header"> <h1>Activity Rail</h1> <p>竖向活动栏：一列图标按钮，含选中态 .is-active（左侧 --bg-brand 指示条）和 --border-neutral-l2 分隔线。</p> </div>
+*/
+/* ===== Activity Rail ===== */
+    .ds-activityrail {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacer-4);
+      width: 48px;
+      padding: var(--spacer-8) 0;
+      background: var(--bg-base-secondary);
+      border-right: 1px solid var(--border-neutral-l1);
+    }
+    .ds-activityrail__btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-8);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    .ds-activityrail__btn:hover { background: var(--bg-overlay-l2); }
+    .ds-activityrail__btn.is-active {
+      background: var(--bg-overlay-l3);
+    }
+    .ds-activityrail__btn.is-active::before {
+      content: "";
+      position: absolute;
+      left: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 20px;
+      border-radius: var(--radius-full);
+      background: var(--bg-brand);
+    }
+    .ds-activityrail__divider {
+      width: 24px;
+      height: 1px;
+      margin: var(--spacer-4) 0;
+      background: var(--border-neutral-l2);
+    }
+    .ds-activityrail__spacer { flex: 1; }
+
+/* ── Alert ─────────────────────────────────────────────────── */
+/* @anatomy
+   <div class="pv-header"> <h1>Notifications</h1> <p>Two layouts (Simple, Complex) × four statuses (Error, Warning, Alert, Information). Status is conveyed by an <strong>outline</strong> icon color + tinted surface — never by a filled glyph.</p> </div>
+*/
+/* ===== Alert / Banner ===== */
+    .ds-alert {
+      display: flex; gap: var(--spacer-12);
+      padding: var(--spacer-12) var(--spacer-16);
+      background: var(--bg-base-secondary);
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-4);
+      color: var(--text-default);
+      align-items: flex-start;
+    }
+    .ds-alert__icon { flex-shrink: 0; margin-top: 1px; color: var(--icon-default); display: inline-flex; }
+    .ds-alert--success .ds-alert__icon { color: var(--status-success-default); }
+    .ds-alert--warning .ds-alert__icon { color: var(--status-warning-default); }
+    .ds-alert--danger  .ds-alert__icon { color: var(--status-error-default); }
+    .ds-alert--info    .ds-alert__icon { color: var(--status-primary-default); }
+    .ds-alert__title { font-weight: var(--font-weight-medium, 500); margin-bottom: var(--spacer-4); }
+    .ds-alert__desc { color: var(--text-secondary); font-size: var(--body-sm-font-size); }
+
+/* ── Avatar ────────────────────────────────────────────────── */
+/* @anatomy
+   <span class="ds-avatar ds-avatar--sm">A</span> <span class="ds-avatar">M</span> <span class="ds-avatar ds-avatar--lg">L</span> <div class="row" style="gap: -8px;"> <span class="ds-avatar" style="border: 2px solid var(--bg-base-default); margin-right: -10px; z-index: 3;">A</span> <span class="ds-avatar" style="border: 2px solid var(--bg-base-default); margin-right: -10px; z-index: 2;">M</span> <...
+*/
+/* ===== Avatar ===== */
+    .ds-avatar {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--bg-overlay-l3);
+      color: var(--text-default);
+      font-size: var(--body-sm-font-size); font-weight: var(--font-weight-strong);
+      flex-shrink: 0;
+    }
+    .ds-avatar--sm { width: 24px; height: 24px; font-size: var(--body-xs-font-size); }
+    .ds-avatar--lg { width: 40px; height: 40px; }
+    .ds-avatar--square { border-radius: var(--radius-4); }
+    .ds-avatar--accent { background: var(--bg-brand); color: var(--text-onbrand); }
+
+/* ── Buttons ───────────────────────────────────────────────── */
+/* @anatomy
+   <span class="size-tag" style="margin:0;">Brand · max 1 per page</span><button class="ds-btn ds-btn--brand"><img src="../assets/icons/zap.0c0c0d.svg" width="14" height="14" alt="zap" class="icon"><span>Generate spec</span></button>
+*/
+/* ===== Buttons =====
+     * Hierarchy (one BRAND/green CTA per page max):
+     *   primary  → high-contrast neutral (white). Default "main action".
+     *   secondary→ neutral surface, used for any neighbour action.
+     *   tertiary → ghost (no fill, no border), used for dense toolbars / inline.
+     *   danger / danger-subtle / warning / brand / link.
+     * Sizes follow the Figma "Sm / Default / Large":  24 / 28 / 32 / 36
+     * Geek hard-edged — radii are tight (4 / 6 max).
+     */
+    .ds-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: var(--spacer-6);
+      padding: 0 var(--spacer-12); height: 28px;
+      border-radius: var(--radius-4);
+      border: 1px solid transparent;
+      cursor: pointer; user-select: none; white-space: nowrap;
+      font-family: var(--body-sm-strong-font-family);
+      font-size: var(--body-sm-strong-font-size);
+      line-height: 1;
+      font-weight: var(--body-sm-strong-font-weight);
+      transition: background .12s ease, color .12s ease, border-color .12s ease, opacity .12s ease;
+    }
+    .ds-btn .icon { color: currentColor; }
+    .ds-btn--sm { height: 24px; padding: 0 var(--spacer-8); border-radius: var(--radius-4); font-size: var(--body-xs-font-size); }
+    .ds-btn--md { height: 28px; padding: 0 var(--spacer-12); border-radius: var(--radius-4); }
+    .ds-btn--lg { height: 32px; padding: 0 var(--spacer-16); border-radius: var(--radius-4); font-size: var(--body-base-font-size); }
+
+    /* PRIMARY = high-contrast neutral (white). Use this when you don't need
+     * brand emphasis. Page rule: at most ONE brand button per page; every other
+     * "main" action falls back to this neutral primary. */
+    .ds-btn--primary { background: var(--text-default); color: var(--bg-base-default); border-color: var(--text-default); }
+    .ds-btn--primary:hover { background: var(--text-default-hover); }
+    .ds-btn--primary:active { background: var(--text-secondary); border-color: var(--text-secondary); }
+    .ds-btn--primary[disabled] { background: var(--bg-overlay-l3); color: var(--text-tertiary); border-color: var(--border-neutral-l1); cursor: not-allowed; }
+
+    /* SECONDARY = neutral surface */
+    .ds-btn--secondary { background: var(--bg-overlay-l2); color: var(--text-default); border-color: var(--border-neutral-l1); }
+    .ds-btn--secondary:hover { background: var(--bg-overlay-l3); border-color: var(--border-neutral-l2); }
+    .ds-btn--secondary:active { background: var(--bg-overlay-l1); }
+    .ds-btn--secondary[disabled] { color: var(--text-tertiary); cursor: not-allowed; opacity: .6; }
+
+    /* TERTIARY = ghost (no border, no fill) */
+    .ds-btn--tertiary,
+    .ds-btn--ghost { background: transparent; color: var(--text-default); border-color: transparent; }
+    .ds-btn--tertiary:hover,
+    .ds-btn--ghost:hover { background: var(--bg-overlay-l2); }
+    .ds-btn--tertiary:active,
+    .ds-btn--ghost:active { background: var(--bg-overlay-l1); }
+    .ds-btn--tertiary[disabled],
+    .ds-btn--ghost[disabled] { color: var(--text-tertiary); cursor: not-allowed; }
+
+    /* DANGER strong (filled) */
+    .ds-btn--danger,
+    .ds-btn--danger-strong {
+      background: var(--status-error-default); color: var(--special-white);
+      border-color: var(--status-error-default);
+    }
+    .ds-btn--danger:hover,
+    .ds-btn--danger-strong:hover { filter: brightness(0.92); }
+    .ds-btn--danger:active,
+    .ds-btn--danger-strong:active { filter: brightness(0.84); }
+    .ds-btn--danger[disabled],
+    .ds-btn--danger-strong[disabled] { opacity: .5; cursor: not-allowed; }
+
+    /* DANGER subtle (tinted surface) */
+    .ds-btn--danger-subtle {
+      background: var(--status-error-surface-l1);
+      color: var(--status-error-default);
+      border-color: var(--status-error-surface-l2);
+    }
+    .ds-btn--danger-subtle:hover { background: var(--status-error-surface-l2); }
+    .ds-btn--danger-subtle:active { background: var(--status-error-surface-l1); }
+    .ds-btn--danger-subtle[disabled] { opacity: .5; cursor: not-allowed; }
+
+    /* WARNING */
+    .ds-btn--warning {
+      background: var(--status-warning-default); color: var(--text-onbrand);
+      border-color: var(--status-warning-default);
+    }
+    .ds-btn--warning:hover { filter: brightness(0.94); }
+    .ds-btn--warning:active { filter: brightness(0.86); }
+    .ds-btn--warning[disabled] { opacity: .5; cursor: not-allowed; }
+
+    /* BRAND — exactly the Figma "Brand" row. Use AT MOST one per page. */
+    .ds-btn--brand { background: var(--bg-brand); color: var(--text-onbrand); border-color: var(--bg-brand); }
+    .ds-btn--brand:hover { background: var(--bg-brand-hover); border-color: var(--bg-brand-hover); }
+    .ds-btn--brand:active { filter: brightness(0.92); }
+    .ds-btn--brand[disabled] { background: var(--bg-brand-disabled, var(--bg-overlay-l3)); border-color: transparent; color: var(--text-tertiary); cursor: not-allowed; }
+
+    /* LINK */
+    .ds-btn--link { background: transparent; color: var(--text-default); border-color: transparent; padding: 0; height: auto; }
+    .ds-btn--link:hover { color: var(--text-default-hover); text-decoration: underline; }
+    .ds-btn--link[disabled] { color: var(--text-tertiary); text-decoration: none; cursor: not-allowed; }
+
+    /* ICON BUTTON — square */
+    .ds-btn--icon { padding: 0; width: 28px; justify-content: center; }
+    .ds-btn--icon.ds-btn--sm { width: 24px; }
+    .ds-btn--icon.ds-btn--lg { width: 32px; }
+
+    /* BUTTON GROUP — segmented, hard edged */
+    .ds-btn-group { display: inline-flex; }
+    .ds-btn-group > .ds-btn { border-radius: 0; margin-left: -1px; }
+    .ds-btn-group > .ds-btn:first-child { border-top-left-radius: var(--radius-4); border-bottom-left-radius: var(--radius-4); margin-left: 0; }
+    .ds-btn-group > .ds-btn:last-child  { border-top-right-radius: var(--radius-4); border-bottom-right-radius: var(--radius-4); }
+
+/* ── Cards ─────────────────────────────────────────────────── */
+/* @anatomy
+   <span class="ds-tag">New</span> <span class="text-tertiary" style="font-size: var(--body-xs-font-size);">2 min ago</span>
+*/
+/* ===== Card ===== */
+    .ds-card {
+      background: var(--bg-base-secondary);
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-4);
+      padding: var(--spacer-24);
+    }
+    .ds-card__title { font-size: var(--heading-xs-font-size); line-height: var(--heading-xs-line-height); font-weight: var(--heading-xs-font-weight); margin-bottom: var(--spacer-8); }
+    .ds-card__desc { font-size: var(--body-sm-font-size); line-height: var(--body-sm-line-height); color: var(--text-secondary); }
+
+/* ── Chat Composer ─────────────────────────────────────────── */
+/* @anatomy
+   <div class="pv-header"> <h1>Chat Composer</h1> <p>AI 对话输入器，含多行输入框、底部工具行与品牌色发送按钮。</p> </div>
+*/
+/* ===== Chat Composer ===== */
+    .ds-composer {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacer-8);
+      width: 100%;
+      max-width: 720px;
+      padding: var(--spacer-12);
+      background: var(--bg-overlay-l1);
+      border: 1px solid var(--border-neutral-l2);
+      border-radius: var(--radius-10);
+    }
+    .ds-composer:focus-within {
+      border-color: var(--border-brand);
+    }
+    .ds-composer__input {
+      width: 100%;
+      min-height: 56px;
+      max-height: 200px;
+      resize: vertical;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: var(--text-default);
+      font-size: var(--body-md-font-size);
+      line-height: var(--body-md-line-height);
+      font-weight: var(--body-md-font-weight);
+    }
+    .ds-composer__input::placeholder {
+      color: var(--text-tertiary);
+    }
+    .ds-composer__toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--spacer-8);
+    }
+    .ds-composer__tools {
+      display: flex;
+      align-items: center;
+      gap: var(--spacer-4);
+    }
+    .ds-composer__icon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      border: none;
+      border-radius: var(--radius-6);
+      background: transparent;
+      cursor: pointer;
+    }
+    .ds-composer__icon-btn:hover {
+      background: var(--bg-overlay-l2);
+    }
+    .ds-composer__model {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacer-4);
+      height: 28px;
+      padding: 0 var(--spacer-8);
+      border: 1px solid var(--border-neutral-l2);
+      border-radius: var(--radius-full);
+      background: var(--bg-overlay-l2);
+      color: var(--text-secondary);
+      font-size: var(--body-sm-font-size);
+      line-height: var(--body-sm-line-height);
+      cursor: pointer;
+    }
+    .ds-composer__model:hover {
+      background: var(--bg-overlay-l3);
+      color: var(--text-default);
+    }
+    .ds-composer__actions {
+      display: flex;
+      align-items: center;
+      gap: var(--spacer-8);
+    }
+    .ds-composer__send {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      border: none;
+      border-radius: var(--radius-8);
+      background: var(--bg-brand);
+      cursor: pointer;
+    }
+    .ds-composer__send:hover {
+      background: var(--bg-brand-hover);
+    }
+
+/* ── Dialog ────────────────────────────────────────────────── */
+/* @anatomy
+   <div class="pv-header"> <h1>Dialog / Modal</h1> <p>Surface <code>--bg-base-secondary</code>, radius <code>--radius-4</code>. Width 360 / 420 / 560. Backdrop <code>rgba(0,0,0,.5)</code>.</p> </div>
+*/
+/* ===== Dialog / Modal ===== */
+    .ds-backdrop {
+      position: relative;
+      background: rgba(0,0,0,.5);
+      border: 1px solid var(--border-neutral-l1);
+      padding: var(--spacer-32) var(--spacer-24);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ds-dialog {
+      background: var(--bg-base-secondary);
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-4);
+      width: 100%; max-width: 420px;
+      overflow: hidden;
+    }
+    .ds-dialog__head {
+      padding: var(--spacer-16) var(--spacer-24);
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--border-neutral-l1);
+    }
+    .ds-dialog__title { font-size: var(--heading-xs-font-size); font-weight: var(--heading-xs-font-weight); color: var(--text-default); }
+    .ds-dialog__close {
+      width: 24px; height: 24px;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: transparent; border: none; color: var(--icon-secondary);
+      cursor: pointer; border-radius: var(--radius-4);
+    }
+    .ds-dialog__close:hover { background: var(--bg-overlay-l2); color: var(--icon-default); }
+    .ds-dialog__body { padding: var(--spacer-16) var(--spacer-24); color: var(--text-secondary); font-size: var(--body-sm-font-size); line-height: var(--body-sm-line-height); }
+    .ds-dialog__foot {
+      padding: var(--spacer-12) var(--spacer-24);
+      display: flex; justify-content: flex-end; gap: var(--spacer-8);
+      border-top: 1px solid var(--border-neutral-l1);
+    }
+
+    /* ===== Drawer ===== */
+    .ds-drawer {
+      background: var(--bg-base-secondary);
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-4);
+      width: 100%; max-width: 360px;
+      display: flex; flex-direction: column;
+    }
+    .ds-drawer__head { padding: var(--spacer-16) var(--spacer-24); border-bottom: 1px solid var(--border-neutral-l1); display: flex; justify-content: space-between; align-items: center; }
+    .ds-drawer__body { padding: var(--spacer-16) var(--spacer-24); flex: 1; }
+
+/* ── Editor Tabs ───────────────────────────────────────────── */
+/* @anatomy
+   <div class="pv-header"> <h1>Editor Tabs</h1> <p>IDE-style closable file tabs with a flex spacer pushing trailing layout/split icon buttons to the right. Active tab gets a 1px inset top indicator and a lifted <code>--bg-base-secondary</code> surface. Distinct from <code>.ds-tabs</code>, which is for content-section navigation.</p> </div>
+*/
+/* ===== Editor Tabs ===== */
+    .ds-editortabs {
+      display: flex;
+      align-items: stretch;
+      border-bottom: 1px solid var(--border-neutral-l1);
+      background-color: var(--bg-base-default);
+      background-image: linear-gradient(var(--special-bgtabsoverlay), var(--special-bgtabsoverlay));
+    }
+    .ds-editortab {
+      display: inline-flex;
+      align-items: center;
+      column-gap: 8px;
+      padding: 0 14px;
+      height: 40px;
+      color: var(--text-secondary);
+      font-size: 12px;
+      font-weight: 500;
+      border-right: 1px solid var(--border-neutral-l1);
+      cursor: pointer;
+      white-space: nowrap;
+      background: transparent;
+      min-width: 0;
+    }
+    .ds-editortab:hover {
+      color: var(--text-default);
+      background-image: linear-gradient(var(--bg-overlay-l1), var(--bg-overlay-l1));
+    }
+    .ds-editortab.is-active {
+      background: var(--bg-base-secondary);
+      color: var(--text-default);
+      box-shadow: inset 0 1px 0 0 var(--icon-default);
+    }
+    .ds-editortab.is-active:hover { background: var(--bg-base-secondary); }
+    .ds-editortab .ic {
+      width: 14px; height: 14px;
+      flex-shrink: 0;
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .ds-editortab .close {
+      width: 16px; height: 16px;
+      display: inline-flex; align-items: center; justify-content: center;
+      color: var(--icon-tertiary);
+    }
+    .ds-editortab.is-active .close { color: var(--icon-secondary); }
+    .ds-editortabs__spacer { flex: 1; min-width: 0; border-right: 0; }
+    .ds-editortabs__actions {
+      display: inline-flex;
+      align-items: center;
+      column-gap: 4px;
+      padding: 0 8px;
+      color: var(--icon-secondary);
+    }
+    .ds-editortabs__actions button {
+      width: 24px; height: 24px;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: transparent; border: 0;
+      color: inherit;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .ds-editortabs__actions button:hover {
+      color: var(--icon-default);
+      background: var(--bg-overlay-l1);
+    }
+
+/* ── File Tree ─────────────────────────────────────────────── */
+/* @anatomy
+   <div class="pv-header"> <h1>File Tree</h1> <p>文件树：多层级行 .ds-filetree__row（data-depth 控制缩进），含展开箭头 chevron、文件/文件夹图标、选中态 .is-active。</p> </div>
+*/
+/* ===== File Tree ===== */
+    .ds-filetree {
+      width: 260px;
+      padding: var(--spacer-4);
+      background: var(--bg-base-secondary);
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-6);
+      font-size: var(--body-sm-font-size);
+      color: var(--text-default);
+    }
+    .ds-filetree__row {
+      display: flex;
+      align-items: center;
+      gap: var(--spacer-6);
+      height: 26px;
+      padding: 0 var(--spacer-6);
+      padding-left: var(--spacer-6);
+      border-radius: var(--radius-4);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .ds-filetree__row[data-depth="1"] { padding-left: calc(var(--spacer-6) + 16px); }
+    .ds-filetree__row[data-depth="2"] { padding-left: calc(var(--spacer-6) + 32px); }
+    .ds-filetree__row[data-depth="3"] { padding-left: calc(var(--spacer-6) + 48px); }
+    .ds-filetree__row:hover { background: var(--bg-overlay-l2); }
+    .ds-filetree__row.is-active {
+      background: var(--bg-overlay-l3);
+      color: var(--text-default-hover);
+    }
+    .ds-filetree__chevron {
+      display: inline-flex;
+      width: 14px;
+      height: 14px;
+      flex: 0 0 14px;
+    }
+    .ds-filetree__chevron--leaf { visibility: hidden; }
+    .ds-filetree__label { overflow: hidden; text-overflow: ellipsis; }
+    .ds-filetree__icon--folder { filter: none; }
+    .ds-filetree__icon--ts { color: var(--accent-blue); }
+    .ds-filetree__icon--css { color: var(--code-attribute); }
+    .ds-filetree__icon--json { color: var(--code-constant); }
+
+/* ── Forms ─────────────────────────────────────────────────── */
+/* @anatomy
+   <button class="ds-btn ds-btn--secondary"><span>Sort by</span><img src="../assets/icons/chevron-down.svg" width="14" height="14" alt="chevron-down" class="icon"></button> <div class="ds-popover" style="margin-left: -120px; margin-top: 36px;"> <div class="ds-menu" style="border:none; padding: 0; min-width: 180px;"> <div class="ds-menu__item"><span>Most recent</span><img src="../assets/icons/check...
+*/
+/* ===== Input / Search ===== */
+    .ds-input {
+      display: flex; align-items: center; gap: var(--spacer-8);
+      padding: 0 var(--spacer-12); height: 28px;
+      background: var(--bg-overlay-l1);
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-4);
+      color: var(--text-default);
+      width: 100%;
+      font-size: var(--body-sm-font-size); line-height: 1;
+    }
+    .ds-input:focus-within { border-color: var(--border-brand); background: var(--bg-overlay-l2); }
+    .ds-input input {
+      flex: 1; background: transparent; border: none; outline: none;
+      color: var(--text-default); font: inherit;
+    }
+    .ds-input input::placeholder { color: var(--text-tertiary); }
+    .ds-input__icon { color: var(--icon-secondary); display: inline-flex; }
+    .ds-search { position: relative; }
+
+    /* ===== Select =====
+     * Dropdown indicator is a linear chevron (Lucide-style SVG, 2px stroke) — never a
+     * filled triangle / caret. The svg is inlined as a data-uri using currentColor
+     * stand-in so it inherits via the --icon-tertiary fallback.
+     */
+    .ds-select {
+      width: 100%; height: 28px;
+      padding: 0 var(--spacer-32) 0 var(--spacer-12);
+      background: var(--bg-overlay-l1);
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239aa0aa' stroke-width='2' stroke-linecap='butt' stroke-linejoin='miter'><polyline points='6 9 12 15 18 9'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right var(--spacer-12) center;
+      background-size: 12px 12px;
+      color: var(--text-default);
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-4);
+      appearance: none; -webkit-appearance: none;
+      font: inherit; font-size: var(--body-sm-font-size);
+    }
+    .ds-select:focus { border-color: var(--border-brand); outline: none; }
+
+    /* ===== Textarea ===== */
+    .ds-textarea {
+      width: 100%; min-height: 96px; padding: var(--spacer-8) var(--spacer-12);
+      background: var(--bg-overlay-l1);
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-4);
+      color: var(--text-default);
+      font-family: var(--body-base-font-family);
+      font-size: var(--body-sm-font-size);
+      line-height: var(--body-base-line-height);
+      resize: vertical;
+    }
+    .ds-textarea:focus { outline: none; border-color: var(--border-brand); }
+
+    /* ===== Slider ===== */
+    .ds-slider { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; background: var(--bg-overlay-l3); border-radius: var(--radius-full); outline: none; }
+    .ds-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 14px; height: 14px; border-radius: 50%; background: var(--text-default); border: 2px solid var(--bg-base-default); box-shadow: 0 0 0 1px var(--border-neutral-l2); cursor: pointer; }
+    .ds-slider::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%; background: var(--text-default); border: 2px solid var(--bg-base-default); box-shadow: 0 0 0 1px var(--border-neutral-l2); cursor: pointer; }
+
+    /* ===== Checkbox / Radio / Switch ===== */
+    .ds-check, .ds-radio {
+      display: inline-flex; align-items: center; gap: var(--spacer-8);
+      font-size: var(--body-sm-font-size); color: var(--text-default);
+      cursor: pointer; user-select: none;
+    }
+    .ds-check__box {
+      width: 14px; height: 14px;
+      border: 1px solid var(--border-neutral-l2);
+      background: var(--bg-overlay-l1);
+      border-radius: var(--radius-2);
+      display: inline-flex; align-items: center; justify-content: center;
+      color: var(--text-onbrand);
+      transition: background .12s, border-color .12s;
+    }
+    .ds-check input { display: none; }
+    .ds-check input:checked + .ds-check__box {
+      background: var(--bg-brand);
+      border-color: var(--bg-brand);
+    }
+    .ds-check input:checked + .ds-check__box::after {
+      content: ''; width: 8px; height: 4px;
+      border-left: 2px solid var(--text-onbrand);
+      border-bottom: 2px solid var(--text-onbrand);
+      transform: rotate(-45deg) translate(1px, -1px);
+    }
+    .ds-check input:disabled + .ds-check__box { opacity: .5; cursor: not-allowed; }
+
+    .ds-radio__dot {
+      width: 16px; height: 16px;
+      border: 1px solid var(--border-neutral-l2);
+      background: var(--bg-overlay-l1);
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .ds-radio input { display: none; }
+    .ds-radio input:checked + .ds-radio__dot {
+      border-color: var(--bg-brand);
+    }
+    .ds-radio input:checked + .ds-radio__dot::after {
+      content: ''; width: 8px; height: 8px; border-radius: 50%;
+      background: var(--bg-brand);
+    }
+
+    .ds-switch {
+      position: relative; display: inline-flex;
+      width: 32px; height: 18px;
+      background: var(--bg-overlay-l3);
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-full);
+      cursor: pointer; transition: background .15s, border-color .15s;
+    }
+    .ds-switch input { display: none; }
+    .ds-switch__thumb {
+      position: absolute; top: 2px; left: 2px;
+      width: 12px; height: 12px;
+      background: var(--text-default);
+      border-radius: 50%;
+      transition: left .15s, background .15s;
+    }
+    .ds-switch input:checked ~ .ds-switch__thumb { left: 16px; background: var(--text-onbrand); }
+    .ds-switch:has(input:checked) {
+      background: var(--bg-brand);
+      border-color: var(--bg-brand);
+    }
+
+    /* Small switch */
+    .ds-switch--sm { width: 26px; height: 14px; }
+    .ds-switch--sm .ds-switch__thumb { width: 10px; height: 10px; }
+    .ds-switch--sm input:checked ~ .ds-switch__thumb { left: 12px; }
+
+    /* Labelled switch row: description on the left, switch on the right */
+    .ds-switch-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: var(--spacer-16); padding: var(--spacer-8) 0;
+      max-width: 480px;
+    }
+    .ds-switch-row__text { display: flex; flex-direction: column; gap: var(--spacer-4); }
+    .ds-switch-row__title { font-size: var(--body-sm-font-size); color: var(--text-default); }
+    .ds-switch-row__hint { font-size: var(--body-xs-font-size); color: var(--text-tertiary); }
+
+/* ── Kbd ───────────────────────────────────────────────────── */
+/* @anatomy
+   <div class="pv-header"> <h1>Kbd</h1> <p>键盘快捷键提示，小圆角方块。</p> </div>
+*/
+/* ===== Kbd ===== */
+    .ds-kbd {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 22px;
+      height: 22px;
+      padding: 0 var(--spacer-6);
+      font-family: var(--code-editor-font-family);
+      font-size: var(--body-xs-font-size);
+      line-height: 1;
+      font-weight: var(--font-weight-medium);
+      color: var(--text-secondary);
+      background: var(--bg-overlay-l2);
+      border: 1px solid var(--border-neutral-l2);
+      border-bottom-width: 2px;
+      border-radius: var(--radius-4);
+    }
+    .ds-kbd__combo {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacer-4);
+    }
+    .ds-kbd__plus {
+      color: var(--text-tertiary);
+      font-size: var(--body-xs-font-size);
+    }
+    .ds-kbd__row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--spacer-16);
+    }
+
+/* ── Atoms ─────────────────────────────────────────────────── */
+/* @anatomy
+   <span class="ds-tooltip">Tooltip A</span> <span class="ds-tooltip">Tooltip B</span> <span class="ds-tooltip">Tooltip C</span>
+*/
+/* ===== Section / heading helpers ===== */
+    .h1 { font-family: var(--heading-2xl-font-family); font-size: var(--heading-2xl-font-size); line-height: var(--heading-2xl-line-height); font-weight: var(--heading-2xl-font-weight); color: var(--text-default); }
+    .h2 { font-family: var(--heading-md-font-family); font-size: var(--heading-md-font-size); line-height: var(--heading-md-line-height); font-weight: var(--heading-md-font-weight); color: var(--text-default); }
+    .h3 { font-family: var(--heading-sm-font-family); font-size: var(--heading-sm-font-size); line-height: var(--heading-sm-line-height); font-weight: var(--heading-sm-font-weight); color: var(--text-default); }
+    .eyebrow { font-size: var(--body-xs-font-size); line-height: var(--body-xs-line-height); color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; }
+    .text-secondary { color: var(--text-secondary); }
+    .text-tertiary { color: var(--text-tertiary); }
+
+    /* ===== Hero / brand title ===== */
+    .ds-hero-title {
+      font-family: var(--heading-3xl-font-family);
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: 1.04;
+      font-weight: var(--heading-3xl-font-weight, 600);
+      letter-spacing: -0.03em;
+      color: var(--text-default);
+    }
+    .ds-hero-title .brand1 { color: var(--bg-brand); }
+    .ds-hero-title .brand2 { color: var(--text-default); }
+    .ds-hero-title .brand3 { color: var(--bg-brand); }
+    .ds-hero-title .brand4 { color: var(--text-default); }
+    .ds-hero-title__sub {
+      display: block;
+      margin-top: var(--spacer-12);
+      font-size: clamp(28px, 4vw, 56px);
+      color: var(--text-secondary);
+      letter-spacing: -0.02em;
+    }
+
+    /* ===== Section title with mono index ===== */
+    .ds-section-title__index {
+      display: block;
+      font-family: var(--code-editor-font-family, 'JetBrains Mono', ui-monospace, monospace);
+      font-size: var(--body-sm-font-size, 14px);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--bg-brand);
+      margin-bottom: var(--spacer-16);
+    }
+    .ds-section-title {
+      font-family: var(--heading-xl-font-family, var(--heading-3xl-font-family));
+      font-size: clamp(24px, 2.4vw, 32px);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: var(--text-default);
+      font-weight: var(--font-weight-strong, 600);
+      margin: 0;
+    }
+
+    /* ===== Layout helpers ===== */
+    .ds-row { display: flex; gap: var(--spacer-12); flex-wrap: wrap; align-items: center; }
+    .ds-col { display: flex; flex-direction: column; gap: var(--spacer-12); }
+    .ds-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacer-16); }
+    .ds-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacer-16); }
+    .ds-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacer-16); }
+    .ds-stack-8 { display: flex; flex-direction: column; gap: var(--spacer-8); }
+    .ds-stack-12 { display: flex; flex-direction: column; gap: var(--spacer-12); }
+    .ds-stack-16 { display: flex; flex-direction: column; gap: var(--spacer-16); }
+    .ds-stack-24 { display: flex; flex-direction: column; gap: var(--spacer-24); }
+    .ds-stack-40 { display: flex; flex-direction: column; gap: var(--spacer-40); }
+    /* legacy aliases kept for preview/component-*.html markup */
+    .row { display: flex; gap: var(--spacer-12); flex-wrap: wrap; align-items: center; }
+    .col { display: flex; flex-direction: column; gap: var(--spacer-12); }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacer-16); }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacer-16); }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacer-16); }
+    .stack-8 { display: flex; flex-direction: column; gap: var(--spacer-8); }
+    .stack-12 { display: flex; flex-direction: column; gap: var(--spacer-12); }
+    .stack-16 { display: flex; flex-direction: column; gap: var(--spacer-16); }
+    .stack-24 { display: flex; flex-direction: column; gap: var(--spacer-24); }
+    .stack-40 { display: flex; flex-direction: column; gap: var(--spacer-40); }
+
+    /* ===== Tooltip / Popover ===== */
+    .ds-tooltip {
+      display: inline-flex; align-items: center; gap: var(--spacer-6);
+      padding: var(--spacer-4) var(--spacer-8);
+      background: var(--bg-tooltip);
+      color: var(--text-default);
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-4);
+      font-size: var(--body-xs-font-size); line-height: var(--body-xs-line-height);
+      box-shadow: 0 8px 24px rgba(0,0,0,.36);
+    }
+    .ds-popover {
+      background: var(--bg-overlay-l1);
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-4);
+      padding: var(--spacer-12);
+      box-shadow: 0 12px 32px rgba(0,0,0,.36);
+    }
+
+    /* ===== Empty state ===== */
+    .ds-empty {
+      display: flex; flex-direction: column; align-items: center;
+      padding: var(--spacer-40) var(--spacer-24);
+      color: var(--text-tertiary); text-align: center;
+      border: 1px dashed var(--border-neutral-l1);
+      border-radius: var(--radius-4);
+    }
+    .ds-empty__icon {
+      width: 40px; height: 40px;
+      display: inline-flex; align-items: center; justify-content: center;
+      border: 1px solid var(--border-neutral-l1); margin-bottom: var(--spacer-12);
+      color: var(--icon-secondary);
+    }
+    .ds-empty__title { color: var(--text-default); font-size: var(--body-base-font-size); font-weight: var(--font-weight-medium, 500); margin-bottom: var(--spacer-4); }
+    .ds-empty__desc { font-size: var(--body-sm-font-size); }
+
+    /* ===== Code block ===== */
+    .ds-code {
+      background: var(--bg-overlay-l1);
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-4);
+      padding: var(--spacer-12) var(--spacer-16);
+      color: var(--text-default);
+      font-family: var(--code-editor-font-family);
+      font-size: var(--code-editor-font-size);
+      line-height: var(--code-editor-line-height);
+      white-space: pre;
+      overflow: auto;
+    }
+
+    /* ===== Mono / Numeric utilities =====
+     * Anything code-like or numeric (counts, currencies, percentages, IDs,
+     * tabular cells, kbd, code) MUST use the mono token + tabular figures. */
+    .mono,
+    .num,
+    code, samp, pre {
+      font-family: var(--code-editor-font-family);
+      font-variant-numeric: tabular-nums;
+      font-feature-settings: "tnum" 1, "lnum" 1;
+    }
+
+/* ── Menu ──────────────────────────────────────────────────── */
+/* @anatomy
+   <div class="pv-header"> <h1>Menu</h1> <p>Context menus and sidebar menus. Background <code>--bg-menu</code>, item radius <code>--radius-4</code>, hover <code>--bg-overlay-l2</code>. Destructive items use <code>--status-error-default</code>.</p> </div>
+*/
+/* ===== Menu ===== */
+    .ds-menu {
+      background: var(--bg-menu);
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-4);
+      padding: var(--spacer-4);
+      min-width: 180px;
+    }
+    .ds-menu__item {
+      display: flex; align-items: center; gap: var(--spacer-8);
+      padding: var(--spacer-6) var(--spacer-8);
+      border-radius: var(--radius-2);
+      color: var(--text-default);
+      font-size: var(--body-sm-font-size);
+      cursor: pointer;
+    }
+    .ds-menu__item .icon { color: var(--icon-secondary); }
+    .ds-menu__item:hover { background: var(--bg-overlay-l2); }
+    .ds-menu__item--danger { color: var(--status-error-default); }
+    .ds-menu__item--danger .icon { color: var(--status-error-default); }
+    .ds-menu__divider { height: 1px; background: var(--border-neutral-l1); margin: var(--spacer-4) 0; }
+    .ds-menu__shortcut { margin-left: auto; color: var(--text-tertiary); font-size: var(--body-xs-font-size); font-family: var(--code-editor-font-family); }
+
+/* ── Nav List ──────────────────────────────────────────────── */
+/* @anatomy
+   <div class="pv-header"> <h1>Nav list</h1> <p>侧栏导航菜单：分组标题 + 菜单项（图标 + 文字 + 选中态）。</p> </div>
+*/
+/* ===== Nav list ===== */
+    .ds-navlist {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacer-16);
+      width: 240px;
+      padding: var(--spacer-12);
+      background: var(--bg-menu);
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-10);
+    }
+    .ds-navlist__group {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .ds-navlist__group-title {
+      padding: var(--spacer-6) var(--spacer-8);
+      font-size: var(--body-xs-font-size);
+      line-height: var(--body-xs-line-height);
+      font-weight: var(--font-weight-medium);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+    }
+    .ds-navlist__item {
+      display: flex;
+      align-items: center;
+      gap: var(--spacer-8);
+      padding: var(--spacer-8);
+      border-radius: var(--radius-6);
+      font-size: var(--body-sm-font-size);
+      line-height: var(--body-sm-line-height);
+      font-weight: var(--font-weight-medium);
+      color: var(--text-secondary);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .ds-navlist__item:hover {
+      background: var(--bg-overlay-l2);
+      color: var(--text-default);
+    }
+    .ds-navlist__item.is-active {
+      background: var(--bg-brand);
+      color: var(--text-onbrand);
+    }
+    .ds-navlist__label { flex: 1; min-width: 0; }
+    .ds-navlist__badge {
+      font-size: var(--body-xs-font-size);
+      font-variant-numeric: tabular-nums;
+      color: var(--text-tertiary);
+    }
+    .ds-navlist__item.is-active .ds-navlist__badge { color: var(--text-onbrand); }
+
+/* ── Page Header ───────────────────────────────────────────── */
+/* @anatomy
+   <div class="pv-header"> <h1>Page header</h1> <p>页头：左侧标题 + 副标题，右侧操作按钮区。</p> </div>
+*/
+/* ===== Page header ===== */
+    .ds-pagehead {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: var(--spacer-24);
+      padding: var(--spacer-24) 0;
+      border-bottom: 1px solid var(--border-neutral-l1);
+    }
+    .ds-pagehead__main {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacer-6);
+    }
+    .ds-pagehead__title {
+      font-size: var(--heading-lg-font-size);
+      line-height: var(--heading-lg-line-height);
+      font-weight: var(--font-weight-strong);
+      color: var(--text-default);
+    }
+    .ds-pagehead__subtitle {
+      font-size: var(--body-sm-font-size);
+      line-height: var(--body-sm-line-height);
+      color: var(--text-tertiary);
+    }
+    .ds-pagehead__actions {
+      display: flex;
+      align-items: center;
+      gap: var(--spacer-8);
+      flex-shrink: 0;
+    }
+    .ds-pagehead__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacer-6);
+      height: 32px;
+      padding: 0 var(--spacer-12);
+      font-size: var(--body-sm-font-size);
+      font-weight: var(--font-weight-medium);
+      color: var(--text-default);
+      background: var(--bg-overlay-l2);
+      border: 1px solid var(--border-neutral-l2);
+      border-radius: var(--radius-6);
+      cursor: pointer;
+    }
+    .ds-pagehead__btn.is-primary {
+      color: var(--text-onbrand);
+      background: var(--bg-brand);
+      border-color: var(--border-brand);
+    }
+
+/* ── Pagination ────────────────────────────────────────────── */
+/* @anatomy
+   <div class="ds-pagination"> <button class="ds-pagination__item" aria-label="Previous"><img src="../assets/icons/chevron-right.svg" width="12" height="12" alt="chevron-right" class="icon" style="transform: rotate(180deg);"></button> <button class="ds-pagination__item is-active num">1</button> <button class="ds-pagination__item num">2</button> <button class="ds-pagination__item num">3</button> <b...
+*/
+/* ===== Pagination ===== */
+    .ds-pagination { display: inline-flex; gap: var(--spacer-4); }
+    .ds-pagination__item {
+      min-width: 24px; height: 24px; padding: 0 var(--spacer-6);
+      display: inline-flex; align-items: center; justify-content: center;
+      background: transparent; color: var(--text-secondary);
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-2);
+      font: inherit; font-size: var(--body-xs-font-size);
+      cursor: pointer;
+    }
+    .ds-pagination__item:hover { background: var(--bg-overlay-l2); color: var(--text-default); }
+    .ds-pagination__item.is-active { background: var(--bg-overlay-l3); color: var(--text-default); border-color: var(--border-neutral-l2); }
+    .ds-pagination__item[disabled] { opacity: .4; cursor: not-allowed; }
+
+/* ── Setting Row ───────────────────────────────────────────── */
+/* @anatomy
+   <div class="pv-header"> <h1>Setting row</h1> <p>配置行：左侧标题 + 描述，右侧控件。三个 control 变体：select / button / select-with-icon。多行堆叠到 .ds-settingrow__panel 中；多个 panel 用 .ds-settingrow__group 分组。</p> </div>
+*/
+/* ===== Setting row ===== */
+    .ds-settingrow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--spacer-24);
+      padding: var(--spacer-16) var(--spacer-24);
+    }
+    .ds-settingrow__main {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacer-4);
+      min-width: 0;
+    }
+    .ds-settingrow__title {
+      font-size: var(--body-md-font-size);
+      line-height: var(--body-md-line-height);
+      font-weight: var(--font-weight-medium);
+      color: var(--text-default);
+    }
+    .ds-settingrow__desc {
+      font-size: var(--body-sm-font-size);
+      line-height: var(--body-sm-line-height);
+      color: var(--text-tertiary);
+    }
+    .ds-settingrow__control {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacer-8);
+      flex-shrink: 0;
+    }
+
+    /* === Variant A: select === */
+    .ds-settingrow__select {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--spacer-12);
+      min-width: 200px;
+      height: 36px;
+      padding: 0 var(--spacer-12);
+      font-size: var(--body-sm-font-size);
+      font-weight: var(--font-weight-medium);
+      color: var(--text-default);
+      background: var(--bg-overlay-l2);
+      border: 1px solid var(--border-neutral-l2);
+      border-radius: var(--radius-6);
+      cursor: pointer;
+    }
+    .ds-settingrow__select:hover { background: var(--bg-overlay-l3); }
+    .ds-settingrow__select .icon { color: var(--icon-tertiary); flex-shrink: 0; }
+
+    /* === Variant B: button === */
+    .ds-settingrow__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacer-6);
+      height: 36px;
+      padding: 0 var(--spacer-16);
+      font-size: var(--body-sm-font-size);
+      font-weight: var(--font-weight-medium);
+      color: var(--text-default);
+      background: var(--bg-overlay-l2);
+      border: 1px solid var(--border-neutral-l2);
+      border-radius: var(--radius-6);
+      cursor: pointer;
+    }
+    .ds-settingrow__btn:hover { background: var(--bg-overlay-l3); }
+    .ds-settingrow__btn .icon { color: var(--icon-tertiary); }
+
+    /* danger text button (e.g. 清除 / Clear) */
+    .ds-settingrow__btn--danger {
+      color: var(--status-error-default);
+    }
+    .ds-settingrow__btn--danger:hover {
+      background: var(--status-error-surface-l1);
+      border-color: var(--status-error-surface-l2);
+    }
+
+    /* === Variant C: select-with-icon (select + trailing icon button) === */
+    .ds-settingrow__iconbtn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      color: var(--icon-secondary);
+      background: transparent;
+      border: 1px solid var(--border-neutral-l2);
+      border-radius: var(--radius-6);
+      cursor: pointer;
+    }
+    .ds-settingrow__iconbtn:hover {
+      background: var(--bg-overlay-l2);
+      color: var(--icon-default);
+    }
+
+    /* === Panel container === */
+    .ds-settingrow__panel {
+      display: flex;
+      flex-direction: column;
+      background: var(--bg-base-secondary);
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-10);
+      overflow: hidden;
+    }
+    .ds-settingrow__panel > .ds-settingrow + .ds-settingrow {
+      border-top: 1px solid var(--border-neutral-l1);
+    }
+
+    /* === Section group label (e.g. 基础设置 / 偏好设置 / 数据管理) === */
+    .ds-settingrow__group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacer-12);
+    }
+    .ds-settingrow__group + .ds-settingrow__group {
+      margin-top: var(--spacer-24);
+    }
+    .ds-settingrow__grouplabel {
+      font-size: var(--body-sm-font-size);
+      font-weight: var(--font-weight-medium);
+      color: var(--text-secondary);
+      padding-left: var(--spacer-4);
+    }
+
+/* ── Stat Card ─────────────────────────────────────────────── */
+/* @anatomy
+   <div class="pv-header"> <h1>Stat card</h1> <p>KPI 指标卡：大写小标签 + 等宽大数字 + 涨跌 delta。</p> </div>
+*/
+/* ===== Stat card ===== */
+    .ds-statcard {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacer-8);
+      padding: var(--spacer-16);
+      background: var(--bg-base-secondary);
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-10);
+      min-width: 200px;
+    }
+    .ds-statcard__label {
+      font-size: var(--body-xs-font-size);
+      line-height: var(--body-xs-line-height);
+      font-weight: var(--font-weight-medium);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+    }
+    .ds-statcard__value {
+      font-family: var(--code-editor-font-family);
+      font-variant-numeric: tabular-nums;
+      font-size: var(--heading-lg-font-size);
+      line-height: var(--heading-lg-line-height);
+      font-weight: var(--font-weight-strong);
+      color: var(--text-default);
+    }
+    .ds-statcard__delta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacer-4);
+      font-size: var(--body-sm-font-size);
+      line-height: var(--body-sm-line-height);
+      font-weight: var(--font-weight-medium);
+      font-variant-numeric: tabular-nums;
+    }
+    .ds-statcard__delta.is-up { color: var(--status-success-default); }
+    .ds-statcard__delta.is-down { color: var(--status-error-default); }
+    .ds-statcard__delta .ds-statcard__caption {
+      color: var(--text-tertiary);
+      font-weight: var(--font-weight-default);
+    }
+    .ds-statcard__grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacer-16);
+    }
+
+/* ── Status Bar ────────────────────────────────────────────── */
+/* @anatomy
+   <div class="pv-header"> <h1>Status Bar</h1> <p>底部状态栏：左右两组 status-item（图标+文字），含彩色 dot（--status-success/warning/error-default）。背景 --bg-base-secondary。</p> </div>
+*/
+/* ===== Status Bar ===== */
+    .ds-statusbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 24px;
+      padding: 0 var(--spacer-8);
+      background: var(--bg-base-secondary);
+      border-top: 1px solid var(--border-neutral-l1);
+      font-size: var(--body-xs-font-size);
+      color: var(--text-secondary);
+    }
+    .ds-statusbar__group {
+      display: flex;
+      align-items: center;
+      gap: var(--spacer-4);
+    }
+    .ds-statusbar__item {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacer-6);
+      height: 20px;
+      padding: 0 var(--spacer-6);
+      border-radius: var(--radius-4);
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+    .ds-statusbar__item:hover {
+      background: var(--bg-overlay-l2);
+      color: var(--text-default);
+    }
+    .ds-statusbar__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: var(--radius-full);
+    }
+    .ds-statusbar__dot--success { background: var(--status-success-default); }
+    .ds-statusbar__dot--warning { background: var(--status-warning-default); }
+    .ds-statusbar__dot--error { background: var(--status-error-default); }
+
+/* ── Table Panel ───────────────────────────────────────────── */
+/* @anatomy
+   <div class="pv-header"> <h1>Table Panel</h1> <p>Dashboard table container with rounded foot only. Pair it with an external header/toolbar (with its own top-rounded corners) above. Use this when the surrounding card already owns the title; for self-contained tables use <code>.ds-table-wrap</code>.</p> </div>
+*/
+/* ===== Table Panel ===== */
+    .ds-tablepanel {
+      background: var(--bg-layout-1);
+      border: 1px solid var(--border-1);
+      border-radius: 0 0 var(--radius-4) var(--radius-4);
+      border-top: none;
+      overflow: hidden;
+    }
+    .ds-tablepanel table { width: 100%; border-collapse: collapse; }
+    .ds-tablepanel th, .ds-tablepanel td {
+      padding: var(--spacer-12) var(--spacer-16);
+      border-bottom: 1px solid var(--border-1);
+      font-size: var(--body-sm-font-size);
+      text-align: left;
+    }
+    .ds-tablepanel th {
+      color: var(--text-tertiary);
+      font-weight: var(--font-weight-default);
+      font-size: var(--body-xs-font-size);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: var(--bg-overlay-l1);
+    }
+    .ds-tablepanel td { color: var(--text-default); }
+    .ds-tablepanel tr:last-child td { border-bottom: none; }
+    .ds-tablepanel td.num, .ds-tablepanel th.num {
+      text-align: right;
+      font-family: var(--code-editor-font-family);
+      font-variant-numeric: tabular-nums;
+    }
+    .ds-tablepanel__foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--spacer-8) var(--spacer-16);
+      border-top: 1px solid var(--border-1);
+      color: var(--text-tertiary);
+      font-size: var(--body-xs-font-size);
+      gap: var(--spacer-12);
+    }
+
+    /* Local-only header bar to demonstrate the "external header above the panel" usage pattern */
+    .pv-tp-header {
+      background: var(--bg-layout-1);
+      border: 1px solid var(--border-1);
+      border-bottom: none;
+      border-radius: var(--radius-4) var(--radius-4) 0 0;
+      padding: var(--spacer-12) var(--spacer-16);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: var(--spacer-12);
+    }
+    .pv-tp-header h3 { margin: 0; font-size: var(--body-md-font-size, 14px); color: var(--text-default); }
+    .pv-tp-header .meta { color: var(--text-tertiary); font-size: var(--body-xs-font-size); }
+
+/* ── Table ─────────────────────────────────────────────────── */
+/* @anatomy
+   <span class="ds-avatar ds-avatar--sm">A</span> <div> <div>Avery Chen
+*/
+/* ===== Table ===== */
+    .ds-table { width: 100%; border-collapse: collapse; }
+    .ds-table th, .ds-table td { text-align: left; padding: var(--spacer-12) var(--spacer-8); border-bottom: 1px solid var(--border-neutral-l1); font-size: var(--body-sm-font-size); }
+    .ds-table th { color: var(--text-tertiary); font-weight: var(--font-weight-default, 400); font-size: var(--body-xs-font-size); text-transform: uppercase; letter-spacing: 0.04em; }
+    .ds-table td { color: var(--text-default); }
+    .ds-table tr:last-child td { border-bottom: none; }
+    /* Numeric cells in tables default to mono for column alignment */
+    .ds-table td.num,
+    .ds-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+    /* Table wrapper: rounded, bordered container */
+    .ds-table-wrap {
+      border: 1px solid var(--border-neutral-l1);
+      border-radius: var(--radius-8);
+      overflow: hidden;
+      background: var(--bg-base-secondary);
+    }
+    /* Toolbar: search on the left, actions on the right */
+    .ds-table__toolbar {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: var(--spacer-12);
+      padding: var(--spacer-12);
+      border-bottom: 1px solid var(--border-neutral-l1);
+    }
+    .ds-table__toolbar-actions { display: flex; align-items: center; gap: var(--spacer-8); }
+    /* Footer: row count on the left, pagination on the right */
+    .ds-table__footer {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: var(--spacer-12);
+      padding: var(--spacer-12);
+      border-top: 1px solid var(--border-neutral-l1);
+      font-size: var(--body-xs-font-size); color: var(--text-tertiary);
+    }
+    .ds-table__pagination { display: flex; align-items: center; gap: var(--spacer-8); }
+
+/* ── Tabs ──────────────────────────────────────────────────── */
+/* @anatomy
+   <div class="pv-header"> <h1>Tabs</h1> <p>Underline tabs only. Inactive uses <code>--text-tertiary</code>; active uses <code>--text-default</code> with a 2px neutral underline (never brand fill).</p> </div>
+*/
+/* ===== Tabs ===== */
+    .ds-tabs { display: flex; gap: var(--spacer-24); border-bottom: 1px solid var(--border-neutral-l1); }
+    .ds-tab {
+      padding: var(--spacer-12) 0;
+      background: transparent; border: none;
+      color: var(--text-tertiary); cursor: pointer;
+      font: inherit; font-size: var(--body-sm-font-size);
+      position: relative;
+    }
+    .ds-tab:hover { color: var(--text-default); }
+    .ds-tab.is-active { color: var(--text-default); }
+    .ds-tab.is-active::after {
+      content: ''; position: absolute;
+      left: 0; right: 0; bottom: -1px; height: 2px;
+      background: var(--icon-default);
+    }
+
+    /* Filled tabs: selected item gets a filled background + radius, no underline */
+    .ds-tabs--filled { border-bottom: none; gap: var(--spacer-4); }
+    .ds-tabs--filled .ds-tab {
+      padding: var(--spacer-6) var(--spacer-12);
+      border-radius: var(--radius-4);
+    }
+    .ds-tabs--filled .ds-tab.is-active::after { display: none; }
+    .ds-tabs--filled .ds-tab.is-active {
+      background: var(--bg-overlay-l3);
+      color: var(--text-default);
+    }
+
+    /* Closable tabs: each tab carries an inline close button on the right */
+    .ds-tabs--closable .ds-tab {
+      display: inline-flex; align-items: center; gap: var(--spacer-8);
+    }
+    .ds-tab__close {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 16px; height: 16px;
+      border-radius: var(--radius-2);
+      color: var(--icon-secondary);
+    }
+    .ds-tab__close:hover { background: var(--bg-overlay-l3); color: var(--icon-default); }
+
+/* ── Tag ───────────────────────────────────────────────────── */
+/* @anatomy
+   <span class="ds-tag">Default</span> <span class="ds-tag ds-tag--success">Active</span> <span class="ds-tag ds-tag--warning">Pending</span> <span class="ds-tag ds-tag--danger">Failed</span> <span class="ds-tag ds-tag--brand"><span style="width:6px;height:6px;border-radius:50%;background:currentColor;display:inline-block;margin-right:6px;"></span>Live</span>
+*/
+/* ===== Tag / Badge ===== */
+    .ds-tag {
+      display: inline-flex; align-items: center;
+      padding: 0 var(--spacer-6); height: 18px;
+      border-radius: var(--radius-2);
+      font-size: var(--body-xs-font-size); line-height: 1;
+      background: var(--bg-overlay-l2); color: var(--text-secondary);
+      border: 1px solid var(--border-neutral-l1);
+    }
+    .ds-tag--brand { background: var(--bg-brand-popup); color: var(--text-brand); }
+    .ds-tag--success { background: var(--status-success-surface-l1); color: var(--status-success-default); }
+    .ds-tag--warning { background: var(--status-warning-surface-l1); color: var(--status-warning-default); }
+    .ds-tag--danger  { background: var(--status-error-surface-l1); color: var(--status-error-default); }
+    /* Count badge: numeric pill for list counts */
+    .ds-tag--count {
+      justify-content: center;
+      min-width: 18px; padding: 0 var(--spacer-6);
+      border-radius: var(--radius-full);
+      background: var(--bg-overlay-l3); color: var(--text-secondary);
+      border: none;
+      font-variant-numeric: tabular-nums;
+    }
+    /* Neutral strong: plan-style emphasis badge */
+    .ds-tag--neutral-strong {
+      background: var(--bg-overlay-l4); color: var(--text-default);
+      border: none; font-weight: var(--font-weight-medium);
+    }
+
+/* ── Workbench Titlebar ────────────────────────────────────── */
+/* @anatomy
+   <div class="pv-header"> <h1>Workbench Titlebar</h1> <p>IDE/Agent 工作台顶栏：左侧窗口控制点 + 产品模式胶囊 + 项目选择器，右侧图标按钮组。背景用 --bg-base-secondary，分隔用 --border-neutral-l1。</p> </div>
+*/
+/* ===== Workbench Titlebar ===== */
+    .ds-wbtitlebar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--spacer-12);
+      height: 40px;
+      padding: 0 var(--spacer-12);
+      background: var(--bg-base-secondary);
+      border-bottom: 1px solid var(--border-neutral-l1);
+    }
+    .ds-wbtitlebar__left,
+    .ds-wbtitlebar__right {
+      display: flex;
+      align-items: center;
+      gap: var(--spacer-8);
+    }
+    .ds-wbtitlebar__lights {
+      display: flex;
+      align-items: center;
+      gap: var(--spacer-8);
+      margin-right: var(--spacer-8);
+    }
+    .ds-wbtitlebar__light {
+      width: 12px;
+      height: 12px;
+      border-radius: var(--radius-full);
+    }
+    .ds-wbtitlebar__light--close { background: var(--status-error-default); }
+    .ds-wbtitlebar__light--min { background: var(--status-alert-default); }
+    .ds-wbtitlebar__light--max { background: var(--status-success-default); }
+    .ds-wbtitlebar__mode-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacer-6);
+      height: 24px;
+      padding: 0 var(--spacer-8);
+      background: var(--bg-brand);
+      color: var(--text-onbrand);
+      border-radius: var(--radius-full);
+      font-size: var(--body-xs-font-size);
+      font-weight: var(--font-weight-medium);
+    }
+    .ds-wbtitlebar__project-selector {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacer-6);
+      height: 24px;
+      padding: 0 var(--spacer-8);
+      background: var(--bg-overlay-l1);
+      color: var(--text-default);
+      border: 1px solid var(--border-neutral-l2);
+      border-radius: var(--radius-6);
+      font-size: var(--body-sm-font-size);
+      cursor: pointer;
+    }
+    .ds-wbtitlebar__project-selector:hover {
+      background: var(--bg-overlay-l2);
+      color: var(--text-default-hover);
+    }
+    .ds-wbtitlebar__iconbtn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: var(--radius-6);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    .ds-wbtitlebar__iconbtn:hover { background: var(--bg-overlay-l2); }
+    .ds-wbtitlebar .icon { display: block; }

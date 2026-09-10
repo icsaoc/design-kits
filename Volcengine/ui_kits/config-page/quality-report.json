@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 2,
+  "kitType": "config-page",
+  "sourceKind": "preview-contract",
+  "screensGenerated": 2,
+  "coreComponentsUsed": [
+    "button",
+    "steps",
+    "tabs",
+    "topnav"
+  ],
+  "supportComponentsUsed": [
+    "topnav",
+    "page-header",
+    "steps",
+    "button",
+    "select",
+    "input",
+    "table",
+    "checkbox",
+    "tabs",
+    "tag",
+    "tooltip",
+    "pagination"
+  ],
+  "previewClassReuseRate": 0.78,
+  "inventedComponents": [],
+  "interactiveStatesRendered": [
+    "active",
+    "hover",
+    "disabled",
+    "selected"
+  ],
+  "primaryActionPerScreen": true,
+  "mockDataDensity": {
+    "tableRows": 8,
+    "chartPoints": 0
+  },
+  "warnings": [],
+  "notes": [
+    "Configuration/create-instance page with Steps bar, form sections (计费类型/地域/实例配置/镜像/存储), and bottom fixed action bar.",
+    "No sidebar - full width content layout with only TopNav.",
+    "All icons are inline SVG for self-contained rendering.",
+    "Bottom bar includes quantity control, pricing display, and primary action button."
+  ],
+  "componentUsageBasis": "preview-reference"
+}

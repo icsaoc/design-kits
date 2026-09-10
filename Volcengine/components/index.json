@@ -1,0 +1,358 @@
+{
+  "schemaVersion": 2,
+  "library": "源力设计系统",
+  "sourceKind": "preview-contract",
+  "summary": "源力设计系统组件集，面向 ByteCloud B2B 管理后台场景，包含 32 个组件，从 preview HTML 契约文件派生。",
+  "crossComponentPatterns": [
+    "Token surface consumed through colors_and_type.css.",
+    "Preview CSS is aggregated into components.css.",
+    "assets/icons/ is the icon asset source; sidenav icons in assets/icons/sidenav-icon/.",
+    "Component contracts include tokensConsumed, domAnatomy, assetsConsumed, and provenance.",
+    "HARD RULE: preview/component-{slug}.html is a CODE TEMPLATE — copy HTML verbatim, do not rewrite with Tailwind or substitute icons with Lucide/Heroicons.",
+    "HARD RULE: Link colors_and_type.css + components.css for styling. Never use Tailwind CDN or any third-party CSS framework."
+  ],
+  "uiKits": [
+    {
+      "type": "detail-with-sidebar",
+      "entry": "ui_kits/detail-with-sidebar/index.html"
+    },
+    {
+      "type": "list-page",
+      "entry": "ui_kits/list-page/index.html"
+    },
+    {
+      "type": "data-dashboard",
+      "entry": "ui_kits/data-dashboard/index.html"
+    },
+    {
+      "type": "detail-basic-page",
+      "entry": "ui_kits/detail-basic-page/index.html"
+    },
+    {
+      "type": "config-page",
+      "entry": "ui_kits/config-page/index.html"
+    }
+  ],
+  "components": [
+    {
+      "slug": "alert",
+      "name": "Alert",
+      "category": "feedback",
+      "preview": "preview/component-alert.html",
+      "contract": "components/alert.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "anchor",
+      "name": "Anchor",
+      "category": "navigation",
+      "preview": "preview/component-anchor.html",
+      "contract": "components/anchor.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "avatar",
+      "name": "Avatar",
+      "category": "data-display",
+      "preview": "preview/component-avatar.html",
+      "contract": "components/avatar.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "badge",
+      "name": "Badge",
+      "category": "data-display",
+      "preview": "preview/component-badge.html",
+      "contract": "components/badge.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "breadcrumb",
+      "name": "Breadcrumb",
+      "category": "navigation",
+      "preview": "preview/component-breadcrumb.html",
+      "contract": "components/breadcrumb.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "button",
+      "name": "Button",
+      "category": "action",
+      "preview": "preview/component-button.html",
+      "contract": "components/button.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 29
+    },
+    {
+      "slug": "cascader",
+      "name": "Cascader",
+      "category": "input",
+      "preview": "preview/component-cascader.html",
+      "contract": "components/cascader.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 11
+    },
+    {
+      "slug": "checkbox",
+      "name": "Checkbox",
+      "category": "input",
+      "preview": "preview/component-checkbox.html",
+      "contract": "components/checkbox.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "descriptions",
+      "name": "Descriptions",
+      "category": "data-display",
+      "preview": "preview/component-descriptions.html",
+      "contract": "components/descriptions.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "drawer",
+      "name": "Drawer",
+      "category": "overlay",
+      "preview": "preview/component-drawer.html",
+      "contract": "components/drawer.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "dropdown",
+      "name": "Dropdown",
+      "category": "action",
+      "preview": "preview/component-dropdown.html",
+      "contract": "components/dropdown.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "form",
+      "name": "Form",
+      "category": "input",
+      "preview": "preview/component-form.html",
+      "contract": "components/form.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "icon",
+      "name": "Icon",
+      "category": "data-display",
+      "preview": "preview/component-icon.html",
+      "contract": "components/icon.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "input",
+      "name": "Input",
+      "category": "input",
+      "preview": "preview/component-input.html",
+      "contract": "components/input.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "message",
+      "name": "Message",
+      "category": "feedback",
+      "preview": "preview/component-message.html",
+      "contract": "components/message.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 9
+    },
+    {
+      "slug": "modal",
+      "name": "Modal",
+      "category": "overlay",
+      "preview": "preview/component-modal.html",
+      "contract": "components/modal.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "page-header",
+      "name": "PageHeader",
+      "category": "layout",
+      "preview": "preview/component-page-header.html",
+      "contract": "components/page-header.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "pagination",
+      "name": "Pagination",
+      "category": "navigation",
+      "preview": "preview/component-pagination.html",
+      "contract": "components/pagination.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "popconfirm",
+      "name": "Popconfirm",
+      "category": "overlay",
+      "preview": "preview/component-popconfirm.html",
+      "contract": "components/popconfirm.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "progress",
+      "name": "Progress",
+      "category": "feedback",
+      "preview": "preview/component-progress.html",
+      "contract": "components/progress.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "segmented-picker",
+      "name": "SegmentedPicker",
+      "category": "input",
+      "preview": "preview/component-segmented-picker.html",
+      "contract": "components/segmented-picker.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "select",
+      "name": "Select",
+      "category": "input",
+      "preview": "preview/component-select.html",
+      "contract": "components/select.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "sidenav",
+      "name": "Sidenav",
+      "category": "navigation",
+      "preview": "preview/component-sidenav.html",
+      "contract": "components/sidenav.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 6
+    },
+    {
+      "slug": "slider",
+      "name": "Slider",
+      "category": "input",
+      "preview": "preview/component-slider.html",
+      "contract": "components/slider.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "status-tag",
+      "name": "StatusTag",
+      "category": "data-display",
+      "preview": "preview/component-status-tag.html",
+      "contract": "components/status-tag.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "steps",
+      "name": "Steps",
+      "category": "navigation",
+      "preview": "preview/component-steps.html",
+      "contract": "components/steps.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 11
+    },
+    {
+      "slug": "switch",
+      "name": "Switch",
+      "category": "input",
+      "preview": "preview/component-switch.html",
+      "contract": "components/switch.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "table",
+      "name": "Table",
+      "category": "data-display",
+      "preview": "preview/component-table.html",
+      "contract": "components/table.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 18
+    },
+    {
+      "slug": "tabs",
+      "name": "Tabs",
+      "category": "navigation",
+      "preview": "preview/component-tabs.html",
+      "contract": "components/tabs.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "timepicker",
+      "name": "TimePicker",
+      "category": "input",
+      "preview": "preview/component-timepicker.html",
+      "contract": "components/timepicker.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "tooltip",
+      "name": "Tooltip",
+      "category": "overlay",
+      "preview": "preview/component-tooltip.html",
+      "contract": "components/tooltip.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 0
+    },
+    {
+      "slug": "topnav",
+      "name": "TopNav",
+      "category": "navigation",
+      "preview": "preview/component-topnav.html",
+      "contract": "components/topnav.json",
+      "sourceKind": "preview-contract",
+      "confidence": "medium",
+      "tokensConsumedCount": 13
+    }
+  ]
+}

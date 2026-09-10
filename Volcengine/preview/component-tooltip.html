@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Tooltip 文字气泡</title>
+  <link rel="stylesheet" href="preview-scaffold.css">
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="../components.css">
+</head>
+<body>
+  <div class="pv-header">
+    <h1>Tooltip 文字气泡</h1>
+    <p>鼠标悬停时展示的简单文本提示气泡，支持多方位（上下左右）定位。</p>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Top 上方</div>
+    <div class="row">
+      <div class="tooltip" data-component="tooltip" data-type="basic" data-placement="top-left">
+        <span class="tooltip-bubble">工具提醒</span>
+        <span class="tooltip-arrow-wrap">
+          <span class="tooltip-arrow tooltip-arrow-bottom"></span>
+        </span>
+      </div>
+      <div class="tooltip" data-component="tooltip" data-type="basic" data-placement="top">
+        <span class="tooltip-bubble">工具提醒</span>
+        <span class="tooltip-arrow-wrap">
+          <span class="tooltip-arrow tooltip-arrow-bottom"></span>
+        </span>
+      </div>
+      <div class="tooltip" data-component="tooltip" data-type="basic" data-placement="top-right">
+        <span class="tooltip-bubble">工具提醒</span>
+        <span class="tooltip-arrow-wrap">
+          <span class="tooltip-arrow tooltip-arrow-bottom"></span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Bottom 下方</div>
+    <div class="row">
+      <div class="tooltip" data-component="tooltip" data-type="basic" data-placement="bottom-left">
+        <span class="tooltip-bubble">工具提醒</span>
+        <span class="tooltip-arrow-wrap">
+          <span class="tooltip-arrow tooltip-arrow-top"></span>
+        </span>
+      </div>
+      <div class="tooltip" data-component="tooltip" data-type="basic" data-placement="bottom">
+        <span class="tooltip-bubble">工具提醒</span>
+        <span class="tooltip-arrow-wrap">
+          <span class="tooltip-arrow tooltip-arrow-top"></span>
+        </span>
+      </div>
+      <div class="tooltip" data-component="tooltip" data-type="basic" data-placement="bottom-right">
+        <span class="tooltip-bubble">工具提醒</span>
+        <span class="tooltip-arrow-wrap">
+          <span class="tooltip-arrow tooltip-arrow-top"></span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Left / Right 左右</div>
+    <div class="row">
+      <div class="tooltip" data-component="tooltip" data-type="basic" data-placement="left">
+        <span class="tooltip-bubble">工具提醒</span>
+        <span class="tooltip-arrow-wrap tooltip-arrow-wrap-side">
+          <span class="tooltip-arrow tooltip-arrow-right"></span>
+        </span>
+      </div>
+      <div class="tooltip" data-component="tooltip" data-type="basic" data-placement="right">
+        <span class="tooltip-arrow-wrap tooltip-arrow-wrap-side">
+          <span class="tooltip-arrow tooltip-arrow-left"></span>
+        </span>
+        <span class="tooltip-bubble">工具提醒</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

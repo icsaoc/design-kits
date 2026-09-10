@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 2,
+  "slug": "popconfirm",
+  "name": "Popconfirm",
+  "category": "overlay",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Popconfirm",
+      "evidence": "Inferred from preview/component-popconfirm.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".popconfirm",
+        ".popconfirm-arrow",
+        ".popconfirm-content",
+        ".popconfirm-description",
+        ".popconfirm-footer",
+        ".popconfirm-header",
+        ".popconfirm-icon",
+        ".popconfirm-icon-error",
+        ".popconfirm-icon-info",
+        ".popconfirm-icon-warning"
+      ],
+      "evidence": "Representative selectors from preview/component-popconfirm.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-popconfirm.html",
+    "representativeSelectors": [
+      ".popconfirm",
+      ".popconfirm-arrow",
+      ".popconfirm-content",
+      ".popconfirm-description",
+      ".popconfirm-footer",
+      ".popconfirm-header",
+      ".popconfirm-icon",
+      ".popconfirm-icon-error",
+      ".popconfirm:hover"
+    ],
+    "cssRuleCount": 19
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "error",
+      "hover"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".popconfirm",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-popconfirm.html",
+    "selectors": [
+      ".popconfirm",
+      ".popconfirm-arrow",
+      ".popconfirm-content",
+      ".popconfirm-description",
+      ".popconfirm-footer",
+      ".popconfirm-header",
+      ".popconfirm-icon",
+      ".popconfirm-icon-error",
+      ".popconfirm-icon-info",
+      ".popconfirm-icon-warning",
+      ".popconfirm-simple",
+      ".popconfirm-title",
+      ".btn",
+      ".btn-danger",
+      ".btn-primary"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-popconfirm.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-popconfirm.html",
+      "classes": [
+        "popconfirm",
+        "popconfirm-arrow",
+        "popconfirm-content",
+        "popconfirm-description",
+        "popconfirm-footer",
+        "popconfirm-header",
+        "popconfirm-icon",
+        "popconfirm-icon-error",
+        "popconfirm-icon-info",
+        "popconfirm-icon-warning",
+        "popconfirm-simple",
+        "popconfirm-title",
+        "btn",
+        "btn-danger",
+        "btn-primary",
+        "btn-secondary"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-popconfirm.html",
+    "source": "preview/component-popconfirm.html",
+    "css": {
+      "file": "components.css",
+      "marker": "popconfirm"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

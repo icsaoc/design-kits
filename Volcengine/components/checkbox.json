@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 2,
+  "slug": "checkbox",
+  "name": "Checkbox",
+  "category": "input",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Checkbox",
+      "evidence": "Inferred from preview/component-checkbox.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".checkbox",
+        ".checkbox-box",
+        ".checkbox-dash",
+        ".checkbox-group",
+        ".checkbox-group-horizontal",
+        ".checkbox-group-vertical",
+        ".checkbox-icon",
+        ".checked",
+        ".disabled",
+        ".indeterminate"
+      ],
+      "evidence": "Representative selectors from preview/component-checkbox.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-checkbox.html",
+    "representativeSelectors": [
+      ".checkbox",
+      ".checkbox-box",
+      ".checkbox-dash",
+      ".checkbox-group",
+      ".checkbox-group-horizontal",
+      ".checkbox-group-vertical",
+      ".checkbox-icon",
+      ".checked",
+      ".checkbox:hover",
+      ".disabled"
+    ],
+    "cssRuleCount": 13
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "disabled",
+      "hover"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".checkbox",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-checkbox.html",
+    "selectors": [
+      ".checkbox",
+      ".checkbox-box",
+      ".checkbox-dash",
+      ".checkbox-group",
+      ".checkbox-group-horizontal",
+      ".checkbox-group-vertical",
+      ".checkbox-icon",
+      ".checked",
+      ".disabled",
+      ".indeterminate",
+      ".invalid"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-checkbox.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-checkbox.html",
+      "classes": [
+        "checkbox",
+        "checkbox-box",
+        "checkbox-dash",
+        "checkbox-group",
+        "checkbox-group-horizontal",
+        "checkbox-group-vertical",
+        "checkbox-icon",
+        "checked",
+        "disabled",
+        "indeterminate",
+        "invalid"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-checkbox.html",
+    "source": "preview/component-checkbox.html",
+    "css": {
+      "file": "components.css",
+      "marker": "checkbox"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

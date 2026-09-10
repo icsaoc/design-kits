@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidenav 侧导航</title>
+  <link rel="stylesheet" href="preview-scaffold.css">
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="../components.css">
+  <style>
+    .collapse-btn { display: inline-flex;
+    flex-shrink: 0;
+    align-items: flex-start;
+    align-self: stretch;
+    column-gap: 10px;
+    border-top: 1px solid var(--border-2);
+    padding: 11px 24px 12px;
+    cursor: pointer;
+    transition: background 0.15s; }
+    .collapse-btn:hover { background: rgba(0, 0, 0, 0.04); }
+    .collapse-btn svg { width: 16px; height: 16px; color: var(--text-1); }
+    .sidenav.collapsed { display: inline-flex;
+    width: auto;
+    min-width: auto; }
+    .sidenav.collapsed .sidenav-header { justify-content: center; padding: 20px 22px; }
+    .sidenav.collapsed .collapsed-menu { display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    flex-grow: 1; }
+    .sidenav.collapsed .collapsed-item { display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 24px;
+    cursor: pointer;
+    transition: background 0.15s; }
+    .sidenav.collapsed .collapsed-item:hover { background: rgba(0, 0, 0, 0.04); }
+    .sidenav.collapsed .collapsed-item .menu-icon { width: 20px; height: 20px; }
+    .collapsed-divider { width: 36px;
+    height: 1px;
+    background: var(--border-2);
+    margin: 14px 12px;
+    flex-shrink: 0; }
+  </style>
+</head>
+<body>
+<!--
+  ⚠️ CODE TEMPLATE — 本文件是代码模板，不是视觉参考。
+  使用方法：找到需要的变体 → 原样复制 HTML（包括所有 class 名和 DOM 结构）→ 只修改文字和数据。
+  禁止：用 Tailwind 重写、改变 class 命名、简化 DOM 结构、用自定义 class 替代。
+-->
+  <div class="pv-header">
+    <h1>Sidenav 侧导航</h1>
+    <p>左侧导航菜单，支持图标平铺、可展开箭头、折叠态等变体。图标全部引用自 icons/sidenav-icon 目录。</p>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">有图标 + 平铺 (icons-flat)</div>
+    <div class="row">
+      <div class="demo-box">
+        <div class="sidenav" data-component="sidenav" data-variant="icons-flat">
+          <div class="sidenav-header">
+            <span class="product-icon" role="img" aria-label="产品"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 49 49" fill="none" width="24" height="24"><g clip-path="url(#atqsvg_eb55a6de3f__clip0_7496_35648)"><ellipse cx="24.094" cy="10.786" rx="16.631" ry="7.547" fill="#B5BCC9"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7.463 10.787V23.01c.091 4.128 7.496 7.462 16.615 7.462 9.12 0 16.524-3.334 16.615-7.462l.001-.078V11.245c-.521 3.955-7.754 7.09-16.6 7.09-9.185 0-16.631-3.38-16.631-7.548zm0 14.29v12.22c.091 4.13 7.496 7.464 16.615 7.464 9.12 0 16.524-3.335 16.615-7.463l.001-.078V25.534c-.521 3.955-7.754 7.09-16.6 7.09-9.185 0-16.631-3.38-16.631-7.548z" fill="url(#atqsvg_eb55a6de3f__paint0_linear_7496_35648)"/><g filter="url(#atqsvg_eb55a6de3f__filter0_d_7496_35648)"><circle cx="13.998" cy="22.37" r="2" fill="#fff"/></g><g filter="url(#atqsvg_eb55a6de3f__filter1_d_7496_35648)"><circle cx="13.998" cy="36.672" r="2" fill="#fff"/></g></g><defs><filter id="atqsvg_eb55a6de3f__filter0_d_7496_35648" x="3.998" y="14.37" width="20" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="2"/><feGaussianBlur stdDeviation="4"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_7496_35648"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_7496_35648" result="shape"/></filter><filter id="atqsvg_eb55a6de3f__filter1_d_7496_35648" x="3.998" y="28.672" width="20" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="2"/><feGaussianBlur stdDeviation="4"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_7496_35648"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_7496_35648" result="shape"/></filter><linearGradient id="atqsvg_eb55a6de3f__paint0_linear_7496_35648" x1="24.078" y1="10.787" x2="24.078" y2="44.761" gradientUnits="userSpaceOnUse"><stop stop-color="#818A9C"/><stop offset="1" stop-color="#353D51"/></linearGradient><clipPath id="atqsvg_eb55a6de3f__clip0_7496_35648"><path fill="#fff" transform="translate(.08)" d="M0 0h48v48H0z"/></clipPath></defs></svg></span>
+            <span class="product-name">产品名称</span>
+          </div>
+          <div class="sidenav-menu">
+            <div class="menu-section">
+              <div class="menu-item active">
+                <span class="menu-icon" role="img" aria-label="概览"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 49 49" fill="none" width="20" height="20"><rect x="12.047" y="4.806" width="31" height="31" rx="2" fill="#B5BCC9"/><path fill-rule="evenodd" clip-rule="evenodd" d="M6.977 10.324a2 2 0 00-2 2v29a2 2 0 002 2h29.082a2 2 0 002-2v-29a2 2 0 00-2-2H6.977z" fill="url(#atksvg_ca5e931028__paint0_linear_7496_35604)"/><path fill="#B5BCC9" d="M11.307 24.229h4v11.913h-4zM19.518 20.547h4v15.595h-4z"/><path fill="#fff" d="M27.729 17.507h4v18.635h-4z"/><defs><linearGradient id="atksvg_ca5e931028__paint0_linear_7496_35604" x1="21.518" y1="10.324" x2="21.518" y2="43.324" gradientUnits="userSpaceOnUse"><stop stop-color="#818A9C"/><stop offset="1" stop-color="#353D51"/></linearGradient></defs></svg></span>
+                <span class="menu-text">概览</span>
+              </div>
+              <div class="menu-group-block">
+                <span class="group-title">分类标题</span>
+                <div class="menu-item">
+                  <span class="menu-icon" role="img" aria-label="网络"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" width="20" height="20"><circle cx="24" cy="24" r="19" fill="url(#aqksvg_c2c37cb859__paint0_linear_7496_35623)"/><mask id="aqka" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="38" height="38"><circle cx="24" cy="24" r="19" fill="#5E6673"/></mask><g mask="url(#aqka)"><path fill="#B5BCC9" d="M5 17.154h38v14.27H5z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M43.858 18.824H4.143v-3h39.715v3zM43.858 32.176H4.143v-3h39.715v3z" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M31.207 9.64c1.235 3.81 1.95 8.887 1.95 14.36 0 5.473-.715 10.55-1.95 14.36-.612 1.889-1.406 3.635-2.43 4.971C27.787 44.624 26.2 46 24 46c-2.2 0-3.787-1.376-4.778-2.669-1.024-1.337-1.818-3.082-2.43-4.971-1.235-3.81-1.95-8.887-1.95-14.36 0-5.473.715-10.55 1.95-14.36.612-1.889 1.406-3.635 2.43-4.971C20.211 3.376 21.799 2 23.999 2c2.2 0 3.787 1.376 4.778 2.669 1.024 1.336 1.818 3.082 2.43 4.971zM30.157 24c0-10.493-2.757-19-6.158-19-3.4 0-6.157 8.507-6.157 19s2.757 19 6.157 19 6.157-8.507 6.157-19z" fill="#fff"/></g><defs><linearGradient id="aqksvg_c2c37cb859__paint0_linear_7496_35623" x1="24" y1="5" x2="24" y2="43" gradientUnits="userSpaceOnUse"><stop stop-color="#353D51"/><stop offset="1" stop-color="#818A9C"/></linearGradient></defs></svg></span>
+                  <span class="menu-text">网络与安全</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <span class="menu-icon" role="img" aria-label="实例"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" width="20" height="20"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 5.004a2 2 0 00-2 2v6.42a2 2 0 002 2h31.999a2 2 0 002-2v-6.42a2 2 0 00-2-2H8zm.001 21.795a2 2 0 00-2 2v12.2a2 2 0 002 2H40a2 2 0 002-2v-12.2a2 2 0 00-2-2H8z" fill="url(#acssvg_c8f63ecaff__paint0_linear_7496_35649)"/><rect x="6" y="17.311" width="36" height="7.62" rx="2" fill="#B5BCC9"/><g filter="url(#acssvg_c8f63ecaff__filter0_d_7496_35649)"><ellipse cx="12.123" cy="34.899" rx="2.452" ry="2.388" fill="#fff"/></g><g filter="url(#acssvg_c8f63ecaff__filter1_d_7496_35649)"><ellipse cx="12.123" cy="21.12" rx="2.452" ry="2.388" fill="#fff"/></g><g filter="url(#acssvg_c8f63ecaff__filter2_d_7496_35649)"><ellipse cx="12.123" cy="9.877" rx="2.452" ry="2.388" fill="#fff"/></g><defs><filter id="acssvg_c8f63ecaff__filter0_d_7496_35649" x="3.672" y="28.511" width="16.903" height="16.776" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="2"/><feGaussianBlur stdDeviation="3"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.19 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_7496_35649"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_7496_35649" result="shape"/></filter><filter id="acssvg_c8f63ecaff__filter1_d_7496_35649" x="3.672" y="14.731" width="16.903" height="16.776" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="2"/><feGaussianBlur stdDeviation="3"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.19 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_7496_35649"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_7496_35649" result="shape"/></filter><filter id="acssvg_c8f63ecaff__filter2_d_7496_35649" x="3.672" y="3.488" width="16.903" height="16.776" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="2"/><feGaussianBlur stdDeviation="3"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.19 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_7496_35649"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_7496_35649" result="shape"/></filter><linearGradient id="acssvg_c8f63ecaff__paint0_linear_7496_35649" x1="6" y1="21.736" x2="42" y2="22.028" gradientUnits="userSpaceOnUse"><stop stop-color="#353D51"/><stop offset="1" stop-color="#818A9C"/></linearGradient></defs></svg></span>
+                <span class="menu-text">实例与镜像</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-icon" role="img" aria-label="安全"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 49 49" fill="none" width="20" height="20"><path d="M23.246 2.353a2 2 0 011.606-.001l17.005 7.443a1.998 1.998 0 011.198 1.831l-.001 7.76c0 8.248-2.73 13.638-6.287 18.013-3.221 3.962-7.753 6.972-12.181 8.431a1.71 1.71 0 01-1.074.006c-1.775-.584-7.603-2.837-12.18-8.49C6.776 31.72 5.111 26.25 5.111 18.988c0-1.675-.005-4.993-.007-7.362 0-.794.469-1.512 1.195-1.83l16.947-7.442z" fill="url(#aqosvg_51554854b3__paint0_linear_7496_35605)"/><path d="M18.44 18.466a6.244 6.244 0 015.54-3.365 6.24 6.24 0 016.122 5.031c2.166.15 3.874 1.933 3.874 4.132 0 2.3-1.866 4.165-4.165 4.165H18.98a5.002 5.002 0 01-4.999-4.998 4.993 4.993 0 014.457-4.965z" fill="#fff"/><defs><linearGradient id="aqosvg_51554854b3__paint0_linear_7496_35605" x1="24.08" y1="2" x2="24.08" y2="46" gradientUnits="userSpaceOnUse"><stop stop-color="#818A9C"/><stop offset="1" stop-color="#353D51"/></linearGradient></defs></svg></span>
+                <span class="menu-text">云安全</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-icon" role="img" aria-label="监控"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 49 49" fill="none" width="20" height="20"><path d="M14.071 36.889H34.09l.68 4.833a2 2 0 01-1.981 2.279H15.372a2 2 0 01-1.98-2.279l.68-4.833z" fill="#B5BCC9"/><rect x="4.051" y="6.051" width="40.06" height="30.837" rx="2" fill="url(#aqjsvg_69d436b23b__paint0_linear_7496_35630)"/><g filter="url(#aqjsvg_69d436b23b__filter0_d_7496_35630)"><path d="M23.124 13.759a.417.417 0 00-.735-.029l-4.226 7.245H14.03a.417.417 0 00-.417.416v2.5c0 .23.187.416.417.416h6.047l2.428-4.161 4.358 9.034c.133.276.51.318.7.079l3.953-4.952h2.616c.23 0 .416-.186.416-.416v-2.5a.417.417 0 00-.416-.416h-4.22l-2.061 2.582-4.727-9.798z" fill="#fff"/></g><defs><linearGradient id="aqjsvg_69d436b23b__paint0_linear_7496_35630" x1="24.081" y1="6.051" x2="24.081" y2="36.888" gradientUnits="userSpaceOnUse"><stop stop-color="#818A9C"/><stop offset="1" stop-color="#353D51"/></linearGradient><filter id="aqjsvg_69d436b23b__filter0_d_7496_35630" x="6.196" y="7.961" width="35.768" height="30.725" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="1.854"/><feGaussianBlur stdDeviation="3.708"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_7496_35630"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_7496_35630" result="shape"/></filter></defs></svg></span>
+                <span class="menu-text">运维监控</span>
+              </div>
+              <div class="menu-item">
+                <span class="menu-icon" role="img" aria-label="容器"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 49 49" fill="none" width="20" height="20"><path d="M23.051 2.613a2 2 0 012.058 0l18 10.8a2 2 0 01.971 1.716v17.735a2 2 0 01-.97 1.715l-18 10.8a2 2 0 01-2.059 0l-18-10.8a2 2 0 01-.97-1.715V15.129a2 2 0 01.97-1.715l18-10.8z" fill="url(#arxsvg_3ddc512d4f__paint0_linear_7496_35645)"/><path d="M34.08 7.996l9.03 5.418a2 2 0 01.97 1.715v8.867l-9.029-5.417a2 2 0 01-.97-1.715V7.996z" fill="#B5BCC9"/><g filter="url(#arxsvg_3ddc512d4f__filter0_d_7496_35645)" fill-rule="evenodd" clip-rule="evenodd" fill="#fff"><path d="M22.082 23.996v-8h4v8h-4z"/><path d="M15.188 26.207l8-4 1.788 3.578-8 4-1.788-3.578z"/><path d="M31.188 29.785l-8-4 1.788-3.578 8 4-1.788 3.578z"/></g><defs><linearGradient id="arxsvg_3ddc512d4f__paint0_linear_7496_35645" x1="24.08" y1="1.996" x2="24.08" y2="45.996" gradientUnits="userSpaceOnUse"><stop stop-color="#818A9C"/><stop offset="1" stop-color="#353D51"/></linearGradient><filter id="arxsvg_3ddc512d4f__filter0_d_7496_35645" x="7.188" y="9.996" width="33.789" height="29.789" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="2"/><feGaussianBlur stdDeviation="4"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_7496_35645"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_7496_35645" result="shape"/></filter></defs></svg></span>
+                <span class="menu-text">容器服务</span>
+              </div>
+            </div>
+          </div>
+          <div class="collapse-btn">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4h12M2 8h12M2 12h12"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pv-section">
+    <div class="pv-section__title">有图标 + 可展开箭头 (icons-expandable)</div>
+    <div class="row">
+      <div class="demo-box">
+        <div class="sidenav" data-component="sidenav" data-variant="icons-expandable">
+          <div class="sidenav-header">
+            <span class="product-icon" role="img" aria-label="产品"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 49 49" fill="none" width="24" height="24"><g clip-path="url(#atqsvg_eb55a6de3f__clip0_7496_35648)"><ellipse cx="24.094" cy="10.786" rx="16.631" ry="7.547" fill="#B5BCC9"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7.463 10.787V23.01c.091 4.128 7.496 7.462 16.615 7.462 9.12 0 16.524-3.334 16.615-7.462l.001-.078V11.245c-.521 3.955-7.754 7.09-16.6 7.09-9.185 0-16.631-3.38-16.631-7.548zm0 14.29v12.22c.091 4.13 7.496 7.464 16.615 7.464 9.12 0 16.524-3.335 16.615-7.463l.001-.078V25.534c-.521 3.955-7.754 7.09-16.6 7.09-9.185 0-16.631-3.38-16.631-7.548z" fill="url(#atqsvg_eb55a6de3f__paint0_linear_7496_35648)"/><g filter="url(#atqsvg_eb55a6de3f__filter0_d_7496_35648)"><circle cx="13.998" cy="22.37" r="2" fill="#fff"/></g><g filter="url(#atqsvg_eb55a6de3f__filter1_d_7496_35648)"><circle cx="13.998" cy="36.672" r="2" fill="#fff"/></g></g><defs><filter id="atqsvg_eb55a6de3f__filter0_d_7496_35648" x="3.998" y="14.37" width="20" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="2"/><feGaussianBlur stdDeviation="4"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_7496_35648"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_7496_35648" result="shape"/></filter><filter id="atqsvg_eb55a6de3f__filter1_d_7496_35648" x="3.998" y="28.672" width="20" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="2"/><feGaussianBlur stdDeviation="4"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_7496_35648"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_7496_35648" result="shape"/></filter><linearGradient id="atqsvg_eb55a6de3f__paint0_linear_7496_35648" x1="24.078" y1="10.787" x2="24.078" y2="44.761" gradientUnits="userSpaceOnUse"><stop stop-color="#818A9C"/><stop offset="1" stop-color="#353D51"/></linearGradient><clipPath id="atqsvg_eb55a6de3f__clip0_7496_35648"><path fill="#fff" transform="translate(.08)" d="M0 0h48v48H0z"/></clipPath></defs></svg></span>
+            <span class="product-name">火山数据库</span>
+          </div>
+          <div class="sidenav-menu">
+            <div class="menu-section">
+              <div class="menu-item has-arrow active">
+                <span class="menu-icon" role="img" aria-label="概览"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 49 49" fill="none" width="20" height="20"><rect x="12.047" y="4.806" width="31" height="31" rx="2" fill="#B5BCC9"/><path fill-rule="evenodd" clip-rule="evenodd" d="M6.977 10.324a2 2 0 00-2 2v29a2 2 0 002 2h29.082a2 2 0 002-2v-29a2 2 0 00-2-2H6.977z" fill="url(#atksvg_ca5e931028__paint0_linear_7496_35604)"/><path fill="#B5BCC9" d="M11.307 24.229h4v11.913h-4zM19.518 20.547h4v15.595h-4z"/><path fill="#fff" d="M27.729 17.507h4v18.635h-4z"/><defs><linearGradient id="atksvg_ca5e931028__paint0_linear_7496_35604" x1="21.518" y1="10.324" x2="21.518" y2="43.324" gradientUnits="userSpaceOnUse"><stop stop-color="#818A9C"/><stop offset="1" stop-color="#353D51"/></linearGradient></defs></svg></span>
+                <span class="menu-text">概览</span>
+                <span class="menu-chevron"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4.5L6 7.5L9 4.5"/></svg></span>
+              </div>
+              <div class="menu-group-block">
+                <span class="group-title">关系型数据库RDS</span>
+                <div class="menu-item has-arrow">
+                  <span class="menu-icon" role="img" aria-label="MySQL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 49 49" fill="none" width="20" height="20"><ellipse cx="24.094" cy="10.787" rx="16.631" ry="7.547" fill="#B5BCC9"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7.463 36.562V10.787c0 4.168 7.446 7.547 16.63 7.547 8.847 0 16.08-3.134 16.601-7.089v25.317c-.092 4.13-7.496 7.463-16.616 7.463S7.554 40.691 7.463 36.562z" fill="url(#atrsvg_2b28417b69__paint0_linear_7496_35640)"/><path d="M20.43 23.37A5.135 5.135 0 0122.875 22v5.018h2.68v-4.945a5.16 5.16 0 01.2 9.828v5.766h-3.351V31.9a5.16 5.16 0 01-1.974-8.53z" fill="#fff"/><defs><linearGradient id="atrsvg_2b28417b69__paint0_linear_7496_35640" x1="24.078" y1="10.787" x2="24.078" y2="44.025" gradientUnits="userSpaceOnUse"><stop stop-color="#818A9C"/><stop offset="1" stop-color="#353D51"/></linearGradient></defs></svg></span>
+                  <span class="menu-text">MySQL</span>
+                  <span class="menu-chevron"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4.5L6 7.5L9 4.5"/></svg></span>
+                </div>
+              </div>
+              <div class="menu-item has-arrow">
+                <span class="menu-icon" role="img" aria-label="Redis"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" width="20" height="20"><rect x="4.574" y="24.826" width="18.768" height="18.768" rx="1.982" fill="#B5BCC9"/><path d="M41.018 5C42.113 5 43 5.887 43 6.982v30.63a1.982 1.982 0 01-1.982 1.983H15.867V33.47c0-.611-.496-1.107-1.108-1.107H8.574V6.983C8.574 5.886 9.462 5 10.556 5h30.462z" fill="url(#abjsvg_0f63368038__paint0_linear_7496_35669)"/><path d="M27.425 5H41a2 2 0 012 2v13.575H27.425V5z" fill="#B5BCC9"/><path d="M21.995 19.617l2.216 2.22-6.317 6.348-4.041 4.05H8.574v7.18c0 .075.062.137.137.137h7.162V34.26l5.996-6.01 4.297-4.322 2.216 2.221 1.042-7.447-7.429.915z" fill="#fff"/><defs><linearGradient id="abjsvg_0f63368038__paint0_linear_7496_35669" x1="25.787" y1="5" x2="25.787" y2="39.595" gradientUnits="userSpaceOnUse"><stop stop-color="#818A9C"/><stop offset="1" stop-color="#353D51"/></linearGradient></defs></svg></span>
+                <span class="menu-text">Redis</span>
+                <span class="menu-chevron"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4.5L6 7.5L9 4.5"/></svg></span>
+              </div>
+            </div>
+          </div>
+          <div class="collapse-btn">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4h12M2 8h12M2 12h12"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pv-section">
+    <div class="pv-section__title">折叠态 (collapsed)</div>
+    <div class="row">
+      <div class="demo-box">
+        <div class="sidenav collapsed" data-component="sidenav" data-variant="collapsed">
+          <div class="sidenav-header">
+            <span class="product-icon" role="img" aria-label="产品"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 49 49" fill="none" width="24" height="24"><g clip-path="url(#atqsvg_eb55a6de3f__clip0_7496_35648)"><ellipse cx="24.094" cy="10.786" rx="16.631" ry="7.547" fill="#B5BCC9"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7.463 10.787V23.01c.091 4.128 7.496 7.462 16.615 7.462 9.12 0 16.524-3.334 16.615-7.462l.001-.078V11.245c-.521 3.955-7.754 7.09-16.6 7.09-9.185 0-16.631-3.38-16.631-7.548zm0 14.29v12.22c.091 4.13 7.496 7.464 16.615 7.464 9.12 0 16.524-3.335 16.615-7.463l.001-.078V25.534c-.521 3.955-7.754 7.09-16.6 7.09-9.185 0-16.631-3.38-16.631-7.548z" fill="url(#atqsvg_eb55a6de3f__paint0_linear_7496_35648)"/><g filter="url(#atqsvg_eb55a6de3f__filter0_d_7496_35648)"><circle cx="13.998" cy="22.37" r="2" fill="#fff"/></g><g filter="url(#atqsvg_eb55a6de3f__filter1_d_7496_35648)"><circle cx="13.998" cy="36.672" r="2" fill="#fff"/></g></g><defs><filter id="atqsvg_eb55a6de3f__filter0_d_7496_35648" x="3.998" y="14.37" width="20" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="2"/><feGaussianBlur stdDeviation="4"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_7496_35648"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_7496_35648" result="shape"/></filter><filter id="atqsvg_eb55a6de3f__filter1_d_7496_35648" x="3.998" y="28.672" width="20" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="2"/><feGaussianBlur stdDeviation="4"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_7496_35648"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_7496_35648" result="shape"/></filter><linearGradient id="atqsvg_eb55a6de3f__paint0_linear_7496_35648" x1="24.078" y1="10.787" x2="24.078" y2="44.761" gradientUnits="userSpaceOnUse"><stop stop-color="#818A9C"/><stop offset="1" stop-color="#353D51"/></linearGradient><clipPath id="atqsvg_eb55a6de3f__clip0_7496_35648"><path fill="#fff" transform="translate(.08)" d="M0 0h48v48H0z"/></clipPath></defs></svg></span>
+          </div>
+          <div class="collapsed-menu">
+            <div class="collapsed-item">
+              <span class="menu-icon" role="img" aria-label="概览"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 49 49" fill="none" width="20" height="20"><rect x="12.047" y="4.806" width="31" height="31" rx="2" fill="#B5BCC9"/><path fill-rule="evenodd" clip-rule="evenodd" d="M6.977 10.324a2 2 0 00-2 2v29a2 2 0 002 2h29.082a2 2 0 002-2v-29a2 2 0 00-2-2H6.977z" fill="url(#atksvg_ca5e931028__paint0_linear_7496_35604)"/><path fill="#B5BCC9" d="M11.307 24.229h4v11.913h-4zM19.518 20.547h4v15.595h-4z"/><path fill="#fff" d="M27.729 17.507h4v18.635h-4z"/><defs><linearGradient id="atksvg_ca5e931028__paint0_linear_7496_35604" x1="21.518" y1="10.324" x2="21.518" y2="43.324" gradientUnits="userSpaceOnUse"><stop stop-color="#818A9C"/><stop offset="1" stop-color="#353D51"/></linearGradient></defs></svg></span>
+            </div>
+            <div class="collapsed-item">
+              <span class="menu-icon" role="img" aria-label="MySQL"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 49 49" fill="none" width="20" height="20"><ellipse cx="24.094" cy="10.787" rx="16.631" ry="7.547" fill="#B5BCC9"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7.463 36.562V10.787c0 4.168 7.446 7.547 16.63 7.547 8.847 0 16.08-3.134 16.601-7.089v25.317c-.092 4.13-7.496 7.463-16.616 7.463S7.554 40.691 7.463 36.562z" fill="url(#atrsvg_2b28417b69__paint0_linear_7496_35640)"/><path d="M20.43 23.37A5.135 5.135 0 0122.875 22v5.018h2.68v-4.945a5.16 5.16 0 01.2 9.828v5.766h-3.351V31.9a5.16 5.16 0 01-1.974-8.53z" fill="#fff"/><defs><linearGradient id="atrsvg_2b28417b69__paint0_linear_7496_35640" x1="24.078" y1="10.787" x2="24.078" y2="44.025" gradientUnits="userSpaceOnUse"><stop stop-color="#818A9C"/><stop offset="1" stop-color="#353D51"/></linearGradient></defs></svg></span>
+            </div>
+            <div class="collapsed-divider"></div>
+            <div class="collapsed-item">
+              <span class="menu-icon" role="img" aria-label="迁移"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" width="20" height="20"><path fill-rule="evenodd" clip-rule="evenodd" d="M41.18 17.318a8.268 8.268 0 01-3.448 15.786h-9.798a17.473 17.473 0 01-.251 0h-9.796a8.268 8.268 0 01-3.45-15.785c1.064-6.424 6.646-11.323 13.371-11.323 6.725 0 12.307 4.898 13.371 11.322z" fill="#B5BCC9"/><path fill-rule="evenodd" clip-rule="evenodd" d="M36.343 24.433A8.998 8.998 0 0132.59 41.61H10.997a8.998 8.998 0 01-3.754-17.178c1.158-6.99 7.232-12.322 14.55-12.322 7.32 0 13.393 5.331 14.551 12.322z" fill="url(#acjsvg_a2089e7697__paint0_linear_7496_35659)"/><g filter="url(#acjsvg_a2089e7697__filter0_d_7496_35659)"><path fill-rule="evenodd" clip-rule="evenodd" d="M26.992 20.965H16.268l2.332 2.331-7.561 7.561 3.031 3.031 8.495-8.495 4.427-4.428z" fill="#fff"/></g><path fill-rule="evenodd" clip-rule="evenodd" d="M16.432 36.248h10.724l-2.332-2.331 7.561-7.561-3.031-3.032-8.495 8.495v.001l-4.427 4.428z" fill="#B5BCC9"/><defs><linearGradient id="acjsvg_a2089e7697__paint0_linear_7496_35659" x1="21.793" y1="12.111" x2="21.793" y2="41.611" gradientUnits="userSpaceOnUse"><stop stop-color="#818A9C"/><stop offset="1" stop-color="#353D51"/></linearGradient><filter id="acjsvg_a2089e7697__filter0_d_7496_35659" x="3.039" y="14.964" width="31.953" height="28.925" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="2"/><feGaussianBlur stdDeviation="4"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_7496_35659"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_7496_35659" result="shape"/></filter></defs></svg></span>
+            </div>
+          </div>
+          <div class="collapse-btn">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4h12M2 8h12M2 12h12"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

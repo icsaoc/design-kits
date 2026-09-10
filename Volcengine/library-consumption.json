@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 2,
+  "tokenSource": "css.json",
+  "uikitPlan": "uikit-plan.json",
+  "componentsIndex": "components/index.json",
+  "componentContractDir": "components",
+  "componentsCss": "components.css",
+  "tokenCss": "colors_and_type.css",
+  "previewDir": "preview",
+  "uiKitsDir": "ui_kits",
+  "consumptionLayers": {
+    "hardRules": {
+      "files": [],
+      "copyable": false,
+      "purpose": "Absolute implementation constraints that override all sub-agent default behaviors.",
+      "downstreamRule": "FORBIDDEN: Tailwind CSS classes, Lucide/Heroicons/FontAwesome icons, CDN links to any CSS framework, self-invented SVG paths. MANDATORY: Copy HTML structure verbatim from preview/component-{slug}.html. Use library's custom CSS classes (.top-nav, .sidenav, .menu-item, .data-table, etc). Link colors_and_type.css + components.css for styling. Sidenav icons are already inline in the preview HTML — copy them directly."
+    },
+    "tokens": {
+      "files": [
+        "colors_and_type.css",
+        "css.json"
+      ],
+      "copyable": true,
+      "purpose": "Design language source: color scales, semantic aliases, typography, radius, spacing, shadow tokens.",
+      "downstreamRule": "Use semantic aliases (--color-primary, --color-surface, --color-border, --radius-sm, --space-*) first. Reference color scales (--primary-6, --danger-6) only for status and brand contexts."
+    },
+    "components": {
+      "files": [
+        "components.css",
+        "preview/component-*.html",
+        "components/{slug}.json"
+      ],
+      "copyable": true,
+      "purpose": "Component-level markup, classes, token consumption, DOM anatomy, and provenance. Preview HTML is a CODE TEMPLATE, not a visual reference.",
+      "downstreamRule": "COPY markup verbatim from preview/component-{slug}.html (HTML structure, CSS class names, inline SVG icons). Only modify text content and data values. Never rewrite structure using Tailwind utilities or substitute icons with Lucide/Heroicons. Link colors_and_type.css + components.css and keep page-local layout out of shared component CSS."
+    },
+    "icons": {
+      "files": [
+        "assets/icons/*.svg",
+        "assets/icons/sidenav-icon/*.svg"
+      ],
+      "copyable": true,
+      "purpose": "SVG icon assets. assets/icons/ for general icons, assets/icons/sidenav-icon/ for sidebar navigation icons.",
+      "downstreamRule": "Inline SVG content into the page for self-contained output. Sidenav icons must be read from assets/icons/sidenav-icon/. Do not use placeholder or invented SVG paths."
+    },
+    "snippets": {
+      "files": [
+        "snippets/nav-logo.html"
+      ],
+      "copyable": true,
+      "purpose": "TopNav logo HTML fragments referencing assets/ PNG images. Must be Read and pasted verbatim.",
+      "downstreamRule": "Read snippets/nav-logo.html and paste content verbatim into TopNav. Never replace with text, SVG, or placeholders."
+    },
+    "uikit": {
+      "files": [
+        "ui_kits/{type}/index.html",
+        "ui_kits/{type}/quality-report.json"
+      ],
+      "copyable": false,
+      "purpose": "Page-level visual showcase and component-composition evidence for B2B admin pages.",
+      "downstreamRule": "Read UIKit pages for structure and layout patterns. Use component previews for reusable markup. Do not copy outer shell as production template."
+    }
+  },
+  "iconUsage": {
+    "canonicalDir": "assets/icons",
+    "sidenavIconDir": "assets/icons/sidenav-icon",
+    "modeA_inlineSvg": {
+      "syntax": "Read SVG file content and inline as <svg>...</svg>",
+      "useFor": "All icon usage in generated pages to ensure self-contained output."
+    },
+    "noRuntimeSprite": true,
+    "colorRule": "Do not edit shipped SVG geometry. Sidenav icons use currentColor for theming."
+  },
+  "downstreamScenarios": {
+    "useTokensOnly": {
+      "read": [
+        "colors_and_type.css",
+        "css.json"
+      ],
+      "consume": "Link the CSS or read css.json for machine consumption."
+    },
+    "buildSingleComponent": {
+      "read": [
+        "components/{slug}.json",
+        "preview/component-{slug}.html",
+        "components.css",
+        "colors_and_type.css"
+      ],
+      "consume": "COPY component markup verbatim from preview HTML. Keep canonical class names, DOM structure, and inline SVGs unchanged. Never rewrite with Tailwind or substitute icons."
+    },
+    "buildFullPage": {
+      "read": [
+        "ui_kits/{type}/index.html",
+        "ui_kits/{type}/quality-report.json",
+        "components/index.json",
+        "preview/component-{slug}.html",
+        "snippets/nav-logo.html"
+      ],
+      "consume": "Use UIKit as layout reference. Assemble page by COPYING component HTML verbatim from preview/component-{slug}.html — preserve all CSS class names, DOM structure, and inline SVG. Only change text/data content. Link colors_and_type.css + components.css. NEVER use Tailwind or Lucide icons. Sidenav icons are already inline in preview — no need to read snippets/sidenav-icons.json."
+    }
+  },
+  "recommendedReadOrder": [
+    "SKILL.md (PRIORITY: read hard rules section first)",
+    "library-consumption.json",
+    "components/index.json",
+    "preview/component-{slug}.html",
+    "components/{slug}.json",
+    "colors_and_type.css",
+    "components.css",
+    "snippets/nav-logo.html",
+    "ui_kits/{type}/index.html"
+  ],
+  "coreComponents": [
+    "topnav",
+    "sidenav",
+    "page-header",
+    "table",
+    "form",
+    "button",
+    "tabs",
+    "tag"
+  ],
+  "supportComponents": [
+    "alert",
+    "anchor",
+    "avatar",
+    "badge",
+    "breadcrumb",
+    "cascader",
+    "checkbox",
+    "descriptions",
+    "drawer",
+    "dropdown",
+    "icon",
+    "input",
+    "message",
+    "modal",
+    "pagination",
+    "popconfirm",
+    "progress",
+    "segmented-picker",
+    "select",
+    "slider",
+    "status-tag",
+    "steps",
+    "switch",
+    "timepicker",
+    "tooltip"
+  ],
+  "uiKits": [
+    "list-page",
+    "list-page-no-tabs",
+    "detail-basic-page",
+    "detail-tab-page",
+    "detail-with-sidebar",
+    "config-page",
+    "data-dashboard"
+  ]
+}

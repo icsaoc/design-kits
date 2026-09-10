@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 2,
+  "slug": "input",
+  "name": "Input",
+  "category": "input",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Input",
+      "evidence": "Inferred from preview/component-input.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".ui-input",
+        ".active",
+        ".disabled",
+        ".hover",
+        ".input-error",
+        ".input-error-msg",
+        ".input-lg",
+        ".input-md",
+        ".input-mini",
+        ".input-prefix",
+        ".input-labeled",
+        ".input-labeled-large",
+        ".input-labeled-default",
+        ".input-labeled-small",
+        ".input-labeled-mini",
+        ".input-label-part",
+        ".input-value-part"
+      ],
+      "evidence": "Representative selectors from preview/component-input.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-input.html",
+    "representativeSelectors": [
+      ".ui-input",
+      ".active",
+      ".disabled",
+      ".hover",
+      ".input-error",
+      ".input-error-msg",
+      ".input-lg",
+      ".input-md",
+      ".ui-input:hover",
+      ".disabled"
+    ],
+    "cssRuleCount": 18
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "disabled",
+      "error",
+      "focus",
+      "hover",
+      "readonly"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".ui-input",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-input.html",
+    "selectors": [
+      ".ui-input",
+      ".active",
+      ".disabled",
+      ".hover",
+      ".input-error",
+      ".input-error-msg",
+      ".input-lg",
+      ".input-md",
+      ".input-mini",
+      ".input-prefix",
+      ".input-sm",
+      ".input-suffix",
+      ".org",
+      ".readonly",
+      ".w3"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-input.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-input.html",
+      "classes": [
+        "ui-input",
+        "active",
+        "disabled",
+        "hover",
+        "input-error",
+        "input-error-msg",
+        "input-lg",
+        "input-md",
+        "input-mini",
+        "input-prefix",
+        "input-sm",
+        "input-suffix",
+        "org",
+        "readonly",
+        "w3"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-input.html",
+    "source": "preview/component-input.html",
+    "css": {
+      "file": "components.css",
+      "marker": "input"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

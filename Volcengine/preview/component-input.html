@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Input 输入框</title>
+  <link rel="stylesheet" href="preview-scaffold.css">
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="../components.css">
+</head>
+<body>
+<!--
+  ⚠️ CODE TEMPLATE — 本文件是代码模板，不是视觉参考。
+  使用方法：找到需要的变体 → 原样复制 HTML（包括所有 class 名和 DOM 结构）→ 只修改文字和数据。
+  禁止：用 Tailwind 重写、改变 class 命名、简化 DOM 结构、用自定义 class 替代。
+-->
+  <div class="pv-header">
+    <h1>Input 输入框</h1>
+    <p>常规输入框组件，支持多种尺寸、状态、前后缀图标及校验反馈。</p>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">常规（无前后缀）— 尺寸</div>
+    <div class="row">
+      <input class="ui-input input-lg" type="text" placeholder="请输入" data-component="input" data-state="default" data-size="large">
+      <input class="ui-input input-md" type="text" placeholder="请输入" data-component="input" data-state="default" data-size="default">
+      <input class="ui-input input-sm" type="text" placeholder="请输入" data-component="input" data-state="default" data-size="small">
+      <input class="ui-input input-mini" type="text" placeholder="请输入" data-component="input" data-state="default" data-size="mini">
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">常规 — 交互状态</div>
+    <div class="row">
+      <input class="ui-input input-md hover" type="text" placeholder="请输入" data-component="input" data-state="hover">
+      <input class="ui-input input-md active" type="text" placeholder="请输入" data-component="input" data-state="active">
+      <input class="ui-input input-md" type="text" value="已填写内容" data-component="input" data-state="default" data-filled="true">
+      <input class="ui-input input-md disabled" type="text" placeholder="请输入" disabled data-component="input" data-state="disabled">
+      <input class="ui-input input-md disabled" type="text" value="禁用内容" disabled data-component="input" data-state="disabled" data-filled="true">
+      <input class="ui-input input-md readonly" type="text" value="只读内容" readonly data-component="input" data-state="readonly">
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">常规报错</div>
+    <div class="row">
+      <input class="ui-input input-md input-error" type="text" value="错误内容" data-component="input" data-state="error">
+      <input class="ui-input input-md input-error hover" type="text" value="错误内容" data-component="input" data-state="error-hover">
+      <input class="ui-input input-md input-error active" type="text" value="错误内容" data-component="input" data-state="error-focus">
+    </div>
+    <div class="demo-box">
+      <div data-component="input" data-state="error-with-msg">
+        <input class="ui-input input-md input-error" type="text" value="错误内容">
+        <div class="input-error-msg">请输入正确的内容</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">前缀图标</div>
+    <div class="row">
+      <input class="ui-input input-md input-prefix" type="text" placeholder="请输入" data-component="input" data-state="default" data-prefix="true">
+      <input class="ui-input input-md input-prefix hover" type="text" placeholder="请输入" data-component="input" data-state="hover" data-prefix="true">
+      <input class="ui-input input-md input-prefix active" type="text" placeholder="请输入" data-component="input" data-state="active" data-prefix="true">
+      <input class="ui-input input-md input-prefix input-error" type="text" value="错误内容" data-component="input" data-state="error" data-prefix="true">
+      <input class="ui-input input-md input-prefix disabled" type="text" placeholder="请输入" disabled data-component="input" data-state="disabled" data-prefix="true">
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">后缀图标</div>
+    <div class="row">
+      <input class="ui-input input-md input-suffix" type="text" placeholder="请输入" data-component="input" data-state="default" data-suffix="true">
+      <input class="ui-input input-md input-suffix hover" type="text" placeholder="请输入" data-component="input" data-state="hover" data-suffix="true">
+      <input class="ui-input input-md input-suffix active" type="text" placeholder="请输入" data-component="input" data-state="active" data-suffix="true">
+      <input class="ui-input input-md input-suffix input-error" type="text" value="错误内容" data-component="input" data-state="error" data-suffix="true">
+      <input class="ui-input input-md input-suffix disabled" type="text" placeholder="请输入" disabled data-component="input" data-state="disabled" data-suffix="true">
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">前缀 + 后缀</div>
+    <div class="row">
+      <input class="ui-input input-md input-prefix input-suffix" type="text" placeholder="请输入" data-component="input" data-state="default" data-prefix="true" data-suffix="true">
+      <input class="ui-input input-md input-prefix input-suffix hover" type="text" placeholder="请输入" data-component="input" data-state="hover" data-prefix="true" data-suffix="true">
+      <input class="ui-input input-md input-prefix input-suffix active" type="text" placeholder="请输入" data-component="input" data-state="active" data-prefix="true" data-suffix="true">
+      <input class="ui-input input-md input-prefix input-suffix input-error" type="text" value="错误内容" data-component="input" data-state="error" data-prefix="true" data-suffix="true">
+      <input class="ui-input input-md input-prefix input-suffix disabled" type="text" placeholder="请输入" disabled data-component="input" data-state="disabled" data-prefix="true" data-suffix="true">
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">内置标签 — 尺寸</div>
+    <div class="row">
+      <div class="input-labeled input-labeled-large" data-component="input-labeled" data-size="large" data-state="default">
+        <span class="input-label-part">标签</span>
+        <div class="input-value-part"><input type="text" placeholder="请输入"></div>
+      </div>
+      <div class="input-labeled input-labeled-default" data-component="input-labeled" data-size="default" data-state="default">
+        <span class="input-label-part">标签</span>
+        <div class="input-value-part"><input type="text" placeholder="请输入"></div>
+      </div>
+      <div class="input-labeled input-labeled-small" data-component="input-labeled" data-size="small" data-state="default">
+        <span class="input-label-part">标签</span>
+        <div class="input-value-part"><input type="text" placeholder="请输入"></div>
+      </div>
+      <div class="input-labeled input-labeled-mini" data-component="input-labeled" data-size="mini" data-state="default">
+        <span class="input-label-part">标签</span>
+        <div class="input-value-part"><input type="text" placeholder="请输入"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">内置标签 — 状态</div>
+    <div class="row">
+      <div class="input-labeled input-labeled-default" data-component="input-labeled" data-size="default" data-state="default">
+        <span class="input-label-part">标签</span>
+        <div class="input-value-part"><input type="text" placeholder="请输入"></div>
+      </div>
+      <div class="input-labeled input-labeled-default hover" data-component="input-labeled" data-size="default" data-state="hover">
+        <span class="input-label-part">标签</span>
+        <div class="input-value-part"><input type="text" placeholder="请输入"></div>
+      </div>
+      <div class="input-labeled input-labeled-default focus" data-component="input-labeled" data-size="default" data-state="focus">
+        <span class="input-label-part">标签</span>
+        <div class="input-value-part"><input type="text" value="输入内容"></div>
+      </div>
+      <div class="input-labeled input-labeled-default input-error" data-component="input-labeled" data-size="default" data-state="error">
+        <span class="input-label-part">标签</span>
+        <div class="input-value-part"><input type="text" value="错误内容"></div>
+      </div>
+      <div class="input-labeled input-labeled-default disabled" data-component="input-labeled" data-size="default" data-state="disabled">
+        <span class="input-label-part">标签</span>
+        <div class="input-value-part"><input type="text" placeholder="请输入" disabled></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

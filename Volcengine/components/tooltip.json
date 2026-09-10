@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 2,
+  "slug": "tooltip",
+  "name": "Tooltip",
+  "category": "overlay",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Tooltip",
+      "evidence": "Inferred from preview/component-tooltip.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".tooltip",
+        ".tooltip-arrow",
+        ".tooltip-arrow-bottom",
+        ".tooltip-arrow-left",
+        ".tooltip-arrow-right",
+        ".tooltip-arrow-top",
+        ".tooltip-arrow-wrap",
+        ".tooltip-arrow-wrap-side",
+        ".tooltip-bubble"
+      ],
+      "evidence": "Representative selectors from preview/component-tooltip.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-tooltip.html",
+    "representativeSelectors": [
+      ".tooltip",
+      ".tooltip-arrow",
+      ".tooltip-arrow-bottom",
+      ".tooltip-arrow-left",
+      ".tooltip-arrow-right",
+      ".tooltip-arrow-top",
+      ".tooltip-arrow-wrap",
+      ".tooltip-arrow-wrap-side"
+    ],
+    "cssRuleCount": 19
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": []
+  },
+  "representativeVariants": [
+    {
+      "selector": ".tooltip",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-tooltip.html",
+    "selectors": [
+      ".tooltip",
+      ".tooltip-arrow",
+      ".tooltip-arrow-bottom",
+      ".tooltip-arrow-left",
+      ".tooltip-arrow-right",
+      ".tooltip-arrow-top",
+      ".tooltip-arrow-wrap",
+      ".tooltip-arrow-wrap-side",
+      ".tooltip-bubble"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-tooltip.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-tooltip.html",
+      "classes": [
+        "tooltip",
+        "tooltip-arrow",
+        "tooltip-arrow-bottom",
+        "tooltip-arrow-left",
+        "tooltip-arrow-right",
+        "tooltip-arrow-top",
+        "tooltip-arrow-wrap",
+        "tooltip-arrow-wrap-side",
+        "tooltip-bubble"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-tooltip.html",
+    "source": "preview/component-tooltip.html",
+    "css": {
+      "file": "components.css",
+      "marker": "tooltip"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

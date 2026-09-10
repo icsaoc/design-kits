@@ -1,0 +1,421 @@
+{
+  "schemaVersion": 1,
+  "headBoilerplate": "<link rel=\"stylesheet\" href=\"../../colors_and_type.css\">\n<link rel=\"stylesheet\" href=\"../../components.css\">",
+  "corePreviewComponents": [
+    {
+      "slug": "topnav",
+      "reason": "Yuanli core layout component; slot=topnav",
+      "evidenceFile": "components/topnav.json",
+      "priority": 1,
+      "slot": "topnav"
+    },
+    {
+      "slug": "sidenav",
+      "reason": "Yuanli core layout component; slot=sidenav",
+      "evidenceFile": "components/sidenav.json",
+      "priority": 2,
+      "slot": "sidenav"
+    },
+    {
+      "slug": "page-header",
+      "reason": "Yuanli core layout component; slot=page-header",
+      "evidenceFile": "components/page-header.json",
+      "priority": 3,
+      "slot": "page-header"
+    },
+    {
+      "slug": "table",
+      "reason": "Yuanli core data component; slot=table",
+      "evidenceFile": "components/table.json",
+      "priority": 4,
+      "slot": "table"
+    },
+    {
+      "slug": "form",
+      "reason": "Yuanli core input component; slot=form",
+      "evidenceFile": "components/form.json",
+      "priority": 5,
+      "slot": "form"
+    },
+    {
+      "slug": "button",
+      "reason": "Yuanli core action component; slot=button",
+      "evidenceFile": "components/button.json",
+      "priority": 6,
+      "slot": "button"
+    },
+    {
+      "slug": "tabs",
+      "reason": "Yuanli core navigation component; slot=tabs",
+      "evidenceFile": "components/tabs.json",
+      "priority": 7,
+      "slot": "tabs"
+    },
+    {
+      "slug": "tag",
+      "reason": "Yuanli core data-display component; slot=tag",
+      "evidenceFile": "components/tag.json",
+      "priority": 8,
+      "slot": "tag"
+    }
+  ],
+  "supportEvidenceComponents": [
+    {
+      "slug": "alert",
+      "reason": "Yuanli support component; category=feedback",
+      "evidenceFile": "components/alert.json",
+      "priority": 9,
+      "slot": "feedback"
+    },
+    {
+      "slug": "anchor",
+      "reason": "Yuanli support component; category=navigation",
+      "evidenceFile": "components/anchor.json",
+      "priority": 10,
+      "slot": "anchor"
+    },
+    {
+      "slug": "avatar",
+      "reason": "Yuanli support component; category=data-display",
+      "evidenceFile": "components/avatar.json",
+      "priority": 11,
+      "slot": "avatar"
+    },
+    {
+      "slug": "badge",
+      "reason": "Yuanli support component; category=data-display",
+      "evidenceFile": "components/badge.json",
+      "priority": 12,
+      "slot": "badge"
+    },
+    {
+      "slug": "breadcrumb",
+      "reason": "Yuanli support component; category=navigation",
+      "evidenceFile": "components/breadcrumb.json",
+      "priority": 13,
+      "slot": "breadcrumb"
+    },
+    {
+      "slug": "cascader",
+      "reason": "Yuanli support component; category=input",
+      "evidenceFile": "components/cascader.json",
+      "priority": 14,
+      "slot": "cascader"
+    },
+    {
+      "slug": "checkbox",
+      "reason": "Yuanli support component; category=input",
+      "evidenceFile": "components/checkbox.json",
+      "priority": 15,
+      "slot": "checkbox"
+    },
+    {
+      "slug": "descriptions",
+      "reason": "Yuanli support component; category=data-display",
+      "evidenceFile": "components/descriptions.json",
+      "priority": 16,
+      "slot": "descriptions"
+    },
+    {
+      "slug": "drawer",
+      "reason": "Yuanli support component; category=overlay",
+      "evidenceFile": "components/drawer.json",
+      "priority": 17,
+      "slot": "drawer"
+    },
+    {
+      "slug": "dropdown",
+      "reason": "Yuanli support component; category=action",
+      "evidenceFile": "components/dropdown.json",
+      "priority": 18,
+      "slot": "dropdown"
+    },
+    {
+      "slug": "icon",
+      "reason": "Yuanli support component; category=data-display",
+      "evidenceFile": "components/icon.json",
+      "priority": 19,
+      "slot": "icon"
+    },
+    {
+      "slug": "input",
+      "reason": "Yuanli support component; category=input",
+      "evidenceFile": "components/input.json",
+      "priority": 20,
+      "slot": "input"
+    },
+    {
+      "slug": "message",
+      "reason": "Yuanli support component; category=feedback",
+      "evidenceFile": "components/message.json",
+      "priority": 21,
+      "slot": "message"
+    },
+    {
+      "slug": "modal",
+      "reason": "Yuanli support component; category=overlay",
+      "evidenceFile": "components/modal.json",
+      "priority": 22,
+      "slot": "modal"
+    },
+    {
+      "slug": "pagination",
+      "reason": "Yuanli support component; category=navigation",
+      "evidenceFile": "components/pagination.json",
+      "priority": 23,
+      "slot": "pagination"
+    },
+    {
+      "slug": "popconfirm",
+      "reason": "Yuanli support component; category=overlay",
+      "evidenceFile": "components/popconfirm.json",
+      "priority": 24,
+      "slot": "popconfirm"
+    },
+    {
+      "slug": "progress",
+      "reason": "Yuanli support component; category=feedback",
+      "evidenceFile": "components/progress.json",
+      "priority": 25,
+      "slot": "progress"
+    },
+    {
+      "slug": "segmented-picker",
+      "reason": "Yuanli support component; category=input",
+      "evidenceFile": "components/segmented-picker.json",
+      "priority": 26,
+      "slot": "segmented-picker"
+    },
+    {
+      "slug": "select",
+      "reason": "Yuanli support component; category=input",
+      "evidenceFile": "components/select.json",
+      "priority": 27,
+      "slot": "select"
+    },
+    {
+      "slug": "slider",
+      "reason": "Yuanli support component; category=input",
+      "evidenceFile": "components/slider.json",
+      "priority": 28,
+      "slot": "slider"
+    },
+    {
+      "slug": "status-tag",
+      "reason": "Yuanli support component; category=data-display",
+      "evidenceFile": "components/status-tag.json",
+      "priority": 29,
+      "slot": "status-tag"
+    },
+    {
+      "slug": "steps",
+      "reason": "Yuanli support component; category=navigation",
+      "evidenceFile": "components/steps.json",
+      "priority": 30,
+      "slot": "steps"
+    },
+    {
+      "slug": "switch",
+      "reason": "Yuanli support component; category=input",
+      "evidenceFile": "components/switch.json",
+      "priority": 31,
+      "slot": "switch"
+    },
+    {
+      "slug": "timepicker",
+      "reason": "Yuanli support component; category=input",
+      "evidenceFile": "components/timepicker.json",
+      "priority": 32,
+      "slot": "timepicker"
+    },
+    {
+      "slug": "tooltip",
+      "reason": "Yuanli support component; category=overlay",
+      "evidenceFile": "components/tooltip.json",
+      "priority": 33,
+      "slot": "tooltip"
+    }
+  ],
+  "allowedComponents": [
+    "alert",
+    "anchor",
+    "avatar",
+    "badge",
+    "breadcrumb",
+    "button",
+    "cascader",
+    "checkbox",
+    "descriptions",
+    "drawer",
+    "dropdown",
+    "form",
+    "icon",
+    "input",
+    "message",
+    "modal",
+    "page-header",
+    "pagination",
+    "popconfirm",
+    "progress",
+    "segmented-picker",
+    "select",
+    "sidenav",
+    "slider",
+    "status-tag",
+    "steps",
+    "switch",
+    "table",
+    "tabs",
+    "tag",
+    "timepicker",
+    "tooltip",
+    "topnav"
+  ],
+  "screenBlueprints": [
+    {
+      "name": "list-page",
+      "displayName": "列表页",
+      "componentSlugs": [
+        "topnav",
+        "sidenav",
+        "page-header",
+        "tabs",
+        "table",
+        "button",
+        "pagination",
+        "segmented-picker",
+        "input"
+      ],
+      "role": "primary"
+    },
+    {
+      "name": "list-page-no-tabs",
+      "displayName": "不带tab的列表页",
+      "componentSlugs": [
+        "topnav",
+        "sidenav",
+        "page-header",
+        "table",
+        "button",
+        "pagination",
+        "segmented-picker",
+        "input",
+        "select"
+      ],
+      "role": "primary"
+    },
+    {
+      "name": "detail-basic-page",
+      "displayName": "基础详情页（无tab）",
+      "componentSlugs": [
+        "topnav",
+        "sidenav",
+        "page-header",
+        "descriptions",
+        "table",
+        "button"
+      ],
+      "role": "primary"
+    },
+    {
+      "name": "detail-tab-page",
+      "displayName": "详情页（带tab）",
+      "componentSlugs": [
+        "topnav",
+        "sidenav",
+        "page-header",
+        "tabs",
+        "descriptions",
+        "table",
+        "button"
+      ],
+      "role": "primary"
+    },
+    {
+      "name": "detail-with-sidebar",
+      "displayName": "带右侧信息模块的详情页",
+      "componentSlugs": [
+        "topnav",
+        "sidenav",
+        "page-header",
+        "tabs",
+        "descriptions",
+        "tag",
+        "button"
+      ],
+      "role": "primary"
+    },
+    {
+      "name": "config-page",
+      "displayName": "配置页",
+      "componentSlugs": [
+        "topnav",
+        "sidenav",
+        "page-header",
+        "form",
+        "input",
+        "select",
+        "button",
+        "steps",
+        "checkbox"
+      ],
+      "role": "primary"
+    },
+    {
+      "name": "data-dashboard",
+      "displayName": "数据看板页",
+      "componentSlugs": [
+        "topnav",
+        "sidenav",
+        "page-header",
+        "tabs",
+        "button",
+        "segmented-picker"
+      ],
+      "role": "secondary"
+    }
+  ],
+  "productContext": {
+    "kitType": "Yuanli B2B Admin",
+    "productType": "ByteCloud enterprise management console",
+    "dominantCopy": [],
+    "pageNames": [
+      "list-page",
+      "list-page-no-tabs",
+      "detail-basic-page",
+      "detail-tab-page",
+      "detail-with-sidebar",
+      "config-page",
+      "data-dashboard"
+    ],
+    "selectedFrameNames": [
+      "list-page",
+      "list-page-no-tabs",
+      "detail-basic-page",
+      "detail-tab-page",
+      "detail-with-sidebar",
+      "config-page",
+      "data-dashboard"
+    ]
+  },
+  "selectionPolicy": "current-library-contract-first",
+  "slotAssignments": [
+    { "slot": "topnav", "slug": "topnav", "reason": "current component contract" },
+    { "slot": "sidenav", "slug": "sidenav", "reason": "current component contract" },
+    { "slot": "page-header", "slug": "page-header", "reason": "current component contract" },
+    { "slot": "table", "slug": "table", "reason": "current component contract" },
+    { "slot": "form", "slug": "form", "reason": "current component contract" },
+    { "slot": "button", "slug": "button", "reason": "current component contract" },
+    { "slot": "tabs", "slug": "tabs", "reason": "current component contract" },
+    { "slot": "tag", "slug": "tag", "reason": "current component contract" }
+  ],
+  "missingFixedSlots": [],
+  "fallbackComponents": [],
+  "needsNarrative": false,
+  "forbiddenInventedComponents": [],
+  "lowConfidence": false,
+  "warnings": [
+    "UIKit pages are visual showcases with TopNav+Sidenav+Content layout; do not copy outer shell constraints into downstream production pages.",
+    "TopNav logo must be sourced from snippets/nav-logo.html (Read and paste verbatim), never invented."
+  ]
+}

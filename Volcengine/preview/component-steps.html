@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Steps 步骤条</title>
+  <link rel="stylesheet" href="preview-scaffold.css">
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="../components.css">
+</head>
+<body>
+  <div class="pv-header">
+    <h1>Steps 步骤条</h1>
+    <p>步骤条组件，支持水平/垂直方向、带/不带描述、多种指示器状态 (completed/active/pending/disabled/error)。</p>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Horizontal - No Description 水平无描述</div>
+    <div class="stack-12" data-component="steps" data-variant="horizontal-no-desc">
+      <!-- 2 steps -->
+      <div class="steps-h" style="width: 243px;">
+        <div class="step-h">
+          <div class="ind active">1</div>
+          <span class="step-title">基本配置</span>
+          <div class="step-line done"><div class="line"></div></div>
+        </div>
+        <div class="step-h last">
+          <div class="ind pending">2</div>
+          <span class="step-title">基本配置</span>
+        </div>
+      </div>
+      <!-- 3 steps -->
+      <div class="steps-h" style="width: 400px;">
+        <div class="step-h">
+          <svg class="ind completed" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="var(--primary-5)"/><polyline points="7,12 10.5,15.5 17,9" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span class="step-title">基本配置</span>
+          <div class="step-line done"><div class="line"></div></div>
+        </div>
+        <div class="step-h">
+          <div class="ind active">2</div>
+          <span class="step-title">基本配置</span>
+          <div class="step-line"><div class="line"></div></div>
+        </div>
+        <div class="step-h last">
+          <div class="ind pending">3</div>
+          <span class="step-title">基本配置</span>
+        </div>
+      </div>
+      <!-- 4 steps -->
+      <div class="steps-h" style="width: 560px;">
+        <div class="step-h">
+          <svg class="ind completed" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="var(--primary-5)"/><polyline points="7,12 10.5,15.5 17,9" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span class="step-title">基本配置</span>
+          <div class="step-line done"><div class="line"></div></div>
+        </div>
+        <div class="step-h">
+          <div class="ind active">2</div>
+          <span class="step-title">基本配置</span>
+          <div class="step-line"><div class="line"></div></div>
+        </div>
+        <div class="step-h">
+          <div class="ind pending">3</div>
+          <span class="step-title">基本配置</span>
+          <div class="step-line"><div class="line"></div></div>
+        </div>
+        <div class="step-h last">
+          <div class="ind pending">4</div>
+          <span class="step-title">基本配置</span>
+        </div>
+      </div>
+      <!-- 5 steps -->
+      <div class="steps-h" style="width: 720px;">
+        <div class="step-h">
+          <svg class="ind completed" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="var(--primary-5)"/><polyline points="7,12 10.5,15.5 17,9" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span class="step-title">基本配置</span>
+          <div class="step-line done"><div class="line"></div></div>
+        </div>
+        <div class="step-h">
+          <div class="ind active">2</div>
+          <span class="step-title">基本配置</span>
+          <div class="step-line"><div class="line"></div></div>
+        </div>
+        <div class="step-h">
+          <div class="ind pending">3</div>
+          <span class="step-title">基本配置</span>
+          <div class="step-line"><div class="line"></div></div>
+        </div>
+        <div class="step-h">
+          <div class="ind pending">4</div>
+          <span class="step-title">基本配置</span>
+          <div class="step-line"><div class="line"></div></div>
+        </div>
+        <div class="step-h last">
+          <div class="ind pending">5</div>
+          <span class="step-title">基本配置</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Horizontal - With Description 水平带描述</div>
+    <div class="stack-12" data-component="steps" data-variant="horizontal-with-desc">
+      <!-- 2 steps -->
+      <div class="steps-h" style="width: 243px;">
+        <div class="step-h-desc">
+          <div class="step-header">
+            <div class="ind active">1</div>
+            <span class="step-title">基本配置</span>
+            <div class="step-line done"><div class="line"></div></div>
+          </div>
+          <p class="step-desc">描述信息</p>
+        </div>
+        <div class="step-h-desc last">
+          <div class="step-header">
+            <div class="ind pending">2</div>
+            <span class="step-title">基本配置</span>
+          </div>
+          <p class="step-desc-last">描述信息</p>
+        </div>
+      </div>
+      <!-- 3 steps -->
+      <div class="steps-h" style="width: 400px;">
+        <div class="step-h-desc">
+          <div class="step-header">
+            <svg class="ind completed" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="var(--primary-5)"/><polyline points="7,12 10.5,15.5 17,9" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span class="step-title">基本配置</span>
+            <div class="step-line done"><div class="line"></div></div>
+          </div>
+          <p class="step-desc">描述信息</p>
+        </div>
+        <div class="step-h-desc">
+          <div class="step-header">
+            <div class="ind active">2</div>
+            <span class="step-title">基本配置</span>
+            <div class="step-line"><div class="line"></div></div>
+          </div>
+          <p class="step-desc">描述信息</p>
+        </div>
+        <div class="step-h-desc last">
+          <div class="step-header">
+            <div class="ind pending">3</div>
+            <span class="step-title">基本配置</span>
+          </div>
+          <p class="step-desc-last">描述信息</p>
+        </div>
+      </div>
+      <!-- 5 steps -->
+      <div class="steps-h" style="width: 720px;">
+        <div class="step-h-desc">
+          <div class="step-header">
+            <svg class="ind completed" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="var(--primary-5)"/><polyline points="7,12 10.5,15.5 17,9" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span class="step-title">基本配置</span>
+            <div class="step-line done"><div class="line"></div></div>
+          </div>
+          <p class="step-desc">描述信息</p>
+        </div>
+        <div class="step-h-desc">
+          <div class="step-header">
+            <div class="ind active">2</div>
+            <span class="step-title">基本配置</span>
+            <div class="step-line"><div class="line"></div></div>
+          </div>
+          <p class="step-desc">描述信息</p>
+        </div>
+        <div class="step-h-desc">
+          <div class="step-header">
+            <div class="ind pending">3</div>
+            <span class="step-title">基本配置</span>
+            <div class="step-line"><div class="line"></div></div>
+          </div>
+          <p class="step-desc">描述信息</p>
+        </div>
+        <div class="step-h-desc">
+          <div class="step-header">
+            <div class="ind pending">4</div>
+            <span class="step-title">基本配置</span>
+            <div class="step-line"><div class="line"></div></div>
+          </div>
+          <p class="step-desc">描述信息</p>
+        </div>
+        <div class="step-h-desc last">
+          <div class="step-header">
+            <div class="ind pending">5</div>
+            <span class="step-title">基本配置</span>
+          </div>
+          <p class="step-desc-last">描述信息</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Vertical - No Description 垂直无描述</div>
+    <div class="row" data-component="steps" data-variant="vertical-no-desc">
+      <!-- 2 steps -->
+      <div class="steps-v">
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind active">1</div>
+            <div class="step-v-line"><div class="vline"></div></div>
+          </div>
+          <span class="step-title">基本配置</span>
+        </div>
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind pending">2</div>
+          </div>
+          <span class="step-title">基本配置</span>
+        </div>
+      </div>
+      <!-- 3 steps -->
+      <div class="steps-v">
+        <div class="step-v">
+          <div class="step-v-icon">
+            <svg class="ind completed" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="var(--primary-5)"/><polyline points="7,12 10.5,15.5 17,9" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <div class="step-v-line done"><div class="vline"></div></div>
+          </div>
+          <span class="step-title">基本配置</span>
+        </div>
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind active">2</div>
+            <div class="step-v-line"><div class="vline"></div></div>
+          </div>
+          <span class="step-title">基本配置</span>
+        </div>
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind pending">3</div>
+          </div>
+          <span class="step-title">基本配置</span>
+        </div>
+      </div>
+      <!-- 4 steps -->
+      <div class="steps-v">
+        <div class="step-v">
+          <div class="step-v-icon">
+            <svg class="ind completed" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="var(--primary-5)"/><polyline points="7,12 10.5,15.5 17,9" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <div class="step-v-line done"><div class="vline"></div></div>
+          </div>
+          <span class="step-title">基本配置</span>
+        </div>
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind active">2</div>
+            <div class="step-v-line"><div class="vline"></div></div>
+          </div>
+          <span class="step-title">基本配置</span>
+        </div>
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind pending">3</div>
+            <div class="step-v-line"><div class="vline"></div></div>
+          </div>
+          <span class="step-title">基本配置</span>
+        </div>
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind pending">4</div>
+          </div>
+          <span class="step-title">基本配置</span>
+        </div>
+      </div>
+      <!-- 5 steps -->
+      <div class="steps-v">
+        <div class="step-v">
+          <div class="step-v-icon">
+            <svg class="ind completed" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="var(--primary-5)"/><polyline points="7,12 10.5,15.5 17,9" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <div class="step-v-line done"><div class="vline"></div></div>
+          </div>
+          <span class="step-title">基本配置</span>
+        </div>
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind active">2</div>
+            <div class="step-v-line"><div class="vline"></div></div>
+          </div>
+          <span class="step-title">基本配置</span>
+        </div>
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind pending">3</div>
+            <div class="step-v-line"><div class="vline"></div></div>
+          </div>
+          <span class="step-title">基本配置</span>
+        </div>
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind pending">4</div>
+            <div class="step-v-line"><div class="vline"></div></div>
+          </div>
+          <span class="step-title">基本配置</span>
+        </div>
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind pending">5</div>
+          </div>
+          <span class="step-title">基本配置</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Vertical - With Description 垂直带描述</div>
+    <div class="row" data-component="steps" data-variant="vertical-with-desc">
+      <!-- 2 steps -->
+      <div class="steps-v">
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind active">1</div>
+            <div class="step-v-line"><div class="vline"></div></div>
+          </div>
+          <div class="step-v-content">
+            <span class="step-title">基本配置</span>
+            <span class="step-desc-v">描述信息</span>
+          </div>
+        </div>
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind pending">2</div>
+          </div>
+          <div class="step-v-content">
+            <span class="step-title">基本配置</span>
+            <span class="step-desc-v">描述信息</span>
+          </div>
+        </div>
+      </div>
+      <!-- 3 steps -->
+      <div class="steps-v">
+        <div class="step-v">
+          <div class="step-v-icon">
+            <svg class="ind completed" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="var(--primary-5)"/><polyline points="7,12 10.5,15.5 17,9" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <div class="step-v-line done"><div class="vline"></div></div>
+          </div>
+          <div class="step-v-content">
+            <span class="step-title">基本配置</span>
+            <span class="step-desc-v">描述信息</span>
+          </div>
+        </div>
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind active">2</div>
+            <div class="step-v-line"><div class="vline"></div></div>
+          </div>
+          <div class="step-v-content">
+            <span class="step-title">基本配置</span>
+            <span class="step-desc-v">描述信息</span>
+          </div>
+        </div>
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind pending">3</div>
+          </div>
+          <div class="step-v-content">
+            <span class="step-title">基本配置</span>
+            <span class="step-desc-v">描述信息</span>
+          </div>
+        </div>
+      </div>
+      <!-- 4 steps -->
+      <div class="steps-v">
+        <div class="step-v">
+          <div class="step-v-icon">
+            <svg class="ind completed" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="var(--primary-5)"/><polyline points="7,12 10.5,15.5 17,9" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <div class="step-v-line done"><div class="vline"></div></div>
+          </div>
+          <div class="step-v-content">
+            <span class="step-title">基本配置</span>
+            <span class="step-desc-v">描述信息</span>
+          </div>
+        </div>
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind active">2</div>
+            <div class="step-v-line"><div class="vline"></div></div>
+          </div>
+          <div class="step-v-content">
+            <span class="step-title">基本配置</span>
+            <span class="step-desc-v">描述信息</span>
+          </div>
+        </div>
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind pending">3</div>
+            <div class="step-v-line"><div class="vline"></div></div>
+          </div>
+          <div class="step-v-content">
+            <span class="step-title">基本配置</span>
+            <span class="step-desc-v">描述信息</span>
+          </div>
+        </div>
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind pending">4</div>
+          </div>
+          <div class="step-v-content">
+            <span class="step-title">基本配置</span>
+            <span class="step-desc-v">描述信息</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Icon States 指示器状态</div>
+    <div class="row" data-component="steps" data-variant="icon-states">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="var(--primary-5)"/><polyline points="7,12 10.5,15.5 17,9" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      <div class="ind pending">1</div>
+      <div class="ind active">2</div>
+      <div class="ind disabled">3</div>
+      <div class="ind error">4</div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Step Item States - Horizontal 水平单步状态</div>
+    <div class="stack-12" data-component="steps" data-variant="step-states-horizontal">
+      <!-- Completed -->
+      <div class="steps-h" style="width: 300px;">
+        <div class="step-h-desc">
+          <div class="step-header">
+            <svg class="ind completed" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="var(--primary-5)"/><polyline points="7,12 10.5,15.5 17,9" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <span class="step-title">基本配置</span>
+            <div class="step-line done"><div class="line"></div></div>
+          </div>
+          <p class="step-desc">描述信息</p>
+        </div>
+      </div>
+      <!-- Pending -->
+      <div class="steps-h" style="width: 300px;">
+        <div class="step-h-desc">
+          <div class="step-header">
+            <div class="ind pending">1</div>
+            <span class="step-title">基本配置</span>
+            <div class="step-line"><div class="line"></div></div>
+          </div>
+          <p class="step-desc">描述信息</p>
+        </div>
+      </div>
+      <!-- Active -->
+      <div class="steps-h" style="width: 300px;">
+        <div class="step-h-desc">
+          <div class="step-header">
+            <div class="ind active">1</div>
+            <span class="step-title">基本配置</span>
+            <div class="step-line"><div class="line"></div></div>
+          </div>
+          <p class="step-desc">描述信息</p>
+        </div>
+      </div>
+      <!-- Error -->
+      <div class="steps-h" style="width: 300px;">
+        <div class="step-h-desc">
+          <div class="step-header">
+            <svg class="ind" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="var(--status-yuanliDanger-5)"/><path d="M12 7v6" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16.5" r="1" fill="var(--color-white)"/></svg>
+            <span class="step-title">基本配置</span>
+            <div class="step-line"><div class="line"></div></div>
+          </div>
+          <p class="step-desc">描述信息</p>
+        </div>
+      </div>
+      <!-- Disabled -->
+      <div class="steps-h" style="width: 300px;">
+        <div class="step-h-desc">
+          <div class="step-header">
+            <div class="ind disabled">1</div>
+            <span class="step-title" style="color: var(--steps-desc);">基本配置</span>
+            <div class="step-line"><div class="line"></div></div>
+          </div>
+          <p class="step-desc">描述信息</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Step Item States - Vertical 垂直单步状态</div>
+    <div class="row" data-component="steps" data-variant="step-states-vertical">
+      <!-- Completed -->
+      <div class="steps-v">
+        <div class="step-v">
+          <div class="step-v-icon">
+            <svg class="ind completed" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="var(--primary-5)"/><polyline points="7,12 10.5,15.5 17,9" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            <div class="step-v-line done"><div class="vline"></div></div>
+          </div>
+          <div class="step-v-content">
+            <span class="step-title">基本配置</span>
+            <span class="step-desc-v">描述信息</span>
+          </div>
+        </div>
+      </div>
+      <!-- Pending -->
+      <div class="steps-v">
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind pending">1</div>
+            <div class="step-v-line"><div class="vline"></div></div>
+          </div>
+          <div class="step-v-content">
+            <span class="step-title">基本配置</span>
+            <span class="step-desc-v">描述信息</span>
+          </div>
+        </div>
+      </div>
+      <!-- Active -->
+      <div class="steps-v">
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind active">1</div>
+            <div class="step-v-line"><div class="vline"></div></div>
+          </div>
+          <div class="step-v-content">
+            <span class="step-title">基本配置</span>
+            <span class="step-desc-v">描述信息</span>
+          </div>
+        </div>
+      </div>
+      <!-- Error -->
+      <div class="steps-v">
+        <div class="step-v">
+          <div class="step-v-icon">
+            <svg class="ind" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="var(--status-yuanliDanger-5)"/><path d="M12 7v6" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16.5" r="1" fill="var(--color-white)"/></svg>
+            <div class="step-v-line"><div class="vline"></div></div>
+          </div>
+          <div class="step-v-content">
+            <span class="step-title">基本配置</span>
+            <span class="step-desc-v">描述信息</span>
+          </div>
+        </div>
+      </div>
+      <!-- Disabled -->
+      <div class="steps-v">
+        <div class="step-v">
+          <div class="step-v-icon">
+            <div class="ind disabled">1</div>
+            <div class="step-v-line"><div class="vline"></div></div>
+          </div>
+          <div class="step-v-content">
+            <span class="step-title" style="color: var(--steps-desc);">基本配置</span>
+            <span class="step-desc-v">描述信息</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 2,
+  "slug": "table",
+  "name": "Table",
+  "category": "data-display",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Table",
+      "evidence": "Inferred from preview/component-table.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".table",
+        ".table-actions",
+        ".table-pagination",
+        ".table-striped",
+        ".table-toolbar",
+        ".table-wrapper",
+        ".action-danger",
+        ".action-link",
+        ".avatar-sm",
+        ".btn"
+      ],
+      "evidence": "Representative selectors from preview/component-table.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-table.html",
+    "representativeSelectors": [
+      ".table",
+      ".table-actions",
+      ".table-pagination",
+      ".table-striped",
+      ".table-toolbar",
+      ".table-wrapper",
+      ".action-danger",
+      ".action-link",
+      ".table:hover",
+      ".disabled"
+    ],
+    "cssRuleCount": 53
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "disabled",
+      "error",
+      "hover"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".table",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-table.html",
+    "selectors": [
+      ".table",
+      ".table-actions",
+      ".table-pagination",
+      ".table-striped",
+      ".table-toolbar",
+      ".table-wrapper",
+      ".action-danger",
+      ".action-link",
+      ".avatar-sm",
+      ".btn",
+      ".btn-primary",
+      ".btn-secondary",
+      ".btn-sm",
+      ".btn-text",
+      ".pagination-active"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-table.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [
+    "--color-bg-1",
+    "--color-bg-3",
+    "--color-bg-4",
+    "--color-bg-5",
+    "--color-border-light",
+    "--color-danger",
+    "--color-primary",
+    "--color-table-action-danger",
+    "--color-table-action-primary",
+    "--color-table-border",
+    "--color-table-cell-bg",
+    "--color-table-cell-text",
+    "--color-table-header-bg",
+    "--color-table-header-text",
+    "--color-table-row-hover",
+    "--color-table-row-stripe",
+    "--color-text-1",
+    "--color-text-2"
+  ],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-table.html",
+      "classes": [
+        "table",
+        "table-actions",
+        "table-pagination",
+        "table-striped",
+        "table-toolbar",
+        "table-wrapper",
+        "action-danger",
+        "action-link",
+        "avatar-sm",
+        "btn",
+        "btn-primary",
+        "btn-secondary",
+        "btn-sm",
+        "btn-text",
+        "pagination-active",
+        "pagination-controls",
+        "pagination-ellipsis",
+        "status-tag",
+        "status-tag-error",
+        "status-tag-icon"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-table.html",
+    "source": "preview/component-table.html",
+    "css": {
+      "file": "components.css",
+      "marker": "table"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "slug": "tabs",
+  "name": "Tabs",
+  "category": "navigation",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Tabs",
+      "evidence": "Inferred from preview/component-tabs.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".tabs-add-btn",
+        ".active",
+        ".btn-extra",
+        ".icon-svg",
+        ".othertabs",
+        ".othertabs-item",
+        ".scroll-btn",
+        ".tab-badge",
+        ".tab-count",
+        ".tab-icon"
+      ],
+      "evidence": "Representative selectors from preview/component-tabs.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-tabs.html",
+    "representativeSelectors": [
+      ".tabs-add-btn",
+      ".active",
+      ".btn-extra",
+      ".icon-svg",
+      ".othertabs",
+      ".othertabs-item",
+      ".scroll-btn",
+      ".tab-badge",
+      ".tabs-add-btn:hover",
+      ".disabled"
+    ],
+    "cssRuleCount": 62
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "disabled",
+      "hover"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".tabs-add-btn",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-tabs.html",
+    "selectors": [
+      ".tabs-add-btn",
+      ".active",
+      ".btn-extra",
+      ".icon-svg",
+      ".othertabs",
+      ".othertabs-item",
+      ".scroll-btn",
+      ".tab-badge",
+      ".tab-count",
+      ".tab-icon",
+      ".tab-item",
+      ".tab-panel",
+      ".tab-panel-bordered",
+      ".tab-panel-vertical",
+      ".tab-size-lg"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-tabs.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-tabs.html",
+      "classes": [
+        "tabs-add-btn",
+        "active",
+        "btn-extra",
+        "icon-svg",
+        "othertabs",
+        "othertabs-item",
+        "scroll-btn",
+        "tab-badge",
+        "tab-count",
+        "tab-icon",
+        "tab-item",
+        "tab-panel",
+        "tab-panel-bordered",
+        "tab-panel-vertical",
+        "tab-size-lg",
+        "tab-size-md",
+        "tab-size-sm",
+        "tabs-button",
+        "tabs-capsule",
+        "tabs-card"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-tabs.html",
+    "source": "preview/component-tabs.html",
+    "css": {
+      "file": "components.css",
+      "marker": "tabs"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

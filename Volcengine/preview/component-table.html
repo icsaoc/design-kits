@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Table 表格</title>
+  <link rel="stylesheet" href="preview-scaffold.css">
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="../components.css">
+</head>
+<body>
+<!--
+  ⚠️ CODE TEMPLATE — 本文件是代码模板，不是视觉参考。
+  使用方法：找到需要的变体 → 原样复制 HTML（包括所有 class 名和 DOM 结构）→ 只修改文字和数据。
+  禁止：用 Tailwind 重写、改变 class 命名、简化 DOM 结构、用自定义 class 替代。
+-->
+  <div class="pv-header">
+    <h1>Table 表格</h1>
+    <p>数据表格组件，支持工具栏筛选、分页、行选择与操作列，适用于中后台数据管理场景。</p>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">完整表格示例</div>
+    <div class="stack-12">
+      <div class="table-toolbar">
+        <div class="toolbar-filters">
+          <div class="ved-select-trigger">
+            <span class="ved-select-placeholder">部门</span>
+            <svg class="ved-select-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="ved-select-trigger">
+            <span class="ved-select-placeholder">状态</span>
+            <svg class="ved-select-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="ved-input">
+            <span class="ved-input-prefix">
+              <svg viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 10.5L13.5 13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            <input type="text" placeholder="搜索姓名或工号...">
+          </div>
+        </div>
+        <div class="toolbar-actions">
+          <button class="btn btn-primary btn-sm">添加员工</button>
+          <button class="btn btn-secondary btn-sm">导出</button>
+        </div>
+      </div>
+      <div class="table-wrapper">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th class="th-checkbox"><input type="checkbox"></th>
+              <th>工号</th>
+              <th>姓名</th>
+              <th>部门</th>
+              <th>职位</th>
+              <th>入职日期</th>
+              <th>状态</th>
+              <th class="table-actions">操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td class="td-mono">EMP-001</td>
+              <td class="td-user"><span class="avatar-sm">陈</span><span>陈明远</span></td>
+              <td>技术部</td>
+              <td>高级前端工程师</td>
+              <td>2022-03-15</td>
+              <td><span class="status-tag status-tag-text status-tag-success"><span class="status-tag-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12.834c3.222 0 5.834-2.612 5.834-5.834S10.222 1.167 7 1.167 1.166 3.778 1.166 7s2.612 5.834 5.834 5.834Z" fill="var(--success-5)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7 11.862a4.862 4.862 0 1 0 0-9.723 4.862 4.862 0 0 0 0 9.723ZM12.834 7A5.834 5.834 0 1 1 1.166 7 5.834 5.834 0 0 1 12.834 7Z" fill="var(--color-success)"/><path fill-rule="evenodd" clip-rule="evenodd" d="m9.362 5.275.4.4a.324.324 0 0 1 0 .4l-3.202 3.203a.33.33 0 0 1-.15.08h-.067a.317.317 0 0 1-.183-.08L4.358 7.477a.324.324 0 0 1 0-.4l.4-.401a.324.324 0 0 1 .401 0l1.2 1.201 2.602-2.602a.324.324 0 0 1 .4 0Z" fill="var(--color-white)"/></svg></span>在职</span></td>
+              <td class="table-actions">
+                <a class="action-link">编辑</a>
+                <a class="action-link">详情</a>
+                <a class="action-link action-danger">停用</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td class="td-mono">EMP-002</td>
+              <td class="td-user"><span class="avatar-sm">林</span><span>林小雨</span></td>
+              <td>产品部</td>
+              <td>产品经理</td>
+              <td>2023-06-01</td>
+              <td><span class="status-tag status-tag-text status-tag-success"><span class="status-tag-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12.834c3.222 0 5.834-2.612 5.834-5.834S10.222 1.167 7 1.167 1.166 3.778 1.166 7s2.612 5.834 5.834 5.834Z" fill="var(--success-5)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7 11.862a4.862 4.862 0 1 0 0-9.723 4.862 4.862 0 0 0 0 9.723ZM12.834 7A5.834 5.834 0 1 1 1.166 7 5.834 5.834 0 0 1 12.834 7Z" fill="var(--color-success)"/><path fill-rule="evenodd" clip-rule="evenodd" d="m9.362 5.275.4.4a.324.324 0 0 1 0 .4l-3.202 3.203a.33.33 0 0 1-.15.08h-.067a.317.317 0 0 1-.183-.08L4.358 7.477a.324.324 0 0 1 0-.4l.4-.401a.324.324 0 0 1 .401 0l1.2 1.201 2.602-2.602a.324.324 0 0 1 .4 0Z" fill="var(--color-white)"/></svg></span>在职</span></td>
+              <td class="table-actions">
+                <a class="action-link">编辑</a>
+                <a class="action-link">详情</a>
+                <a class="action-link action-danger">停用</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td class="td-mono">EMP-003</td>
+              <td class="td-user"><span class="avatar-sm">赵</span><span>赵磊</span></td>
+              <td>设计部</td>
+              <td>UI 设计师</td>
+              <td>2024-09-10</td>
+              <td><span class="status-tag status-tag-text status-tag-warning"><span class="status-tag-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1.167 7c0-3.222 2.611-5.833 5.833-5.833S12.833 3.778 12.833 7 10.222 12.834 7 12.834 1.167 10.222 1.167 7Z" fill="var(--warning-4)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.139A4.861 4.861 0 1 0 7 11.86 4.861 4.861 0 0 0 7 2.14ZM7 1.167A5.833 5.833 0 1 0 7 12.834 5.833 5.833 0 0 0 7 1.167Z" fill="var(--warning-5)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7.242 8.373c.16 0 .29.13.29.29v.755a.29.29 0 0 1-.29.29h-.755a.29.29 0 0 1-.29-.29v-.755c0-.16.13-.29.29-.29h.755Zm0-4.265c.16 0 .29.13.29.29v3.055a.29.29 0 0 1-.29.29h-.755a.29.29 0 0 1-.29-.29V4.398c0-.16.13-.29.29-.29h.755Z" fill="var(--color-white)"/></svg></span>试用期</span></td>
+              <td class="table-actions">
+                <a class="action-link">编辑</a>
+                <a class="action-link">详情</a>
+                <a class="action-link action-danger">停用</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td class="td-mono">EMP-004</td>
+              <td class="td-user"><span class="avatar-sm">周</span><span>周婷</span></td>
+              <td>市场部</td>
+              <td>市场运营</td>
+              <td>2021-11-20</td>
+              <td><span class="status-tag status-tag-text status-tag-success"><span class="status-tag-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 12.834c3.222 0 5.834-2.612 5.834-5.834S10.222 1.167 7 1.167 1.166 3.778 1.166 7s2.612 5.834 5.834 5.834Z" fill="var(--success-5)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7 11.862a4.862 4.862 0 1 0 0-9.723 4.862 4.862 0 0 0 0 9.723ZM12.834 7A5.834 5.834 0 1 1 1.166 7 5.834 5.834 0 0 1 12.834 7Z" fill="var(--color-success)"/><path fill-rule="evenodd" clip-rule="evenodd" d="m9.362 5.275.4.4a.324.324 0 0 1 0 .4l-3.202 3.203a.33.33 0 0 1-.15.08h-.067a.317.317 0 0 1-.183-.08L4.358 7.477a.324.324 0 0 1 0-.4l.4-.401a.324.324 0 0 1 .401 0l1.2 1.201 2.602-2.602a.324.324 0 0 1 .4 0Z" fill="var(--color-white)"/></svg></span>在职</span></td>
+              <td class="table-actions">
+                <a class="action-link">编辑</a>
+                <a class="action-link">详情</a>
+                <a class="action-link action-danger">停用</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td class="td-mono">EMP-005</td>
+              <td class="td-user"><span class="avatar-sm">吴</span><span>吴凡</span></td>
+              <td>技术部</td>
+              <td>后端工程师</td>
+              <td>2020-04-08</td>
+              <td><span class="status-tag status-tag-text status-tag-error"><span class="status-tag-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M6.973 12.831c3.213 0 5.818-2.605 5.818-5.819 0-3.213-2.605-5.818-5.818-5.818-3.214 0-5.819 2.605-5.819 5.818 0 3.214 2.605 5.819 5.819 5.819Z" fill="var(--danger-5)"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7 11.861a4.861 4.861 0 1 0 0-9.722 4.861 4.861 0 0 0 0 9.722ZM12.834 7A5.834 5.834 0 1 1 1.167 7 5.834 5.834 0 0 1 12.834 7Z" fill="var(--color-danger)"/><path fill-rule="evenodd" clip-rule="evenodd" d="m8.762 4.826.41.41a.324.324 0 0 1 0 .47L7.853 7.025l1.32 1.32a.324.324 0 0 1 0 .47l-.41.41a.324.324 0 0 1-.47 0L6.973 7.905l-1.32 1.32a.324.324 0 0 1-.469 0l-.41-.41a.324.324 0 0 1 0-.47l1.318-1.32-1.318-1.32a.324.324 0 0 1 0-.469l.41-.41a.324.324 0 0 1 .47 0l1.319 1.32 1.32-1.32a.324.324 0 0 1 .469 0Z" fill="var(--color-white)"/></svg></span>已离职</span></td>
+              <td class="table-actions">
+                <a class="action-link">详情</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-pagination">
+        <span>共 128 条</span>
+        <div class="pagination-controls">
+          <button class="btn btn-text btn-sm" disabled>&lt;</button>
+          <button class="btn btn-text btn-sm pagination-active">1</button>
+          <button class="btn btn-text btn-sm">2</button>
+          <button class="btn btn-text btn-sm">3</button>
+          <span class="pagination-ellipsis">...</span>
+          <button class="btn btn-text btn-sm">13</button>
+          <button class="btn btn-text btn-sm">&gt;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('.table-wrapper').forEach(function(wrapper) {
+      wrapper.addEventListener('scroll', function() {
+        var maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+        wrapper.classList.toggle('is-scrolling', wrapper.scrollLeft > 0 && wrapper.scrollLeft < maxScroll);
+      });
+    });
+  </script>
+</body>
+</html>

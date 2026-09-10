@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 2,
+  "slug": "modal",
+  "name": "Modal",
+  "category": "overlay",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Modal",
+      "evidence": "Inferred from preview/component-modal.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".modal",
+        ".modal-body",
+        ".modal-close",
+        ".modal-confirm",
+        ".modal-confirm-body",
+        ".modal-confirm-content",
+        ".modal-confirm-desc",
+        ".modal-confirm-footer",
+        ".modal-confirm-icon",
+        ".modal-confirm-icon-danger"
+      ],
+      "evidence": "Representative selectors from preview/component-modal.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-modal.html",
+    "representativeSelectors": [
+      ".modal",
+      ".modal-body",
+      ".modal-close",
+      ".modal-confirm",
+      ".modal-confirm-body",
+      ".modal-confirm-content",
+      ".modal-confirm-desc",
+      ".modal-confirm-footer",
+      ".modal:hover"
+    ],
+    "cssRuleCount": 28
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "hover"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".modal",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-modal.html",
+    "selectors": [
+      ".modal",
+      ".modal-body",
+      ".modal-close",
+      ".modal-confirm",
+      ".modal-confirm-body",
+      ".modal-confirm-content",
+      ".modal-confirm-desc",
+      ".modal-confirm-footer",
+      ".modal-confirm-icon",
+      ".modal-confirm-icon-danger",
+      ".modal-confirm-icon-info",
+      ".modal-confirm-icon-success",
+      ".modal-confirm-icon-warning",
+      ".modal-confirm-title",
+      ".modal-footer"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-modal.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-modal.html",
+      "classes": [
+        "modal",
+        "modal-body",
+        "modal-close",
+        "modal-confirm",
+        "modal-confirm-body",
+        "modal-confirm-content",
+        "modal-confirm-desc",
+        "modal-confirm-footer",
+        "modal-confirm-icon",
+        "modal-confirm-icon-danger",
+        "modal-confirm-icon-info",
+        "modal-confirm-icon-success",
+        "modal-confirm-icon-warning",
+        "modal-confirm-title",
+        "modal-footer",
+        "modal-header",
+        "modal-lg",
+        "modal-md",
+        "modal-sm",
+        "modal-title"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-modal.html",
+    "source": "preview/component-modal.html",
+    "css": {
+      "file": "components.css",
+      "marker": "modal"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

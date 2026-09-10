@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Timepicker 时间选择器</title>
+  <link rel="stylesheet" href="preview-scaffold.css">
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="../components.css">
+</head>
+<body>
+  <div class="pv-header">
+    <h1>Timepicker 时间选择器</h1>
+    <p>时间选择输入组件，支持单选和范围模式，包含多种尺寸和交互状态。</p>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Single 单选时间 — 有值</div>
+    <div class="row">
+      <div class="timepicker timepicker-lg" data-component="timepicker" data-type="single" data-size="large" data-state="default">
+        <div class="timepicker-input">
+          <span class="timepicker-value">09:30:00</span>
+          <span class="timepicker-suffix"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 1.5v2M11 1.5v2M2 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+      </div>
+      <div class="timepicker timepicker-md" data-component="timepicker" data-type="single" data-size="default" data-state="default">
+        <div class="timepicker-input">
+          <span class="timepicker-value">09:30:00</span>
+          <span class="timepicker-suffix"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 1.5v2M11 1.5v2M2 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+      </div>
+      <div class="timepicker timepicker-sm" data-component="timepicker" data-type="single" data-size="small" data-state="default">
+        <div class="timepicker-input">
+          <span class="timepicker-value">09:30:00</span>
+          <span class="timepicker-suffix"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 1.5v2M11 1.5v2M2 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Single 单选时间 — Placeholder</div>
+    <div class="row">
+      <div class="timepicker timepicker-lg" data-component="timepicker" data-type="single" data-size="large" data-state="placeholder">
+        <div class="timepicker-input">
+          <span class="timepicker-placeholder">请选择时间</span>
+          <span class="timepicker-suffix"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 1.5v2M11 1.5v2M2 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+      </div>
+      <div class="timepicker timepicker-md" data-component="timepicker" data-type="single" data-size="default" data-state="placeholder">
+        <div class="timepicker-input">
+          <span class="timepicker-placeholder">请选择时间</span>
+          <span class="timepicker-suffix"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 1.5v2M11 1.5v2M2 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+      </div>
+      <div class="timepicker timepicker-sm" data-component="timepicker" data-type="single" data-size="small" data-state="placeholder">
+        <div class="timepicker-input">
+          <span class="timepicker-placeholder">请选择时间</span>
+          <span class="timepicker-suffix"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 1.5v2M11 1.5v2M2 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Single — 交互状态</div>
+    <div class="row">
+      <div class="timepicker timepicker-md hover" data-component="timepicker" data-type="single" data-size="default" data-state="hover">
+        <div class="timepicker-input">
+          <span class="timepicker-value">09:30:00</span>
+          <span class="timepicker-suffix"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 1.5v2M11 1.5v2M2 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+      </div>
+      <div class="timepicker timepicker-md focus" data-component="timepicker" data-type="single" data-size="default" data-state="focus">
+        <div class="timepicker-input">
+          <span class="timepicker-value">09:30:00</span>
+          <span class="timepicker-suffix"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 1.5v2M11 1.5v2M2 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+      </div>
+      <div class="timepicker timepicker-md disabled" data-component="timepicker" data-type="single" data-size="default" data-state="disabled">
+        <div class="timepicker-input">
+          <span class="timepicker-placeholder">请选择时间</span>
+          <span class="timepicker-suffix"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 1.5v2M11 1.5v2M2 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+      </div>
+      <div class="timepicker timepicker-md error" data-component="timepicker" data-type="single" data-size="default" data-state="error">
+        <div class="timepicker-input">
+          <span class="timepicker-value">09:30:00</span>
+          <span class="timepicker-suffix"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 1.5v2M11 1.5v2M2 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Range 时间范围 — 有值</div>
+    <div class="row">
+      <div class="timepicker timepicker-range timepicker-lg" data-component="timepicker" data-type="range" data-size="large" data-state="default">
+        <div class="timepicker-input">
+          <span class="timepicker-value">09:00:00</span>
+          <span class="timepicker-separator">~</span>
+          <span class="timepicker-value">18:00:00</span>
+          <span class="timepicker-suffix"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 1.5v2M11 1.5v2M2 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+      </div>
+      <div class="timepicker timepicker-range timepicker-md" data-component="timepicker" data-type="range" data-size="default" data-state="default">
+        <div class="timepicker-input">
+          <span class="timepicker-value">09:00:00</span>
+          <span class="timepicker-separator">~</span>
+          <span class="timepicker-value">18:00:00</span>
+          <span class="timepicker-suffix"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 1.5v2M11 1.5v2M2 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+      </div>
+      <div class="timepicker timepicker-range timepicker-sm" data-component="timepicker" data-type="range" data-size="small" data-state="default">
+        <div class="timepicker-input">
+          <span class="timepicker-value">09:00:00</span>
+          <span class="timepicker-separator">~</span>
+          <span class="timepicker-value">18:00:00</span>
+          <span class="timepicker-suffix"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 1.5v2M11 1.5v2M2 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Range 时间范围 — Placeholder & Disabled</div>
+    <div class="row">
+      <div class="timepicker timepicker-range timepicker-md" data-component="timepicker" data-type="range" data-size="default" data-state="placeholder">
+        <div class="timepicker-input">
+          <span class="timepicker-placeholder">开始时间</span>
+          <span class="timepicker-separator">~</span>
+          <span class="timepicker-placeholder">结束时间</span>
+          <span class="timepicker-suffix"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 1.5v2M11 1.5v2M2 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+      </div>
+      <div class="timepicker timepicker-range timepicker-md disabled" data-component="timepicker" data-type="range" data-size="default" data-state="disabled">
+        <div class="timepicker-input">
+          <span class="timepicker-placeholder">开始时间</span>
+          <span class="timepicker-separator">~</span>
+          <span class="timepicker-placeholder">结束时间</span>
+          <span class="timepicker-suffix"><svg viewBox="0 0 16 16" width="14" height="14" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 1.5v2M11 1.5v2M2 6.5h12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

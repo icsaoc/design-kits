@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 2,
+  "slug": "icon",
+  "name": "Icon",
+  "category": "data-display",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Icon",
+      "evidence": "Inferred from preview/component-icon.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".demo-icon-item",
+        ".demo-icon-name",
+        ".svg-icon"
+      ],
+      "evidence": "Representative selectors from preview/component-icon.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-icon.html",
+    "representativeSelectors": [
+      ".demo-icon-item",
+      ".demo-icon-name",
+      ".svg-icon"
+    ],
+    "cssRuleCount": 4
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": []
+  },
+  "representativeVariants": [
+    {
+      "selector": ".demo-icon-item",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-icon.html",
+    "selectors": [
+      ".demo-icon-item",
+      ".demo-icon-name",
+      ".svg-icon"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-icon.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-icon.html",
+      "classes": [
+        "demo-icon-item",
+        "demo-icon-name",
+        "svg-icon"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-icon.html",
+    "source": "preview/component-icon.html",
+    "css": {
+      "file": "components.css",
+      "marker": "icon"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 2,
+  "slug": "button",
+  "name": "Button",
+  "category": "action",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Button",
+      "evidence": "Inferred from preview/component-button.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".btn",
+        ".btn-danger",
+        ".btn-dashed",
+        ".btn-group",
+        ".btn-group-secondary",
+        ".btn-icon",
+        ".btn-lg",
+        ".btn-md",
+        ".btn-mini",
+        ".btn-outline"
+      ],
+      "evidence": "Representative selectors from preview/component-button.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-button.html",
+    "representativeSelectors": [
+      ".btn",
+      ".btn-danger",
+      ".btn-dashed",
+      ".btn-group",
+      ".btn-group-secondary",
+      ".btn-icon",
+      ".btn-lg",
+      ".btn-md",
+      ".btn:hover",
+      ".disabled"
+    ],
+    "cssRuleCount": 48
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "active",
+      "disabled",
+      "hover"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".btn",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-button.html",
+    "selectors": [
+      ".btn",
+      ".btn-danger",
+      ".btn-dashed",
+      ".btn-group",
+      ".btn-group-secondary",
+      ".btn-icon",
+      ".btn-lg",
+      ".btn-md",
+      ".btn-mini",
+      ".btn-outline",
+      ".btn-primary",
+      ".btn-secondary",
+      ".btn-sm",
+      ".btn-success",
+      ".btn-text"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-button.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [
+    "--bg-4",
+    "--bg-white",
+    "--border-1",
+    "--border-2",
+    "--danger-6",
+    "--danger-active",
+    "--danger-disabled-bg",
+    "--danger-hover",
+    "--primary-6",
+    "--primary-active",
+    "--primary-disabled-bg",
+    "--primary-hover",
+    "--shadow-blue",
+    "--shadow-blue-hover",
+    "--shadow-danger",
+    "--shadow-gray",
+    "--shadow-gray-hover",
+    "--shadow-success",
+    "--shadow-warning",
+    "--success-6",
+    "--success-active",
+    "--success-disabled-bg",
+    "--success-hover",
+    "--text-2",
+    "--text-disabled",
+    "--warning-6",
+    "--warning-active",
+    "--warning-disabled-bg",
+    "--warning-hover"
+  ],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-button.html",
+      "classes": [
+        "btn",
+        "btn-danger",
+        "btn-dashed",
+        "btn-group",
+        "btn-group-secondary",
+        "btn-icon",
+        "btn-lg",
+        "btn-md",
+        "btn-mini",
+        "btn-outline",
+        "btn-primary",
+        "btn-secondary",
+        "btn-sm",
+        "btn-success",
+        "btn-text",
+        "btn-warning",
+        "disabled"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-button.html",
+    "source": "preview/component-button.html",
+    "css": {
+      "file": "components.css",
+      "marker": "button"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

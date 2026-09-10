@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 2,
+  "slug": "page-header",
+  "name": "PageHeader",
+  "category": "layout",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "PageHeader",
+      "evidence": "Inferred from preview/component-page-header.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".page-header-actions",
+        ".active",
+        ".current",
+        ".page-header-breadcrumb",
+        ".page-header-breadcrumb-item",
+        ".page-header-breadcrumb-sep",
+        ".page-header-btn",
+        ".page-header-btn-icon",
+        ".page-header-comp",
+        ".page-header-left"
+      ],
+      "evidence": "Representative selectors from preview/component-page-header.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-page-header.html",
+    "representativeSelectors": [
+      ".page-header-actions",
+      ".active",
+      ".current",
+      ".page-header-breadcrumb",
+      ".page-header-breadcrumb-item",
+      ".page-header-breadcrumb-sep",
+      ".page-header-btn",
+      ".page-header-btn-icon",
+      ".page-header-actions:hover"
+    ],
+    "cssRuleCount": 34
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "error",
+      "hover"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".page-header-actions",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-page-header.html",
+    "selectors": [
+      ".page-header-actions",
+      ".active",
+      ".current",
+      ".page-header-breadcrumb",
+      ".page-header-breadcrumb-item",
+      ".page-header-breadcrumb-sep",
+      ".page-header-btn",
+      ".page-header-btn-icon",
+      ".page-header-comp",
+      ".page-header-left",
+      ".page-header-tab",
+      ".page-header-tabs",
+      ".page-header-tabs-end",
+      ".page-header-tabs-gap",
+      ".page-header-tabs-list"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-page-header.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-page-header.html",
+      "classes": [
+        "page-header-actions",
+        "active",
+        "current",
+        "page-header-breadcrumb",
+        "page-header-breadcrumb-item",
+        "page-header-breadcrumb-sep",
+        "page-header-btn",
+        "page-header-btn-icon",
+        "page-header-comp",
+        "page-header-left",
+        "page-header-tab",
+        "page-header-tabs",
+        "page-header-tabs-end",
+        "page-header-tabs-gap",
+        "page-header-tabs-list",
+        "page-header-tabs-spacer",
+        "page-header-tag",
+        "page-header-tag-error",
+        "page-header-tag-icon",
+        "page-header-tag-info"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-page-header.html",
+    "source": "preview/component-page-header.html",
+    "css": {
+      "file": "components.css",
+      "marker": "page-header"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

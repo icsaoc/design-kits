@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 2,
+  "slug": "segmented-picker",
+  "name": "SegmentedPicker",
+  "category": "input",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "SegmentedPicker",
+      "evidence": "Inferred from preview/component-segmented-picker.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".segmented-picker",
+        ".segmented-picker-item",
+        ".segmented-picker-lg",
+        ".segmented-picker-md",
+        ".segmented-picker-sm",
+        ".segmented-picker-xs",
+        ".active",
+        ".disabled",
+        ".hover"
+      ],
+      "evidence": "Representative selectors from preview/component-segmented-picker.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-segmented-picker.html",
+    "representativeSelectors": [
+      ".segmented-picker",
+      ".segmented-picker-item",
+      ".segmented-picker-lg",
+      ".segmented-picker-md",
+      ".segmented-picker-sm",
+      ".segmented-picker-xs",
+      ".active",
+      ".disabled",
+      ".segmented-picker:hover",
+      ".disabled"
+    ],
+    "cssRuleCount": 10
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "disabled",
+      "hover"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".segmented-picker",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-segmented-picker.html",
+    "selectors": [
+      ".segmented-picker",
+      ".segmented-picker-item",
+      ".segmented-picker-lg",
+      ".segmented-picker-md",
+      ".segmented-picker-sm",
+      ".segmented-picker-xs",
+      ".active",
+      ".disabled",
+      ".hover"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-segmented-picker.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-segmented-picker.html",
+      "classes": [
+        "segmented-picker",
+        "segmented-picker-item",
+        "segmented-picker-lg",
+        "segmented-picker-md",
+        "segmented-picker-sm",
+        "segmented-picker-xs",
+        "active",
+        "disabled",
+        "hover"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-segmented-picker.html",
+    "source": "preview/component-segmented-picker.html",
+    "css": {
+      "file": "components.css",
+      "marker": "segmented-picker"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

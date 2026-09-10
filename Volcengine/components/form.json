@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 2,
+  "slug": "form",
+  "name": "Form",
+  "category": "input",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Form",
+      "evidence": "Inferred from preview/component-form.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".form",
+        ".form-actions",
+        ".form-card",
+        ".form-error-text",
+        ".form-field",
+        ".form-help",
+        ".form-label",
+        ".form-row",
+        ".form-section",
+        ".form-section-title"
+      ],
+      "evidence": "Representative selectors from preview/component-form.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-form.html",
+    "representativeSelectors": [
+      ".form",
+      ".form-actions",
+      ".form-card",
+      ".form-error-text",
+      ".form-field",
+      ".form-help",
+      ".form-label",
+      ".form-row",
+      ".form:hover",
+      ".disabled"
+    ],
+    "cssRuleCount": 45
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "disabled",
+      "error",
+      "focus",
+      "hover"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".form",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-form.html",
+    "selectors": [
+      ".form",
+      ".form-actions",
+      ".form-card",
+      ".form-error-text",
+      ".form-field",
+      ".form-help",
+      ".form-label",
+      ".form-row",
+      ".form-section",
+      ".form-section-title",
+      ".form-success-text",
+      ".form-title",
+      ".btn",
+      ".btn-md",
+      ".btn-primary"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-form.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-form.html",
+      "classes": [
+        "form",
+        "form-actions",
+        "form-card",
+        "form-error-text",
+        "form-field",
+        "form-help",
+        "form-label",
+        "form-row",
+        "form-section",
+        "form-section-title",
+        "form-success-text",
+        "form-title",
+        "btn",
+        "btn-md",
+        "btn-primary",
+        "btn-secondary",
+        "checkbox",
+        "checkbox-group",
+        "divider",
+        "input-error"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-form.html",
+    "source": "preview/component-form.html",
+    "css": {
+      "file": "components.css",
+      "marker": "form"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

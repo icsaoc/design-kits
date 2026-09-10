@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 2,
+  "kitType": "detail-basic-page",
+  "sourceKind": "preview-contract",
+  "screensGenerated": 2,
+  "coreComponentsUsed": [
+    "descriptions",
+    "page-header",
+    "sidenav",
+    "table",
+    "tag",
+    "topnav"
+  ],
+  "supportComponentsUsed": [
+    "topnav",
+    "sidenav",
+    "page-header",
+    "descriptions",
+    "table",
+    "tag",
+    "buttons"
+  ],
+  "previewClassReuseRate": 0.82,
+  "inventedComponents": [],
+  "interactiveStatesRendered": [
+    "active",
+    "hover",
+    "disabled",
+    "selected"
+  ],
+  "primaryActionPerScreen": true,
+  "mockDataDensity": {
+    "tableRows": 6,
+    "chartPoints": 0
+  },
+  "warnings": [],
+  "notes": [
+    "Basic detail page with PageHeader, 3-column description list, and data table section.",
+    "TopNav and Sidenav referenced from preview/component-topnav.html and preview/component-sidenav.html respectively.",
+    "Icons sourced from assets/icons/sidenav-icon/ directory."
+  ],
+  "componentUsageBasis": "preview-reference"
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabs 选项卡</title>
+  <link rel="stylesheet" href="preview-scaffold.css">
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="../components.css">
+</head>
+<body>
+<!--
+  ⚠️ CODE TEMPLATE — 本文件是代码模板，不是视觉参考。
+  使用方法：找到需要的变体 → 原样复制 HTML（包括所有 class 名和 DOM 结构）→ 只修改文字和数据。
+  禁止：用 Tailwind 重写、改变 class 命名、简化 DOM 结构、用自定义 class 替代。
+-->
+  <div class="pv-header">
+    <h1>Tabs 选项卡</h1>
+    <p>选项卡组件，支持下划线 (Line)、卡片 (Card)、胶囊 (Capsule)、按钮 (Button)、分段 (Othertabs)、竖向 (Vertical) 等多种类型。</p>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Line Tabs 下划线样式</div>
+    <div class="stack-12">
+      <!-- Size Large -->
+      <div class="tabs-line" data-component="tabs" data-type="line" data-size="large">
+        <span class="tab-item tab-size-lg active" data-state="active">选项一</span>
+        <span class="tab-item tab-size-lg" data-state="default">选项二</span>
+        <span class="tab-item tab-size-lg" data-state="default">选项三</span>
+        <span class="tab-item tab-size-lg" data-state="default">选项四</span>
+      </div>
+      <!-- Size Default -->
+      <div class="tabs-line" data-component="tabs" data-type="line" data-size="default">
+        <span class="tab-item tab-size-md active" data-state="active">选项一</span>
+        <span class="tab-item tab-size-md" data-state="default">选项二</span>
+        <span class="tab-item tab-size-md" data-state="default">选项三</span>
+        <span class="tab-item tab-size-md" data-state="default">选项四</span>
+      </div>
+      <!-- Size Small -->
+      <div class="tabs-line" data-component="tabs" data-type="line" data-size="small">
+        <span class="tab-item tab-size-sm active" data-state="active">选项一</span>
+        <span class="tab-item tab-size-sm" data-state="default">选项二</span>
+        <span class="tab-item tab-size-sm" data-state="default">选项三</span>
+        <span class="tab-item tab-size-sm" data-state="default">选项四</span>
+      </div>
+      <!-- States -->
+      <div class="tabs-line" data-component="tabs" data-type="line" data-size="default">
+        <span class="tab-item tab-size-md active" data-state="active">激活项</span>
+        <span class="tab-item tab-size-md" data-state="default">默认项</span>
+        <span class="tab-item tab-size-md" style="color: rgba(22, 100, 255, 0.8);" data-state="hover">悬浮项</span>
+        <span class="tab-item tab-size-md" disabled data-state="disabled">禁用项</span>
+      </div>
+      <!-- With Icons -->
+      <div class="tabs-line" data-component="tabs" data-type="line" data-size="default">
+        <span class="tab-item tab-size-md active" data-state="active">
+          <span class="tab-icon"><svg class="icon-svg" viewBox="0 0 16 16"><path d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1.2A5.8 5.8 0 1013.8 8 5.8 5.8 0 008 2.2zm0 2.3a.75.75 0 01.75.75v2.25H11a.75.75 0 010 1.5H8.75V11.25a.75.75 0 01-1.5 0V9H5a.75.75 0 010-1.5h2.25V5.25A.75.75 0 018 4.5z"/></svg></span>
+          概览
+        </span>
+        <span class="tab-item tab-size-md" data-state="default">
+          <span class="tab-icon"><svg class="icon-svg" viewBox="0 0 16 16"><path d="M2 3h12a1 1 0 011 1v8a1 1 0 01-1 1H2a1 1 0 01-1-1V4a1 1 0 011-1zm0 1v8h12V4H2zm2 2h3v1H4V6zm0 2.5h5v1H4v-1z"/></svg></span>
+          文档
+        </span>
+        <span class="tab-item tab-size-md" data-state="default">
+          <span class="tab-icon"><svg class="icon-svg" viewBox="0 0 16 16"><path d="M8 1.5a6.5 6.5 0 110 13 6.5 6.5 0 010-13zM8 3a5 5 0 100 10A5 5 0 008 3zm-.5 2h1v3.25l2.1 1.22-.5.87L7.5 9V5z"/></svg></span>
+          历史
+        </span>
+      </div>
+      <!-- With Badge/Count -->
+      <div class="tabs-line" data-component="tabs" data-type="line" data-size="default">
+        <span class="tab-item tab-size-md active" data-state="active">
+          全部
+          <span class="tab-count">(128)</span>
+        </span>
+        <span class="tab-item tab-size-md" data-state="default">
+          进行中
+          <span class="tab-badge">5</span>
+        </span>
+        <span class="tab-item tab-size-md" data-state="default">
+          已完成
+          <span class="tab-count">(96)</span>
+        </span>
+        <span class="tab-item tab-size-md" data-state="default">
+          异常
+          <span class="tab-badge">2</span>
+        </span>
+      </div>
+      <!-- Scrollable -->
+      <div class="tabs-line-scroll-wrapper" data-component="tabs" data-type="line" data-scrollable="true">
+        <button class="scroll-btn" data-action="scroll-left">&#8249;</button>
+        <div class="tabs-line-scroll">
+          <div class="tabs-line" data-size="default" style="width: max-content;">
+            <span class="tab-item tab-size-md active" data-state="active">选项一</span>
+            <span class="tab-item tab-size-md" data-state="default">选项二</span>
+            <span class="tab-item tab-size-md" data-state="default">选项三</span>
+            <span class="tab-item tab-size-md" data-state="default">选项四</span>
+            <span class="tab-item tab-size-md" data-state="default">选项五</span>
+            <span class="tab-item tab-size-md" data-state="default">选项六</span>
+            <span class="tab-item tab-size-md" data-state="default">选项七</span>
+            <span class="tab-item tab-size-md" data-state="default">选项八</span>
+            <span class="tab-item tab-size-md" data-state="default">选项九</span>
+            <span class="tab-item tab-size-md" data-state="default">选项十</span>
+          </div>
+        </div>
+        <button class="scroll-btn" data-action="scroll-right">&#8250;</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Card Tabs 卡片样式</div>
+    <div class="stack-12">
+      <!-- Default size -->
+      <div class="tabs-card" data-component="tabs" data-type="card" data-size="default">
+        <span class="tab-item tab-size-md active" data-state="active">规则管理</span>
+        <span class="tab-item tab-size-md" data-state="default">配置详情</span>
+        <span class="tab-item tab-size-md" data-state="default">监控面板</span>
+        <span class="tab-item tab-size-md" data-state="default">操作日志</span>
+      </div>
+      <!-- Large size -->
+      <div class="tabs-card" data-component="tabs" data-type="card" data-size="large">
+        <span class="tab-item tab-size-lg active" data-state="active">规则管理</span>
+        <span class="tab-item tab-size-lg" data-state="default">配置详情</span>
+        <span class="tab-item tab-size-lg" data-state="default">监控面板</span>
+        <span class="tab-item tab-size-lg" data-state="default">操作日志</span>
+      </div>
+      <!-- States -->
+      <div class="tabs-card" data-component="tabs" data-type="card" data-size="large">
+        <span class="tab-item tab-size-lg active" data-state="active">激活项</span>
+        <span class="tab-item tab-size-lg" data-state="default">默认项</span>
+        <span class="tab-item tab-size-lg" style="color: var(--color-primary);" data-state="hover">悬浮项</span>
+        <span class="tab-item tab-size-lg" disabled data-state="disabled">禁用项</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Capsule Tabs 胶囊样式</div>
+    <div class="stack-12">
+      <div class="tabs-capsule" data-component="tabs" data-type="capsule">
+        <button class="tab-item active" data-state="active">全部服务</button>
+        <button class="tab-item" data-state="default">我的收藏</button>
+      </div>
+      <div class="tabs-capsule" data-component="tabs" data-type="capsule">
+        <button class="tab-item active" data-state="active">全部</button>
+        <button class="tab-item" data-state="default">进行中</button>
+        <button class="tab-item" data-state="default">已完成</button>
+      </div>
+      <div class="tabs-capsule" data-component="tabs" data-type="capsule">
+        <button class="tab-item active" data-state="active">全部</button>
+        <button class="tab-item" data-state="default">进行中</button>
+        <button class="tab-item" data-state="default">已完成</button>
+        <button class="tab-item" data-state="default">已取消</button>
+      </div>
+      <div class="tabs-capsule" data-component="tabs" data-type="capsule">
+        <button class="tab-item active" data-state="active">全部</button>
+        <button class="tab-item" data-state="default">进行中</button>
+        <button class="tab-item" disabled data-state="disabled">已完成</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Button Tabs 按钮样式（分段控件）</div>
+    <div class="stack-12">
+      <div class="tabs-button" data-component="tabs" data-type="button">
+        <button class="tab-item active" data-state="active">日</button>
+        <button class="tab-item" data-state="default">周</button>
+        <button class="tab-item" data-state="default">月</button>
+      </div>
+      <div class="tabs-button" data-component="tabs" data-type="button">
+        <button class="tab-item active" data-state="active">概览</button>
+        <button class="tab-item" data-state="default">详情</button>
+        <button class="tab-item" data-state="default">监控</button>
+        <button class="tab-item" data-state="default">日志</button>
+      </div>
+      <div class="tabs-button" data-component="tabs" data-type="button">
+        <button class="tab-item" data-state="default">概览</button>
+        <button class="tab-item" data-state="default">详情</button>
+        <button class="tab-item active" data-state="active">监控</button>
+        <button class="tab-item" data-state="default">日志</button>
+      </div>
+      <div class="tabs-button" data-component="tabs" data-type="button">
+        <button class="tab-item active" data-state="active">概览</button>
+        <button class="tab-item" data-state="default">详情</button>
+        <button class="tab-item" disabled data-state="disabled">监控</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Othertabs 分段选项卡</div>
+    <div class="stack-12">
+      <div class="othertabs" data-component="othertabs" data-size="default">
+        <button class="othertabs-item active" data-state="active">多服务</button>
+        <button class="othertabs-item" data-state="default">单服务</button>
+      </div>
+      <div class="othertabs" data-component="othertabs" data-size="default">
+        <button class="othertabs-item active" data-state="active">全部</button>
+        <button class="othertabs-item" data-state="default">进行中</button>
+        <button class="othertabs-item" data-state="default">已完成</button>
+      </div>
+      <div class="othertabs" data-component="othertabs" data-size="default">
+        <button class="othertabs-item active" data-state="active">全部</button>
+        <button class="othertabs-item" data-state="default">进行中</button>
+        <button class="othertabs-item" data-state="default">已完成</button>
+        <button class="othertabs-item" data-state="default">已取消</button>
+      </div>
+      <div class="othertabs" data-component="othertabs" data-size="default">
+        <button class="othertabs-item active" data-state="active">全部</button>
+        <button class="othertabs-item" data-state="default">进行中</button>
+        <button class="othertabs-item" disabled data-state="disabled">已完成</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Vertical Tabs 竖向标签页</div>
+    <div class="stack-12">
+      <div class="row">
+        <div class="tabs-vertical" data-component="tabs" data-type="vertical">
+          <span class="tab-item active" data-state="active">基础信息</span>
+          <span class="tab-item" data-state="default">权限配置</span>
+          <span class="tab-item" data-state="default">告警规则</span>
+          <span class="tab-item" data-state="default">操作日志</span>
+          <span class="tab-item" disabled data-state="disabled">高级设置</span>
+        </div>
+        <div class="tabs-vertical-layout" data-component="tabs" data-type="vertical" data-with-panel="true">
+          <div class="tabs-vertical" style="border-right: 1px solid var(--color-border-2);">
+            <span class="tab-item active" data-state="active">基础信息</span>
+            <span class="tab-item" data-state="default">权限配置</span>
+            <span class="tab-item" data-state="default">告警规则</span>
+            <span class="tab-item" data-state="default">操作日志</span>
+          </div>
+          <div class="tab-panel-vertical">
+            <p style="color: var(--color-text-2); font-size: 13px;">这里是「基础信息」选项卡的内容区域。当用户切换选项卡时，此区域显示对应内容。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Extra Content 附加操作</div>
+    <div class="stack-12">
+      <!-- Tabs with extra buttons -->
+      <div class="tabs-wrapper" data-component="tabs" data-type="line" data-extra="true">
+        <div class="tabs-line" data-size="default">
+          <span class="tab-item tab-size-md active" data-state="active">全部</span>
+          <span class="tab-item tab-size-md" data-state="default">进行中</span>
+          <span class="tab-item tab-size-md" data-state="default">已完成</span>
+        </div>
+        <div class="tabs-extra">
+          <button class="btn-extra">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.5a6.5 6.5 0 110 13 6.5 6.5 0 010-13zM8 3a5 5 0 100 10A5 5 0 008 3zm-.5 2h1v3.25l2.1 1.22-.5.87L7.5 9V5z"/></svg>
+            最近更新
+          </button>
+          <button class="btn-extra">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M13.5 2.5v11h-11v-11h11zm-1-1h-9a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1v-9a1 1 0 00-1-1zM7 5h2v2H7V5zm0 3h2v2H7V8zm-3 0h2v2H4V8zm6 0h2v2h-2V8zM4 5h2v2H4V5z"/></svg>
+            导出
+          </button>
+        </div>
+      </div>
+      <!-- Tabs with add button -->
+      <div class="tabs-line" data-component="tabs" data-type="line" data-addable="true" data-size="default" style="align-items: center;">
+        <span class="tab-item tab-size-md active" data-state="active">选项卡一</span>
+        <span class="tab-item tab-size-md" data-state="default">选项卡二</span>
+        <span class="tab-item tab-size-md" data-state="default">选项卡三</span>
+        <button class="tabs-add-btn" data-action="add" title="新增选项卡">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Tab Panel 含内容区</div>
+    <div class="stack-12">
+      <!-- Line Tabs with panel -->
+      <div data-component="tabs" data-type="line" data-with-panel="true">
+        <div class="tabs-line" data-size="default">
+          <span class="tab-item tab-size-md active" data-state="active">基本信息</span>
+          <span class="tab-item tab-size-md" data-state="default">监控数据</span>
+          <span class="tab-item tab-size-md" data-state="default">变更历史</span>
+        </div>
+        <div class="tab-panel" data-panel="0">
+          <p>当前显示「基本信息」选项卡的内容。包含服务名称、描述、创建时间等基础字段信息。</p>
+        </div>
+      </div>
+      <!-- Card Tabs with panel -->
+      <div data-component="tabs" data-type="card" data-with-panel="true">
+        <div class="tabs-card" data-size="large">
+          <span class="tab-item tab-size-lg active" data-state="active">接口列表</span>
+          <span class="tab-item tab-size-lg" data-state="default">请求日志</span>
+          <span class="tab-item tab-size-lg" data-state="default">错误分析</span>
+        </div>
+        <div class="tab-panel-bordered" data-panel="0">
+          <p>当前显示「接口列表」选项卡的内容。此面板展示所有已注册的 API 接口及其请求方式、路径、状态等。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

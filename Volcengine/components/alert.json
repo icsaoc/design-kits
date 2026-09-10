@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 2,
+  "slug": "alert",
+  "name": "Alert",
+  "category": "feedback",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Alert",
+      "evidence": "Inferred from preview/component-alert.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".alert",
+        ".alert-banner",
+        ".alert-close",
+        ".alert-content",
+        ".alert-desc",
+        ".alert-error",
+        ".alert-icon",
+        ".alert-info",
+        ".alert-success",
+        ".alert-title"
+      ],
+      "evidence": "Representative selectors from preview/component-alert.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-alert.html",
+    "representativeSelectors": [
+      ".alert",
+      ".alert-banner",
+      ".alert-close",
+      ".alert-content",
+      ".alert-desc",
+      ".alert-error",
+      ".alert-icon",
+      ".alert-info",
+      ".alert:hover"
+    ],
+    "cssRuleCount": 13
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "error",
+      "hover"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".alert",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-alert.html",
+    "selectors": [
+      ".alert",
+      ".alert-banner",
+      ".alert-close",
+      ".alert-content",
+      ".alert-desc",
+      ".alert-error",
+      ".alert-icon",
+      ".alert-info",
+      ".alert-success",
+      ".alert-title",
+      ".alert-warning",
+      ".alert-with-desc"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-alert.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-alert.html",
+      "classes": [
+        "alert",
+        "alert-banner",
+        "alert-close",
+        "alert-content",
+        "alert-desc",
+        "alert-error",
+        "alert-icon",
+        "alert-info",
+        "alert-success",
+        "alert-title",
+        "alert-warning",
+        "alert-with-desc"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-alert.html",
+    "source": "preview/component-alert.html",
+    "css": {
+      "file": "components.css",
+      "marker": "alert"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

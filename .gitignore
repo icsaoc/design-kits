@@ -1,0 +1,13 @@
+# macOS / Windows junk
+.DS_Store
+Thumbs.db
+desktop.ini
+__MACOSX/
+
+# Git / editor
+*.swp
+.idea/
+.vscode/
+
+# Local tooling config
+.claude/

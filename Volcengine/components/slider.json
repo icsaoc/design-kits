@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 2,
+  "slug": "slider",
+  "name": "Slider",
+  "category": "input",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Slider",
+      "evidence": "Inferred from preview/component-slider.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".slider",
+        ".slider-mark",
+        ".slider-mark-labels",
+        ".slider-marks",
+        ".slider-sm",
+        ".slider-thumb",
+        ".slider-tooltip",
+        ".slider-track",
+        ".slider-track-fill",
+        ".active"
+      ],
+      "evidence": "Representative selectors from preview/component-slider.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-slider.html",
+    "representativeSelectors": [
+      ".slider",
+      ".slider-mark",
+      ".slider-mark-labels",
+      ".slider-marks",
+      ".slider-sm",
+      ".slider-thumb",
+      ".slider-tooltip",
+      ".slider-track",
+      ".slider:hover",
+      ".disabled"
+    ],
+    "cssRuleCount": 18
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "active",
+      "disabled",
+      "hover"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".slider",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-slider.html",
+    "selectors": [
+      ".slider",
+      ".slider-mark",
+      ".slider-mark-labels",
+      ".slider-marks",
+      ".slider-sm",
+      ".slider-thumb",
+      ".slider-tooltip",
+      ".slider-track",
+      ".slider-track-fill",
+      ".active",
+      ".disabled"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-slider.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-slider.html",
+      "classes": [
+        "slider",
+        "slider-mark",
+        "slider-mark-labels",
+        "slider-marks",
+        "slider-sm",
+        "slider-thumb",
+        "slider-tooltip",
+        "slider-track",
+        "slider-track-fill",
+        "active",
+        "disabled"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-slider.html",
+    "source": "preview/component-slider.html",
+    "css": {
+      "file": "components.css",
+      "marker": "slider"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

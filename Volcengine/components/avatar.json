@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 2,
+  "slug": "avatar",
+  "name": "Avatar",
+  "category": "data-display",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Avatar",
+      "evidence": "Inferred from preview/component-avatar.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".avatar",
+        ".avatar-capsule",
+        ".avatar-default",
+        ".avatar-editable",
+        ".avatar-icon",
+        ".avatar-icon-beige",
+        ".avatar-icon-bordered",
+        ".avatar-icon-default",
+        ".avatar-icon-green",
+        ".avatar-icon-grey"
+      ],
+      "evidence": "Representative selectors from preview/component-avatar.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-avatar.html",
+    "representativeSelectors": [
+      ".avatar",
+      ".avatar-capsule",
+      ".avatar-default",
+      ".avatar-editable",
+      ".avatar-icon",
+      ".avatar-icon-beige",
+      ".avatar-icon-bordered",
+      ".avatar-icon-default",
+      ".avatar:hover"
+    ],
+    "cssRuleCount": 27
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "hover"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".avatar",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-avatar.html",
+    "selectors": [
+      ".avatar",
+      ".avatar-capsule",
+      ".avatar-default",
+      ".avatar-editable",
+      ".avatar-icon",
+      ".avatar-icon-beige",
+      ".avatar-icon-bordered",
+      ".avatar-icon-default",
+      ".avatar-icon-green",
+      ".avatar-icon-grey",
+      ".avatar-icon-large",
+      ".avatar-icon-medium",
+      ".avatar-icon-mini",
+      ".avatar-icon-primary",
+      ".avatar-icon-purple"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-avatar.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-avatar.html",
+      "classes": [
+        "avatar",
+        "avatar-capsule",
+        "avatar-default",
+        "avatar-editable",
+        "avatar-icon",
+        "avatar-icon-beige",
+        "avatar-icon-bordered",
+        "avatar-icon-default",
+        "avatar-icon-green",
+        "avatar-icon-grey",
+        "avatar-icon-large",
+        "avatar-icon-medium",
+        "avatar-icon-mini",
+        "avatar-icon-primary",
+        "avatar-icon-purple",
+        "avatar-icon-red",
+        "avatar-icon-teal",
+        "avatar-info",
+        "avatar-large",
+        "avatar-medium"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-avatar.html",
+    "source": "preview/component-avatar.html",
+    "css": {
+      "file": "components.css",
+      "marker": "avatar"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkbox 复选框</title>
+  <link rel="stylesheet" href="preview-scaffold.css">
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="../components.css">
+</head>
+<body>
+  <div class="pv-header">
+    <h1>Checkbox 复选框</h1>
+    <p>单个复选框与复选框组，支持选中、半选、禁用、失效状态，以及水平/垂直布局。</p>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">单个复选框 — 各状态</div>
+    <div class="row">
+      <label class="checkbox" data-component="checkbox" data-state="default">
+        <span class="checkbox-box"></span>
+        <span class="checkbox-label">选项一</span>
+      </label>
+      <label class="checkbox checked" data-component="checkbox" data-state="checked">
+        <span class="checkbox-box">
+          <svg class="checkbox-icon" viewBox="0 0 14 14" fill="none">
+            <path d="M3 7l3 3 5-5" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="checkbox-label">选项一</span>
+      </label>
+      <label class="checkbox indeterminate" data-component="checkbox" data-state="indeterminate">
+        <span class="checkbox-box">
+          <span class="checkbox-dash"></span>
+        </span>
+        <span class="checkbox-label">选项一</span>
+      </label>
+      <label class="checkbox disabled" data-component="checkbox" data-state="disabled">
+        <span class="checkbox-box"></span>
+        <span class="checkbox-label">选项一</span>
+      </label>
+      <label class="checkbox invalid" data-component="checkbox" data-state="invalid">
+        <span class="checkbox-box"></span>
+        <span class="checkbox-label">选项一</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Checkbox Group 水平布局</div>
+    <div class="demo-box">
+      <div class="checkbox-group checkbox-group-horizontal" data-component="checkbox-group" data-layout="horizontal">
+        <label class="checkbox checked" data-component="checkbox" data-state="checked">
+          <span class="checkbox-box">
+            <svg class="checkbox-icon" viewBox="0 0 14 14" fill="none">
+              <path d="M3 7l3 3 5-5" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="checkbox-label">选项一</span>
+        </label>
+        <label class="checkbox" data-component="checkbox" data-state="default">
+          <span class="checkbox-box"></span>
+          <span class="checkbox-label">选项二</span>
+        </label>
+        <label class="checkbox" data-component="checkbox" data-state="default">
+          <span class="checkbox-box"></span>
+          <span class="checkbox-label">选项三</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">Checkbox Group 垂直布局</div>
+    <div class="demo-box">
+      <div class="checkbox-group checkbox-group-vertical" data-component="checkbox-group" data-layout="vertical">
+        <label class="checkbox checked" data-component="checkbox" data-state="checked">
+          <span class="checkbox-box">
+            <svg class="checkbox-icon" viewBox="0 0 14 14" fill="none">
+              <path d="M3 7l3 3 5-5" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="checkbox-label">选项一</span>
+        </label>
+        <label class="checkbox" data-component="checkbox" data-state="default">
+          <span class="checkbox-box"></span>
+          <span class="checkbox-label">选项二</span>
+        </label>
+        <label class="checkbox" data-component="checkbox" data-state="default">
+          <span class="checkbox-box"></span>
+          <span class="checkbox-label">选项三</span>
+        </label>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "passedChecks": ["no-tailwind", "no-lucide", "token-css-linked", "component-classes-match", "no-cdn"],
+  "componentSources": {
+    "topnav": "preview/component-topnav.html",
+    "sidenav": "preview/component-sidenav.html",
+    "page-header": "preview/component-page-header.html (no-tab variant)",
+    "table": "preview/component-table.html",
+    "button": "preview/component-button.html"
+  },
+  "warnings": []
+}

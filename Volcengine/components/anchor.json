@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 2,
+  "slug": "anchor",
+  "name": "Anchor",
+  "category": "navigation",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Anchor",
+      "evidence": "Inferred from preview/component-anchor.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".anchor",
+        ".anchor-item",
+        ".anchor-item--1st",
+        ".anchor-item--2nd",
+        ".anchor-item--3rd",
+        ".anchor-item__bar",
+        ".anchor-item__text",
+        ".active"
+      ],
+      "evidence": "Representative selectors from preview/component-anchor.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-anchor.html",
+    "representativeSelectors": [
+      ".anchor",
+      ".anchor-item",
+      ".anchor-item--1st",
+      ".anchor-item--2nd",
+      ".anchor-item--3rd",
+      ".anchor-item__bar",
+      ".anchor-item__text",
+      ".active",
+      ".anchor:hover"
+    ],
+    "cssRuleCount": 10
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "hover"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".anchor",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-anchor.html",
+    "selectors": [
+      ".anchor",
+      ".anchor-item",
+      ".anchor-item--1st",
+      ".anchor-item--2nd",
+      ".anchor-item--3rd",
+      ".anchor-item__bar",
+      ".anchor-item__text",
+      ".active"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-anchor.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-anchor.html",
+      "classes": [
+        "anchor",
+        "anchor-item",
+        "anchor-item--1st",
+        "anchor-item--2nd",
+        "anchor-item--3rd",
+        "anchor-item__bar",
+        "anchor-item__text",
+        "active"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-anchor.html",
+    "source": "preview/component-anchor.html",
+    "css": {
+      "file": "components.css",
+      "marker": "anchor"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

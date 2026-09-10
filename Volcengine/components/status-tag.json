@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 2,
+  "slug": "status-tag",
+  "name": "StatusTag",
+  "category": "data-display",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "StatusTag",
+      "evidence": "Inferred from preview/component-status-tag.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".status-tag",
+        ".status-tag-error",
+        ".status-tag-icon",
+        ".status-tag-loading",
+        ".status-tag-processing",
+        ".status-tag-stop",
+        ".status-tag-success",
+        ".status-tag-waiting",
+        ".status-tag-warning"
+      ],
+      "evidence": "Representative selectors from preview/component-status-tag.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-status-tag.html",
+    "representativeSelectors": [
+      ".status-tag",
+      ".status-tag-error",
+      ".status-tag-icon",
+      ".status-tag-loading",
+      ".status-tag-processing",
+      ".status-tag-stop",
+      ".status-tag-success",
+      ".status-tag-waiting"
+    ],
+    "cssRuleCount": 9
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "error"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".status-tag",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-status-tag.html",
+    "selectors": [
+      ".status-tag",
+      ".status-tag-error",
+      ".status-tag-icon",
+      ".status-tag-loading",
+      ".status-tag-processing",
+      ".status-tag-stop",
+      ".status-tag-success",
+      ".status-tag-waiting",
+      ".status-tag-warning"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-status-tag.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-status-tag.html",
+      "classes": [
+        "status-tag",
+        "status-tag-error",
+        "status-tag-icon",
+        "status-tag-loading",
+        "status-tag-processing",
+        "status-tag-stop",
+        "status-tag-success",
+        "status-tag-waiting",
+        "status-tag-warning"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-status-tag.html",
+    "source": "preview/component-status-tag.html",
+    "css": {
+      "file": "components.css",
+      "marker": "status-tag"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 2,
+  "slug": "message",
+  "name": "Message",
+  "category": "feedback",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Message",
+      "evidence": "Inferred from preview/component-message.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".message",
+        ".message-close",
+        ".message-content",
+        ".message-error",
+        ".message-icon",
+        ".message-info",
+        ".message-loading",
+        ".message-success",
+        ".message-warning"
+      ],
+      "evidence": "Representative selectors from preview/component-message.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-message.html",
+    "representativeSelectors": [
+      ".message",
+      ".message-close",
+      ".message-content",
+      ".message-error",
+      ".message-icon",
+      ".message-info",
+      ".message-loading",
+      ".message-success"
+    ],
+    "cssRuleCount": 15
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "error"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".message",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-message.html",
+    "selectors": [
+      ".message",
+      ".message-close",
+      ".message-content",
+      ".message-error",
+      ".message-icon",
+      ".message-info",
+      ".message-loading",
+      ".message-success",
+      ".message-warning"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-message.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [
+    "--color-border",
+    "--color-danger",
+    "--color-primary",
+    "--color-success",
+    "--color-text-primary",
+    "--color-text-secondary",
+    "--color-warning",
+    "--font-family",
+    "--radius-default"
+  ],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-message.html",
+      "classes": [
+        "message",
+        "message-close",
+        "message-content",
+        "message-error",
+        "message-icon",
+        "message-info",
+        "message-loading",
+        "message-success",
+        "message-warning"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-message.html",
+    "source": "preview/component-message.html",
+    "css": {
+      "file": "components.css",
+      "marker": "message"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

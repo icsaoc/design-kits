@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 2,
+  "slug": "select",
+  "name": "Select",
+  "category": "input",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Select",
+      "evidence": "Inferred from preview/component-select.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".select",
+        ".select-arrow",
+        ".select-checkbox",
+        ".select-clear",
+        ".select-dropdown",
+        ".select-empty",
+        ".select-error-msg",
+        ".select-group-title",
+        ".select-large",
+        ".select-mini"
+      ],
+      "evidence": "Representative selectors from preview/component-select.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-select.html",
+    "representativeSelectors": [
+      ".select",
+      ".select-arrow",
+      ".select-checkbox",
+      ".select-clear",
+      ".select-dropdown",
+      ".select-empty",
+      ".select-error-msg",
+      ".select-group-title",
+      ".select:hover",
+      ".disabled"
+    ],
+    "cssRuleCount": 45
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "disabled",
+      "error",
+      "hover",
+      "readonly"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".select",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-select.html",
+    "selectors": [
+      ".select",
+      ".select-arrow",
+      ".select-checkbox",
+      ".select-clear",
+      ".select-dropdown",
+      ".select-empty",
+      ".select-error-msg",
+      ".select-group-title",
+      ".select-large",
+      ".select-mini",
+      ".select-option",
+      ".select-option-check",
+      ".select-placeholder",
+      ".select-small",
+      ".select-suffix"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-select.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-select.html",
+      "classes": [
+        "select",
+        "select-arrow",
+        "select-checkbox",
+        "select-clear",
+        "select-dropdown",
+        "select-empty",
+        "select-error-msg",
+        "select-group-title",
+        "select-large",
+        "select-mini",
+        "select-option",
+        "select-option-check",
+        "select-placeholder",
+        "select-small",
+        "select-suffix",
+        "select-tag",
+        "select-tag-close",
+        "select-tag-count",
+        "select-tag-text",
+        "select-tags"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-select.html",
+    "source": "preview/component-select.html",
+    "css": {
+      "file": "components.css",
+      "marker": "select"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

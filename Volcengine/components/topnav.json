@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 2,
+  "slug": "topnav",
+  "name": "TopNav",
+  "category": "navigation",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "TopNav",
+      "evidence": "Inferred from preview/component-topnav.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".top-nav",
+        ".active",
+        ".avatar",
+        ".hamburger-btn",
+        ".hamburger-line",
+        ".nav-icon",
+        ".nav-link",
+        ".nav-links",
+        ".nav-logo"
+      ],
+      "evidence": "Representative selectors from preview/component-topnav.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-topnav.html",
+    "representativeSelectors": [
+      ".top-nav",
+      ".active",
+      ".avatar",
+      ".hamburger-btn",
+      ".hamburger-line",
+      ".nav-icon",
+      ".nav-link",
+      ".top-nav:hover"
+    ],
+    "cssRuleCount": 43
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "hover"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".top-nav",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-topnav.html",
+    "selectors": [
+      ".top-nav",
+      ".active",
+      ".avatar",
+      ".hamburger-btn",
+      ".hamburger-line",
+      ".nav-icon",
+      ".nav-link",
+      ".nav-links",
+      ".nav-logo",
+      ".nav-right",
+      ".notification-dot",
+      ".product-name",
+      ".product-tab",
+      ".product-tabs"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "MANDATORY: Copy HTML structure VERBATIM from preview/component-topnav.html. This is a code template, not a visual reference.",
+    "Keep all CSS class names (.top-nav, .nav-left, .nav-right, .nav-logo, .nav-links, .nav-link, .nav-icon, .avatar) unchanged.",
+    "Logo: Read snippets/nav-logo.html and paste verbatim into .nav-logo div. Do NOT use text or placeholder.",
+    "FORBIDDEN: Tailwind CSS classes, Lucide/Heroicons icons, CDN framework links.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [
+    "--bg-4",
+    "--bg-hover",
+    "--bg-subtle",
+    "--bg-white",
+    "--border-1",
+    "--border-2",
+    "--primary-6",
+    "--text-1",
+    "--text-2",
+    "--text-3"
+  ],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-topnav.html",
+      "classes": [
+        "top-nav",
+        "active",
+        "avatar",
+        "hamburger-btn",
+        "hamburger-line",
+        "nav-icon",
+        "nav-link",
+        "nav-links",
+        "nav-logo",
+        "nav-right",
+        "notification-dot",
+        "product-name",
+        "product-tab",
+        "product-tabs",
+        "search-box",
+        "search-input",
+        "sec-tab",
+        "secondary-nav"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-topnav.html",
+    "source": "preview/component-topnav.html",
+    "css": {
+      "file": "components.css",
+      "marker": "topnav"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": [
+    "assets/logo.svg"
+  ]
+}

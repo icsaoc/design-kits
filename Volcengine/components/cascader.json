@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 2,
+  "slug": "cascader",
+  "name": "Cascader",
+  "category": "input",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Cascader",
+      "evidence": "Inferred from preview/component-cascader.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".cascader",
+        ".cascader-check",
+        ".cascader-group-title",
+        ".cascader-icon",
+        ".cascader-item",
+        ".cascader-item-arrow",
+        ".cascader-item-label",
+        ".cascader-panel",
+        ".cascader-search",
+        ".cascader-search-input"
+      ],
+      "evidence": "Representative selectors from preview/component-cascader.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-cascader.html",
+    "representativeSelectors": [
+      ".cascader",
+      ".cascader-check",
+      ".cascader-group-title",
+      ".cascader-icon",
+      ".cascader-item",
+      ".cascader-item-arrow",
+      ".cascader-item-label",
+      ".cascader-panel",
+      ".disabled"
+    ],
+    "cssRuleCount": 16
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "disabled"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".cascader",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-cascader.html",
+    "selectors": [
+      ".cascader",
+      ".cascader-check",
+      ".cascader-group-title",
+      ".cascader-icon",
+      ".cascader-item",
+      ".cascader-item-arrow",
+      ".cascader-item-label",
+      ".cascader-panel",
+      ".cascader-search",
+      ".cascader-search-input",
+      ".active",
+      ".checked",
+      ".disabled"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-cascader.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [
+    "--color-bg-card",
+    "--color-bg-subtle",
+    "--color-border",
+    "--color-border-light",
+    "--color-primary",
+    "--color-text-disabled",
+    "--color-text-primary",
+    "--color-text-tertiary",
+    "--font-size-md",
+    "--font-size-sm",
+    "--radius-default"
+  ],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-cascader.html",
+      "classes": [
+        "cascader",
+        "cascader-check",
+        "cascader-group-title",
+        "cascader-icon",
+        "cascader-item",
+        "cascader-item-arrow",
+        "cascader-item-label",
+        "cascader-panel",
+        "cascader-search",
+        "cascader-search-input",
+        "active",
+        "checked",
+        "disabled"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-cascader.html",
+    "source": "preview/component-cascader.html",
+    "css": {
+      "file": "components.css",
+      "marker": "cascader"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

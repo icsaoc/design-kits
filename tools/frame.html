@@ -1,0 +1,17 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Capture frame</title>
+<style>
+  html, body { margin: 0; padding: 0; overflow: hidden; background: #fff; }
+  iframe { border: 0; width: 1440px; height: 3200px; position: absolute; left: 0; top: 0; }
+</style>
+<!-- Helper for tools/capture-screenshots.sh: renders a kit page inside a fixed
+     1440px iframe so a headless screenshot can start at an arbitrary scroll
+     offset (?u=<path>&y=<pixels>). Not part of any design kit. -->
+<iframe id="f"></iframe>
+<script>
+  const q = new URLSearchParams(location.search);
+  const f = document.getElementById('f');
+  f.src = q.get('u');
+  f.style.top = -(parseInt(q.get('y') || '0', 10)) + 'px';
+</script>

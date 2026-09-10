@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Cascader 级联选择</title>
+  <link rel="stylesheet" href="preview-scaffold.css">
+  <link rel="stylesheet" href="../colors_and_type.css">
+  <link rel="stylesheet" href="../components.css">
+</head>
+<body>
+  <div class="pv-header">
+    <h1>Cascader 级联选择</h1>
+    <p>多级联动选择面板，支持单选、多选、搜索、图标和分组模式。</p>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">单选级联</div>
+    <div class="demo-box">
+      <div class="cascader" data-component="cascader" data-multiple="false" data-search="false" data-icon="false" data-group="false">
+        <div class="cascader-panel">
+          <button class="cascader-item active" data-component="cascader-item" data-state="active">
+            <span class="cascader-item-label">北京</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+          <button class="cascader-item" data-component="cascader-item" data-state="default">
+            <span class="cascader-item-label">上海</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+        </div>
+        <div class="cascader-panel">
+          <button class="cascader-item active" data-component="cascader-item" data-state="active">
+            <span class="cascader-item-label">朝阳区</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+          <button class="cascader-item" data-component="cascader-item" data-state="default">
+            <span class="cascader-item-label">海淀区</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+        </div>
+        <div class="cascader-panel">
+          <button class="cascader-item active" data-component="cascader-item" data-state="active">
+            <span class="cascader-item-label">望京街道</span>
+          </button>
+          <button class="cascader-item" data-component="cascader-item" data-state="default">
+            <span class="cascader-item-label">酒仙桥街道</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">多选级联</div>
+    <div class="demo-box">
+      <div class="cascader" data-component="cascader" data-multiple="true" data-search="false" data-icon="false" data-group="false">
+        <div class="cascader-panel">
+          <button class="cascader-item active" data-component="cascader-item" data-state="active">
+            <span class="cascader-check checked"></span>
+            <span class="cascader-item-label">北京</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+          <button class="cascader-item" data-component="cascader-item" data-state="default">
+            <span class="cascader-check"></span>
+            <span class="cascader-item-label">上海</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+        </div>
+        <div class="cascader-panel">
+          <button class="cascader-item active" data-component="cascader-item" data-state="active">
+            <span class="cascader-check checked"></span>
+            <span class="cascader-item-label">朝阳区</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+          <button class="cascader-item" data-component="cascader-item" data-state="default">
+            <span class="cascader-check"></span>
+            <span class="cascader-item-label">海淀区</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+        </div>
+        <div class="cascader-panel">
+          <button class="cascader-item active" data-component="cascader-item" data-state="active">
+            <span class="cascader-check checked"></span>
+            <span class="cascader-item-label">望京街道</span>
+          </button>
+          <button class="cascader-item" data-component="cascader-item" data-state="default">
+            <span class="cascader-check"></span>
+            <span class="cascader-item-label">酒仙桥街道</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">带搜索级联</div>
+    <div class="demo-box">
+      <div class="cascader has-search" data-component="cascader" data-multiple="false" data-search="true" data-icon="false" data-group="false">
+        <div class="cascader-panel">
+          <label class="cascader-search">
+            <span>&#8981;</span>
+            <input class="cascader-search-input" value="请输入关键字搜索" />
+          </label>
+          <button class="cascader-item active" data-component="cascader-item" data-state="active">
+            <span class="cascader-item-label">北京</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+          <button class="cascader-item" data-component="cascader-item" data-state="default">
+            <span class="cascader-item-label">上海</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+        </div>
+        <div class="cascader-panel">
+          <button class="cascader-item active" data-component="cascader-item" data-state="active">
+            <span class="cascader-item-label">朝阳区</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+          <button class="cascader-item" data-component="cascader-item" data-state="default">
+            <span class="cascader-item-label">海淀区</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+        </div>
+        <div class="cascader-panel">
+          <button class="cascader-item active" data-component="cascader-item" data-state="active">
+            <span class="cascader-item-label">望京街道</span>
+          </button>
+          <button class="cascader-item" data-component="cascader-item" data-state="default">
+            <span class="cascader-item-label">酒仙桥街道</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">带图标级联</div>
+    <div class="demo-box">
+      <div class="cascader has-icon" data-component="cascader" data-multiple="false" data-search="false" data-icon="true" data-group="false">
+        <div class="cascader-panel">
+          <button class="cascader-item active" data-component="cascader-item" data-state="active">
+            <span class="cascader-icon">&#9723;</span>
+            <span class="cascader-item-label">北京</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+          <button class="cascader-item" data-component="cascader-item" data-state="default">
+            <span class="cascader-icon">&#9723;</span>
+            <span class="cascader-item-label">上海</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+        </div>
+        <div class="cascader-panel">
+          <button class="cascader-item active" data-component="cascader-item" data-state="active">
+            <span class="cascader-icon">&#9723;</span>
+            <span class="cascader-item-label">朝阳区</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+          <button class="cascader-item" data-component="cascader-item" data-state="default">
+            <span class="cascader-icon">&#9723;</span>
+            <span class="cascader-item-label">海淀区</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+        </div>
+        <div class="cascader-panel">
+          <button class="cascader-item active" data-component="cascader-item" data-state="active">
+            <span class="cascader-icon">&#9723;</span>
+            <span class="cascader-item-label">望京街道</span>
+          </button>
+          <button class="cascader-item" data-component="cascader-item" data-state="default">
+            <span class="cascader-icon">&#9723;</span>
+            <span class="cascader-item-label">酒仙桥街道</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">分组级联</div>
+    <div class="demo-box">
+      <div class="cascader is-grouped" data-component="cascader" data-multiple="false" data-search="false" data-icon="false" data-group="true">
+        <div class="cascader-panel">
+          <div class="cascader-group-title">热门城市</div>
+          <button class="cascader-item active" data-component="cascader-item" data-state="active">
+            <span class="cascader-item-label">北京</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+          <button class="cascader-item" data-component="cascader-item" data-state="default">
+            <span class="cascader-item-label">上海</span>
+            <span class="cascader-item-arrow">&#8250;</span>
+          </button>
+        </div>
+        <div class="cascader-panel">
+          <button class="cascader-item active" data-component="cascader-item" data-state="active">
+            <span class="cascader-item-label">朝阳区</span>
+          </button>
+          <button class="cascader-item" data-component="cascader-item" data-state="default">
+            <span class="cascader-item-label">海淀区</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pv-section">
+    <div class="pv-section__title">选项状态</div>
+    <div class="row">
+      <button class="cascader-item" data-component="cascader-item" data-state="default">
+        <span class="cascader-item-label">选项名称</span>
+        <span class="cascader-item-arrow">&#8250;</span>
+      </button>
+      <button class="cascader-item active" data-component="cascader-item" data-state="active">
+        <span class="cascader-item-label">选项名称</span>
+        <span class="cascader-item-arrow">&#8250;</span>
+      </button>
+      <button class="cascader-item disabled" data-component="cascader-item" data-state="disabled">
+        <span class="cascader-item-label">选项名称</span>
+      </button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 2,
+  "slug": "breadcrumb",
+  "name": "Breadcrumb",
+  "category": "navigation",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Breadcrumb",
+      "evidence": "Inferred from preview/component-breadcrumb.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".breadcrumb",
+        ".breadcrumb-icon",
+        ".breadcrumb-item",
+        ".breadcrumb-lg",
+        ".breadcrumb-md",
+        ".breadcrumb-separator",
+        ".current",
+        ".disabled"
+      ],
+      "evidence": "Representative selectors from preview/component-breadcrumb.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-breadcrumb.html",
+    "representativeSelectors": [
+      ".breadcrumb",
+      ".breadcrumb-icon",
+      ".breadcrumb-item",
+      ".breadcrumb-lg",
+      ".breadcrumb-md",
+      ".breadcrumb-separator",
+      ".current",
+      ".disabled",
+      ".breadcrumb:hover",
+      ".disabled"
+    ],
+    "cssRuleCount": 13
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": [
+      "disabled",
+      "hover"
+    ]
+  },
+  "representativeVariants": [
+    {
+      "selector": ".breadcrumb",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-breadcrumb.html",
+    "selectors": [
+      ".breadcrumb",
+      ".breadcrumb-icon",
+      ".breadcrumb-item",
+      ".breadcrumb-lg",
+      ".breadcrumb-md",
+      ".breadcrumb-separator",
+      ".current",
+      ".disabled"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-breadcrumb.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-breadcrumb.html",
+      "classes": [
+        "breadcrumb",
+        "breadcrumb-icon",
+        "breadcrumb-item",
+        "breadcrumb-lg",
+        "breadcrumb-md",
+        "breadcrumb-separator",
+        "current",
+        "disabled"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-breadcrumb.html",
+    "source": "preview/component-breadcrumb.html",
+    "css": {
+      "file": "components.css",
+      "marker": "breadcrumb"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

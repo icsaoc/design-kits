@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 2,
+  "slug": "descriptions",
+  "name": "Descriptions",
+  "category": "data-display",
+  "sourceKind": "preview-contract",
+  "confidence": "medium",
+  "semanticTypeCandidates": [
+    {
+      "type": "Descriptions",
+      "evidence": "Inferred from preview/component-descriptions.html title and CSS selectors."
+    }
+  ],
+  "variantDimensions": [
+    {
+      "name": "style-state-density",
+      "values": [
+        ".descriptions",
+        ".descriptions-grid",
+        ".descriptions-grid-2",
+        ".descriptions-inline",
+        ".descriptions-inline-colon",
+        ".descriptions-label-left",
+        ".descriptions-label-right",
+        ".descriptions-list",
+        ".descriptions-stacked",
+        ".descriptions-title"
+      ],
+      "evidence": "Representative selectors from preview/component-descriptions.html."
+    }
+  ],
+  "coverageMatrix": {
+    "source": "preview/component-descriptions.html",
+    "representativeSelectors": [
+      ".descriptions",
+      ".descriptions-grid",
+      ".descriptions-grid-2",
+      ".descriptions-inline",
+      ".descriptions-inline-colon",
+      ".descriptions-label-left",
+      ".descriptions-label-right",
+      ".descriptions-list"
+    ],
+    "cssRuleCount": 14
+  },
+  "sizeDeltas": [],
+  "stateCoverage": {
+    "states": []
+  },
+  "representativeVariants": [
+    {
+      "selector": ".descriptions",
+      "whySelected": "Primary component selector from preview CSS.",
+      "traits": [],
+      "childrenDigest": []
+    }
+  ],
+  "anatomy": {
+    "source": "preview/component-descriptions.html",
+    "selectors": [
+      ".descriptions",
+      ".descriptions-grid",
+      ".descriptions-grid-2",
+      ".descriptions-inline",
+      ".descriptions-inline-colon",
+      ".descriptions-label-left",
+      ".descriptions-label-right",
+      ".descriptions-list",
+      ".descriptions-stacked",
+      ".descriptions-title",
+      ".desc-item",
+      ".desc-item-horizontal",
+      ".desc-item-inline",
+      ".desc-item-stacked",
+      ".desc-label"
+    ]
+  },
+  "structurePatterns": [],
+  "usageHints": [
+    "Copy component markup from preview/component-descriptions.html; keep page/demo styles outside shared component CSS.",
+    "Use colors_and_type.css + components.css as the rendering contract."
+  ],
+  "doNotInvent": [
+    "Do not add variants or states absent from the preview without updating the contract.",
+    "Do not treat this inferred JSON as original Figma evidence."
+  ],
+  "unknowns": [],
+  "tokensConsumed": [],
+  "domAnatomy": {
+    "root": {
+      "tag": "preview-fragment",
+      "source": "preview/component-descriptions.html",
+      "classes": [
+        "descriptions",
+        "descriptions-grid",
+        "descriptions-grid-2",
+        "descriptions-inline",
+        "descriptions-inline-colon",
+        "descriptions-label-left",
+        "descriptions-label-right",
+        "descriptions-list",
+        "descriptions-stacked",
+        "descriptions-title",
+        "desc-item",
+        "desc-item-horizontal",
+        "desc-item-inline",
+        "desc-item-stacked",
+        "desc-label",
+        "desc-value"
+      ]
+    },
+    "componentCssMarker": {
+      "start": "/* @component-css-start */",
+      "end": "/* @component-css-end */"
+    }
+  },
+  "provenance": {
+    "preview": "preview/component-descriptions.html",
+    "source": "preview/component-descriptions.html",
+    "css": {
+      "file": "components.css",
+      "marker": "descriptions"
+    },
+    "contractBasis": "Derived from preview markup; original design evidence not available."
+  },
+  "assetsConsumed": []
+}

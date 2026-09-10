@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 2,
+  "kitType": "data-dashboard",
+  "sourceKind": "preview-contract",
+  "screensGenerated": 2,
+  "coreComponentsUsed": [
+    "page-header",
+    "sidenav",
+    "tabs",
+    "tag",
+    "topnav"
+  ],
+  "supportComponentsUsed": [
+    "topnav",
+    "sidenav",
+    "page-header",
+    "tabs",
+    "tag",
+    "buttons"
+  ],
+  "previewClassReuseRate": 0.8,
+  "inventedComponents": [],
+  "interactiveStatesRendered": [
+    "active",
+    "hover",
+    "disabled",
+    "selected"
+  ],
+  "primaryActionPerScreen": true,
+  "mockDataDensity": {
+    "tableRows": 0,
+    "chartPoints": 12
+  },
+  "warnings": [],
+  "notes": [
+    "Detail page with Card Tabs, time filter bar, and 3-column chart grid.",
+    "TopNav and Sidenav referenced from preview/component-topnav.html and preview/component-sidenav.html respectively.",
+    "Icons sourced from assets/icons/sidenav-icon/ directory."
+  ],
+  "componentUsageBasis": "preview-reference"
+}
